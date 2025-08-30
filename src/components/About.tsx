@@ -1,8 +1,18 @@
+// Inside src/components/About.tsx
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <motion.section
+      id="about"
+      className="py-20 bg-gray-50"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
 
@@ -39,6 +49,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

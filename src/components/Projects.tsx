@@ -1,4 +1,8 @@
+// Inside src/components/Projects.tsx
+"use client"; // Add this line
+
 import ProjectCard from "./ProjectCard";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 // Define the updated data for your projects
 const projectsData = [
@@ -31,7 +35,15 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <motion.section // Change this to motion.section
+      id="projects"
+      className="py-20 bg-gray-50"
+      // Add these animation props
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
 
@@ -41,6 +53,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

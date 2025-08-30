@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -43,7 +44,13 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <motion.section
+      id="contact"
+      className="py-20 bg-white"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
         <h2 className="text-3xl font-bold mb-8">Send me a message</h2>
         <p className="text-gray-600 mb-8">
@@ -52,7 +59,7 @@ export default function Contact() {
           <a
             href="mailto:mendresvon@gmail.com"
             target="_blank"
-            className="text-blue-600 hover:underline font-semibold">
+            className="text-purple-600 hover:underline font-semibold">
             mendresvon@gmail.com
           </a>
           .
@@ -64,7 +71,7 @@ export default function Contact() {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -73,7 +80,7 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -82,15 +89,15 @@ export default function Contact() {
               placeholder="Your Message"
               rows={5}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
           </div>
           <button
             type="submit"
-            className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
+            className="bg-purple-600 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition-colors">
             Send Message
           </button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }

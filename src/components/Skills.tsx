@@ -1,3 +1,8 @@
+// Inside src/components/Skills.tsx
+"use client";
+
+import { motion } from "framer-motion";
+
 // This data structure will hold all your skills.
 const skillsData = [
   {
@@ -20,7 +25,13 @@ const skillsData = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
+    <motion.section
+      id="skills"
+      className="py-20"
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">My Skills</h2>
 
@@ -41,6 +52,6 @@ export default function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

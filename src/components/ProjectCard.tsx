@@ -19,10 +19,12 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <div
+      className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col 
+                transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
       {/* Project Image */}
       <div className="relative w-full h-48">
-        <Image src={project.imageUrl} alt={project.title} layout="fill" objectFit="cover" />
+        <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
       </div>
 
       <div className="p-6 flex flex-col flex-grow">
@@ -42,7 +44,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded-md">
+                className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-1 rounded-md">
                 {tech}
               </span>
             ))}
