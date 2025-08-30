@@ -4,6 +4,22 @@
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
+// --- 1. Define animation variants here ---
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // This will apply a 0.3s delay between each child's animation
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 }, // Start 50px down and invisible
+  visible: { opacity: 1, y: 0 }, // Animate to original position and fully visible
+};
+
 const projectsData = [
   {
     title: "AI Image Classifier",
@@ -35,19 +51,25 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-20 bg-gray-50 dark:bg-gray-900"
-      initial={{ opacity: 0, y: 75 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}>
+      // Remove animation props from here, we will control it from the container below
+      className="py-20 bg-card-background/80 dark:bg-card-background/80 backdrop-blur-md">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* --- 2. Apply variants to the grid container --- */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}>
           {projectsData.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            // --- 3. Wrap each card in a motion.div and apply card variants ---
+            <motion.div key={project.title} variants={cardVariants}>
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
