@@ -1,4 +1,4 @@
-// Inside src/components/About.tsx
+// src/components/About.tsx
 "use client";
 
 import Image from "next/image";
@@ -8,7 +8,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="py-20 bg-gray-50"
+      className="py-20 bg-gray-50 dark:bg-gray-900"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -30,19 +30,19 @@ export default function About() {
 
           {/* Text Column */}
           <div>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Hi, I’m Von Mendres — a 3rd-year Computer Science student at Southern Taiwan
               University of Science and Technology (STUST). I’m passionate about exploring new
               technologies and keeping up with the latest trends in the tech world.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               Right now, I’m focused on building a strong foundation in software development and
               artificial intelligence while continuously challenging myself through projects and
               research. My career goal is to secure an internship in Taiwan that will allow me to
               apply my skills, learn from industry professionals, and prepare for a future career in
               top tech companies.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               I believe in continuous growth, whether it’s through coding, problem-solving, or
               collaborating with others. Technology is always evolving — and so am I.
             </p>

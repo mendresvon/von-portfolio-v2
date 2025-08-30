@@ -1,9 +1,8 @@
-// Inside src/components/Skills.tsx
+// src/components/Skills.tsx
 "use client";
 
 import { motion } from "framer-motion";
 
-// This data structure will hold all your skills.
 const skillsData = [
   {
     category: "Languages",
@@ -37,13 +36,15 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillsData.map((categoryData) => (
-            <div key={categoryData.category} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4">{categoryData.category}</h3>
+            <div
+              key={categoryData.category}
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold mb-4 dark:text-white">{categoryData.category}</h3>
               <div className="flex flex-wrap gap-2">
                 {categoryData.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">
                     {skill}
                   </span>
                 ))}
