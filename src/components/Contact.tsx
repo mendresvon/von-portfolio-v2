@@ -10,10 +10,16 @@ export default function Contact() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.target as HTMLFormElement);
+    const formspreeURL = process.env.NEXT_PUBLIC_FORMSPREE_URL;
+
+    if (!formspreeURL) {
+      console.error("Formspree URL is not defined");
+      return;
+    }
 
     try {
-      const response = await fetch("https://formspree.io/f/xnnbplep", {
-        // <-- IMPORTANT: Replace this
+      const response = await fetch(formspreeURL, {
+        // Use the variable here
         method: "POST",
         body: data,
         headers: {
