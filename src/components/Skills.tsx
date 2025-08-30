@@ -26,7 +26,7 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="py-20 relative overflow-hidden" // <-- Added relative and overflow-hidden
+      className="py-20 relative overflow-hidden"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -52,16 +52,13 @@ export default function Skills() {
           {skillsData.map((categoryData) => (
             <div
               key={categoryData.category}
-              // Added transparency and a backdrop blur for readability
-              className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/20">
-              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                {categoryData.category}
-              </h3>
+              className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/20">
+              <h3 className="text-xl font-bold mb-4 text-white">{categoryData.category}</h3>
               <div className="flex flex-wrap gap-2">
                 {categoryData.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full">
+                    className="bg-gray-700 text-gray-200 text-sm font-medium px-3 py-1 rounded-full">
                     {skill}
                   </span>
                 ))}

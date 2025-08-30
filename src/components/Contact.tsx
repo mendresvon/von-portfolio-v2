@@ -37,7 +37,7 @@ export default function Contact() {
     return (
       <section id="contact" className="py-20 text-center">
         <h2 className="text-3xl font-bold mb-4">Thank you!</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
+        <p className="text-lg text-gray-300">
           Your message has been sent. I&apos;ll get back to you soon.
         </p>
       </section>
@@ -47,14 +47,14 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="py-20 bg-white dark:bg-black"
+      className="py-20 bg-black"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
         <h2 className="text-3xl font-bold mb-8">Send me a message</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-400 mb-8">
           I&apos;m open to new opportunities and collaborations. Feel free to send me a message
           using the form below or email me directly at {""}
           <a
@@ -72,7 +72,7 @@ export default function Contact() {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent dark:border-gray-600 dark:placeholder-gray-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent border-gray-600 placeholder-gray-400"
             />
           </div>
           <div className="mb-4">
@@ -81,7 +81,7 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent dark:border-gray-600 dark:placeholder-gray-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent border-gray-600 placeholder-gray-400"
             />
           </div>
           <div className="mb-4">
@@ -90,7 +90,7 @@ export default function Contact() {
               placeholder="Your Message"
               rows={5}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent dark:border-gray-600 dark:placeholder-gray-400"></textarea>
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-transparent border-gray-600 placeholder-gray-400"></textarea>
           </div>
           <button
             type="submit"
