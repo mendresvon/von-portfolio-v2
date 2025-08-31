@@ -21,3 +21,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem; /* This must match the card's rounded-xl */
+  padding: 1px; /* This controls the thickness of the glow border */
+  background: conic-gradient(from 180deg at 50% 50%, #a855f7, #6366f1, #d946ef, #a855f7);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Allows clicks to pass through the glow */
+}
+
+/* This makes the glow visible when hovering the parent card (`group`) */
+.group:hover .card-glow::before {
+  opacity: 1;
+}

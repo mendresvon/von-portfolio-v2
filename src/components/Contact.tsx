@@ -62,7 +62,7 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
-        <h2 className="text-3xl font-bold mb-8">Send me a message</h2>
+        <h2 className="text-5xl font-bold mb-8">Send me a message</h2>
         <p className="text-gray-400 mb-8">
           I&apos;m open to new opportunities and collaborations. Feel free to send me a message
           using the form below or email me directly at {""}
