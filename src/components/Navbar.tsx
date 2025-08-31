@@ -46,16 +46,16 @@ export default function Navbar() {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6">
           <Link href="#about" className="hover:text-purple-500">
-            About
+            About Me
           </Link>
           <Link href="#skills" className="hover:text-purple-500">
-            Skills
+            Education & Skills
           </Link>
           <Link href="#projects" className="hover:text-purple-500">
-            Projects
+            Project Portfolio
           </Link>
           <Link href="#contact" className="hover:text-purple-500">
-            Contact
+            Contact Me
           </Link>
         </div>
 
@@ -72,25 +72,25 @@ export default function Navbar() {
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
             <Link href="#about" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              About
+              About Me
             </Link>
             <Link
               href="#skills"
               onClick={handleLinkClick}
               className="text-lg hover:text-purple-500">
-              Skills
+              Education & Skills
             </Link>
             <Link
               href="#projects"
               onClick={handleLinkClick}
               className="text-lg hover:text-purple-500">
-              Projects
+              Project Portfolio
             </Link>
             <Link
               href="#contact"
               onClick={handleLinkClick}
               className="text-lg hover:text-purple-500">
-              Contact
+              Contact Me
             </Link>
           </div>
         </div>

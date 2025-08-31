@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-20 bg-gray-900"
+      className="py-20 bg-slate-950"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
