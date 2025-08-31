@@ -8,7 +8,7 @@ const projectsData = [
   {
     title: "AI Image Classifier",
     introduction:
-      "Built an AI application that can tell the difference between 3 classes of objects with 98% accuracy.",
+      "Trained a model and built an AI application that can tell the difference between 3 classes of objects with 98% accuracy.",
     description:
       "I developed and deployed a deep learning image classifier capable of distinguishing between birds, airplanes, and Superman with 98% accuracy. For this project, I fine-tuned a ResNet34 architecture model. It was optimized using PyTorch and FastAI, and integrated into a full-stack interactive web application using Gradio. To make the project accessible and user-friendly, I deployed it on Hugging Face Spaces, allowing anyone to test the model in real time.",
     imageUrl: "/ai-classifier.png",

@@ -159,7 +159,7 @@ export default function Skills() {
               custom={i}
               variants={cardVariants}
               // Added `group` for hover effects and a subtle transition
-              className="group relative bg-gradient-to-br from-gray-900/80 to-indigo-950/80 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
+              className="group relative bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
               {/* This div is for the animated glow effect */}
               <div className="card-glow" />
 
