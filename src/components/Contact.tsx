@@ -11,10 +11,19 @@ export default function Contact() {
     event.preventDefault();
     const data = new FormData(event.target as HTMLFormElement);
 
-    // Note: It's best practice to move this URL to a .env.local file
     const formspreeURL = process.env.NEXT_PUBLIC_FORMSPREE_URL;
 
+    // --- FIX STARTS HERE ---
+    // First, check if the URL is actually defined.
+    if (!formspreeURL) {
+      console.error("Formspree URL is not defined. Please check your .env.local file.");
+      // Optionally, you could show an error message to the user here.
+      return; // Stop the function from proceeding
+    }
+    // --- FIX ENDS HERE ---
+
     try {
+      // At this point, TypeScript knows formspreeURL is a string.
       const response = await fetch(formspreeURL, {
         method: "POST",
         body: data,
