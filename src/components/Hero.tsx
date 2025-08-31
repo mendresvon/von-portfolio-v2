@@ -38,6 +38,8 @@ export default function Hero() {
             sequence={[
               "Computer Science Student",
               3000,
+              "Part-Time Teacher",
+              3000,
               "Future AI/ML Engineer",
               3000,
               "Aspiring Software Engineer",
