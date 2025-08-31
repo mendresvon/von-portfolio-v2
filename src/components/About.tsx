@@ -22,8 +22,8 @@ export default function About() {
             <Image
               src="/profile.png" // This path points to public/profile.jpg
               alt="Von Mendres"
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               className="rounded-full object-cover shadow-lg"
             />
           </div>

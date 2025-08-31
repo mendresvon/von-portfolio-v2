@@ -40,7 +40,7 @@ export default function Hero() {
               3000,
               "Future AI/ML Engineer",
               3000,
-              "Technology Enthusiast",
+              "Aspiring Software Engineer",
               3000,
             ]}
             wrapper="span"
