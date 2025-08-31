@@ -12,7 +12,7 @@ export default function Contact() {
     const data = new FormData(event.target as HTMLFormElement);
 
     // Note: It's best practice to move this URL to a .env.local file
-    const formspreeURL = "https://formspree.io/f/xnnbplep";
+    const formspreeURL = process.env.NEXT_PUBLIC_FORMSPREE_URL;
 
     try {
       const response = await fetch(formspreeURL, {
