@@ -58,7 +58,7 @@ const courseworkData = [
     title: "Harvard University",
     items: [
       {
-        courseName: "Computer Science Fundamentals",
+        courseName: "Computer Science",
         courseCode: "CS50x",
         url: "https://courses.edx.org/certificates/306e79cc5c8843e7894d757ea38da308",
       },
@@ -92,7 +92,7 @@ const certificationsData = [
         url: "https://www.coursera.org/account/accomplishments/specialization/MZ3HK8DAZD3F",
       },
       {
-        name: "Introduction to Generative AI",
+        name: "Generative AI Fundamentals",
         issuer: "Google Cloud",
         url: "https://certificates.simplicdn.net/share/8262965_86191031745763809351.pdf",
       },
