@@ -3,6 +3,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { IconContext } from "react-icons";
+import { ReactNode } from "react";
 
 // --- ICONS ---
 import {
@@ -48,7 +49,6 @@ const educationData = [
   {
     icon: <FaGraduationCap />,
     title: "Southern Taiwan University of Science and Technology",
-    // Details are now hardcoded in the JSX for specific formatting
   },
 ];
 
@@ -183,8 +183,16 @@ const skillItemVariants: Variants = {
   },
 };
 
+// --- TYPES ---
+type InfoCardProps = {
+  icon: ReactNode;
+  title: string;
+  children: ReactNode;
+  index: number;
+};
+
 // Reusable card for text-based content
-const InfoCard = ({ icon, title, children, index }: any) => (
+const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
   <motion.div
     custom={index}
     variants={cardVariants}
