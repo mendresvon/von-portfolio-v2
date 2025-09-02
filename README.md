@@ -1,3 +1,8 @@
+## Roadmap
+- [ ] Support multiple languages (en, zh-TW)
+- [ ] Mobile-friendly layout
+- [ ] Add a resume download feature with English and Chinese Version of the Resume
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
