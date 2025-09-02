@@ -2,6 +2,7 @@
 - [ ] Support multiple languages (en, zh-TW)
 - [ ] Mobile-friendly layout
 - [ ] Add a resume download feature with English and Chinese Version of the Resume
+- [ ] Add chatbot functionality chatbot answering questions about my experience, or live project demos
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
