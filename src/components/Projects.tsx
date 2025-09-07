@@ -24,7 +24,7 @@ const projectsData = [
     description:
       "This project bridges software and hardware by building a voice-controlled traffic light prototype. I designed a mobile app to capture and process voice commands, which are transmitted wirelessly via MQTT. On the hardware side, a Raspberry Pi Pico W running C/MicroPython controls the LED lights to mimic real traffic signals. The system demonstrates how voice recognition and IoT can be integrated to create smart, interactive control systems.",
     imageUrl: "/traffic-light.jpeg",
-    techStack: ["Raspberry Pi", "MicroPython", "C", "MQTT", "Mobile Development"],
+    techStack: ["C", "Embedded Systems", "Raspberry Pi", "MQTT", "Mobile App Development"],
     repoUrl:
       "https://github.com/mendresvon/Project-Portfolio/tree/main/Voice%20Controlled%20Traffic%20Control",
     videoUrl: "https://youtu.be/nRs0o199rpQ",
@@ -35,14 +35,24 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-28 bg-slate-950"
+      className="py-28 relative overflow-hidden" // 1. Remove bg-slate-950, add relative and overflow-hidden
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
-      <div className="container mx-auto px-6">
+      {/* 2. Add Video and Overlay */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="/galaxy.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/70 z-0" /> {/* Overlay for readability */}
+      {/* 3. Add relative and z-10 to content container */}
+      <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-5xl font-bold text-center mb-12">Project Portfolio</h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projectsData.map((project) => (
             <ProjectCard key={project.title} project={project} />
