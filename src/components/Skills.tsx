@@ -196,7 +196,7 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
   <motion.div
     custom={index}
     variants={cardVariants}
-    className="group relative bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
+    className="group relative backdrop-blur-md bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
     <div className="card-glow" />
     <div className="flex flex-col items-center text-center">
       <div className="text-purple-400 text-4xl mb-4">{icon}</div>
@@ -298,7 +298,7 @@ export default function Skills() {
               key={categoryData.category}
               custom={i + 3} // Continue animation delay
               variants={cardVariants}
-              className="group relative bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
+              className="group relative backdrop-blur-md bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
               <div className="card-glow" />
               <motion.h3
                 className="text-2xl mb-6 text-white flex items-center justify-center gap-3 border-b border-purple-500/30 pb-3"
