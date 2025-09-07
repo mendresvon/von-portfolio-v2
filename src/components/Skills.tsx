@@ -211,7 +211,7 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="py-20 relative overflow-hidden"
+      className="py-28 relative overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}>
@@ -237,7 +237,7 @@ export default function Skills() {
         </motion.h2>
 
         {/* --- Education, Coursework & Certs Section --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
           {/* Education Card */}
           <InfoCard icon={educationData[0].icon} title={educationData[0].title} index={0}>
             <p>
@@ -284,7 +284,7 @@ export default function Skills() {
 
         {/* --- Technical Skills Section --- */}
         <motion.h3
-          className="text-4xl font-bold text-center mb-16 text-white drop-shadow-md"
+          className="text-4xl font-bold text-center mb-20 text-white drop-shadow-md"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

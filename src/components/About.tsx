@@ -30,21 +30,21 @@ export default function About() {
 
           {/* Text Column */}
           <div>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Hi, I’m Von Mendres — a 3rd-year Computer Science student at Southern Taiwan
+            <p className="text-xl text-gray-300 leading-relaxed mb-4">
+              Hi, I’m Von Mendres, currently a 3rd-year Computer Science student at Southern Taiwan
               University of Science and Technology (STUST). I’m passionate about exploring new
               technologies and keeping up with the latest trends in the tech world.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            <p className="text-xl text-gray-300 leading-relaxed mb-4">
               Right now, I’m focused on building a strong foundation in software development and
               artificial intelligence while continuously challenging myself through projects and
-              research. My career goal is to secure an internship in Taiwan that will allow me to
+              research. My current goal is to secure an internship in Taiwan that will allow me to
               apply my skills, learn from industry professionals, and prepare for a future career in
               top tech companies.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               I believe in continuous growth, whether it’s through coding, problem-solving, or
-              collaborating with others. Technology is always evolving — and so am I.
+              collaborating with others. Technology is always evolving, and so am I.
             </p>
           </div>
         </div>
