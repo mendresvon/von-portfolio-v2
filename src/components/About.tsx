@@ -20,7 +20,7 @@ export default function About() {
           {/* Image Column */}
           <div className="flex justify-center">
             <Image
-              src="/profile.png" // This path points to public/profile.jpg
+              src="/profile.png"
               alt="Von Mendres"
               width={400}
               height={400}
