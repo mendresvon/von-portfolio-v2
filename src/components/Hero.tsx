@@ -1,25 +1,23 @@
 // src/components/Hero.tsx
 "use client";
 
-import { useState } from "react"; // 1. Import useState
+import { useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si"; // Added import for Gmail icon
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import GlowingCursor from "./GlowingCursor";
 
 export default function Hero() {
-  // 2. Create a state to track when the mouse is hovering over the section
   const [isHovering, setIsHovering] = useState(false);
 
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
-      // 3. Add mouse event handlers to the section
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* 4. Pass the hover state to the cursor component */}
       <GlowingCursor isActive={isHovering} />
 
       {/* Video Background */}
@@ -88,6 +86,15 @@ export default function Hero() {
             className="text-gray-400 hover:text-white transition-colors"
           >
             <FaGithub size={32} />
+          </a>
+          {/* --- GMAIL ICON ADDED HERE --- */}
+          <a
+            href="mailto:mendresvon@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <SiGmail size={32} />
           </a>
         </motion.div>
       </div>
