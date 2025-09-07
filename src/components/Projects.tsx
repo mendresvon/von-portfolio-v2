@@ -32,22 +32,22 @@ const projectsData = [
   {
     title: "Aura Notes",
     introduction:
-      "A sleek and secure note-taking application designed with a focus on a fluid user experience and modern aesthetics.",
+      "A sleek and secure note-taking application with a log-in feature.",
     description:
       "Aura Notes is a full-stack MERN application that allows users to perform CRUD operations on their notes. It features secure user authentication using JSON Web Tokens (JWT) and a responsive, glassmorphism-style UI built with React and Tailwind CSS. The backend is powered by Node.js and Express, with a MongoDB database for persistent storage. Animations are handled by Framer Motion to create an engaging user interface.",
     imageUrl: "/aura-notes-ss.jpeg",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS", "Framer Motion"],
+    techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://aura-notes-xi.vercel.app/login",
     repoUrl: "https://github.com/mendresvon/aura-notes-frontend",
   },
   {
     title: "FilmFolio",
     introduction:
-      "A full-stack web application allowing you to easily keep track of movies you want to watch.",
+      "A full-stack app allowing you to easily keep track of movies you want to watch.",
     description:
-      "FilmFolio is a dynamic web app where users can curate multiple movie watchlists. The application integrates with the TMDB API for real-time movie searches. The robust backend is built with Node.js and Express, utilizing a PostgreSQL database with the Prisma ORM for efficient data management. User authentication is handled securely with JWT, and the frontend is styled with CSS Modules for component-scoped styling.",
+      "FilmFolio is a full stack PERN application where users can curate multiple movie watchlists. The application integrates with the TMDB API for real-time movie searches. The robust backend is built with Node.js and Express, utilizing a PostgreSQL database with the Prisma ORM for efficient data management. User authentication is handled securely with JWT, and the frontend is styled with CSS Modules for component-scoped styling.",
     imageUrl: "/filmfolio-ss.jpeg",
-    techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "CSS Modules"],
+    techStack: ["PostgreSQL", "Express", "React", "Node.js", "Prisma", "JWT", "CSS Modules"],
     liveUrl: "https://filmfolio-mu.vercel.app/",
     repoUrl: "https://github.com/mendresvon/filmfolio-frontend",
   },
