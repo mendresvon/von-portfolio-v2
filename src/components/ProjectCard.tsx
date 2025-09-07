@@ -23,9 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       whileHover={{ scale: 1.03, y: -8 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="h-full">
-      <div
-        className="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full 
-                  transition-all duration-300">
+      <div className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300">
         <div className="relative w-full h-48">
           <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
         </div>
