@@ -28,7 +28,7 @@ export default function GlowingCursor({ isActive }: GlowingCursorProps) {
         background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(220, 230, 255, 0.15), transparent 80%)`,
       }}
       animate={{ opacity: isActive ? 1 : 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.20 }}
     />
   );
 }
