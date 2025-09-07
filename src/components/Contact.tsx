@@ -3,7 +3,6 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// Import all necessary icons
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
@@ -60,7 +59,6 @@ export default function Contact() {
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
         <h2 className="text-5xl font-bold mb-8">Let&apos;s Connect </h2>
-        {/* --- 1. PARAGRAPH TEXT IS RESTORED AS REQUESTED --- */}
         <p className="text-gray-400 mb-8">
           I&apos;m open to new opportunities and collaborations. Feel free to send me a message
           using the form below or email me directly at{" "}
@@ -73,14 +71,13 @@ export default function Contact() {
           .
         </p>
 
-        {/* --- 2. GMAIL ICON ADDED TO PROFESSIONAL LINKS --- */}
         <div className="flex justify-center items-center gap-8 mb-12">
           <a
             href="https://github.com/mendresvon"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            className="text-gray-400 hover:text-purple-500 transition-colors duration-300">
+            className="text-gray-400 hover:text-white transition-colors duration-300">
             <FaGithub size={40} />
           </a>
           <a
@@ -88,20 +85,19 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            className="text-gray-400 hover:text-purple-500 transition-colors duration-300">
+            className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
             <FaLinkedin size={40} />
           </a>
           <a
             href="mailto:mendresvon@gmail.com"
             target="_blank"
             aria-label="Email"
-            className="text-gray-400 hover:text-purple-500 transition-colors duration-300">
+            className="text-gray-400 hover:text-red-500 transition-colors duration-300">
             <SiGmail size={40} />
           </a>
         </div>
 
         <form onSubmit={handleSubmit}>
-          {/* Input fields and button remain the same */}
           <div className="mb-4">
             <input
               type="text"

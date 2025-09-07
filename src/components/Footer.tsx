@@ -1,6 +1,6 @@
-// src/components/Footer.tsx
+// Inside src/components/Footer.tsx
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si"; // Added import for Gmail icon
+import { SiGmail } from "react-icons/si";
 import Link from "next/link";
 
 export default function Footer() {
@@ -11,25 +11,21 @@ export default function Footer() {
       <div className="container mx-auto px-6 text-center">
         <div className="flex justify-center gap-6 mb-4">
           <Link
-            href="https://github.com/mendresvon" // Corrected GitHub link
+            href="https://github.com/mendresvon"
             target="_blank"
-            className="hover:text-white transition-colors"
-          >
+            className="hover:text-white transition-colors">
             <FaGithub size={28} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/vonmendres/"
             target="_blank"
-            className="hover:text-white transition-colors"
-          >
+            className="hover:text-blue-500 transition-colors">
             <FaLinkedin size={28} />
           </Link>
-          {/* --- GMAIL ICON ADDED HERE --- */}
           <Link
             href="mailto:mendresvon@gmail.com"
             target="_blank"
-            className="hover:text-white transition-colors"
-          >
+            className="hover:text-red-500 transition-colors">
             <SiGmail size={28} />
           </Link>
         </div>
