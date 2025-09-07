@@ -18,19 +18,47 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  // 1. Determine the correct link for the image based on the project title
+  const imageLinkUrl =
+    project.title === "Voice-Controlled Traffic Light"
+      ? project.videoUrl
+      : project.liveUrl;
+
   return (
     <motion.div
       whileHover={{ scale: 1.03, y: -8 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="h-full">
-      <div className="bg-gray-800/50 backdrop-blur-2xs rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300">
-        <div className="relative w-full h-48">
-          <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
-        </div>
+      className="h-full"
+    >
+      <div className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300">
+        {/* 2. Check if a link exists before creating the clickable area */}
+        {imageLinkUrl ? (
+          <Link href={imageLinkUrl} target="_blank">
+            <div className="relative w-full h-48 cursor-pointer group">
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </Link>
+        ) : (
+          <div className="relative w-full h-48">
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
 
         <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-2xl font-bold mb-2 text-white">{project.title}</h3>
-          <p className="text-gray-300 mb-4 font-semibold italic">{project.introduction}</p>
+          <p className="text-gray-300 mb-4 font-semibold italic">
+            {project.introduction}
+          </p>
           <p className="text-gray-400 mb-4 flex-grow text-sm leading-relaxed">
             {project.description}
           </p>
@@ -39,7 +67,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-purple-900 text-purple-200 text-xs font-medium px-2 py-1 rounded-md">
+                  className="bg-purple-900 text-purple-200 text-xs font-medium px-2 py-1 rounded-md"
+                >
                   {tech}
                 </span>
               ))}
@@ -50,7 +79,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <Link
                 href={project.repoUrl}
                 target="_blank"
-                className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+              >
                 <FaGithub size={24} /> Code
               </Link>
             )}
@@ -58,7 +88,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <Link
                 href={project.liveUrl}
                 target="_blank"
-                className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+              >
                 <FaExternalLinkAlt size={20} /> Live Demo
               </Link>
             )}
@@ -66,7 +97,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <Link
                 href={project.videoUrl}
                 target="_blank"
-                className="flex items-center gap-2 text-gray-400 hover:text-red-500 transition-colors">
+                className="flex items-center gap-2 text-gray-400 hover:text-red-500 transition-colors"
+              >
                 <FaYoutube size={24} /> Video
               </Link>
             )}
