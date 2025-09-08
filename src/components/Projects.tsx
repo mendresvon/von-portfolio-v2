@@ -35,7 +35,7 @@ const projectsData = [
     description:
       "Aura Notes is a full-stack MERN app for creating, editing, and organizing notes. It features JWT-secured authentication, a sleek glassmorphism UI with React + Tailwind, and smooth Framer Motion animations, backed by a Node.js/Express API and MongoDB for persistent storage.",
     imageUrl: "/aura-notes-ss.jpeg",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS", "Framer Motion"],
+    techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://aura-notes-xi.vercel.app/login",
     repoUrl: "https://github.com/mendresvon/aura-notes-frontend",
   },
@@ -45,7 +45,7 @@ const projectsData = [
     description:
       "FilmFolio is a web app that helps you discover, save, and organize movies into custom watchlists. It features real-time movie search powered by the TMDB API and a simple, user-friendly design for keeping track of what you want to watch next.",
     imageUrl: "/filmfolio-ss.jpeg",
-    techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "CSS Modules"],
+    techStack: ["PostgreSQL", "Express", "React", "Node.js", "Prisma", "JWT", "CSS Modules"],
     liveUrl: "https://filmfolio-mu.vercel.app/",
     repoUrl: "https://github.com/mendresvon/filmfolio-frontend",
   },
