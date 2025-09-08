@@ -41,7 +41,7 @@ const projectsData = [
   },
   {
     title: "FilmFolio",
-    introduction: "A dynamic website where you can keep track of movies you want to watch.",
+    introduction: "A watchlist tracker to keep track of movies you want to watch.",
     description:
       "FilmFolio is a web app that helps you discover, save, and organize movies into custom watchlists. It features real-time movie search powered by the TMDB API and a simple, user-friendly design for keeping track of what you want to watch next.",
     imageUrl: "/filmfolio-ss.jpeg",
