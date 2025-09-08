@@ -10,7 +10,7 @@ const projectsData = [
     introduction:
       "Trained a model and built an AI application that can tell the difference between 3 classes of objects with 98% accuracy.",
     description:
-      "I developed and deployed a deep learning image classifier capable of distinguishing between birds, airplanes, and Superman with 98% accuracy. For this project, I fine-tuned a ResNet34 architecture model. It was optimized using PyTorch and FastAI, and integrated into a full-stack interactive web application using Gradio. To make the project accessible and user-friendly, I deployed it on Hugging Face Spaces, allowing anyone to test the model in real time.",
+      "Image Classifier Web App is a deep learning project that can tell apart birds, airplanes, and even Superman with 98% accuracy. Built with a fine-tuned ResNet34 model and deployed on Hugging Face Spaces, it features an interactive web app where anyone can test the model in real time.",
     imageUrl: "/ai-classifier.png",
     techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Hugging Face", "ResNet"],
     liveUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman",
@@ -22,7 +22,7 @@ const projectsData = [
     introduction:
       "Created a mini traffic light system that changes colors just by listening to voice commands through a mobile app.",
     description:
-      "This project bridges software and hardware by building a voice-controlled traffic light prototype. I designed a mobile app to capture and process voice commands, which are transmitted wirelessly via MQTT. On the hardware side, a Raspberry Pi Pico W running C/MicroPython controls the LED lights to mimic real traffic signals. The system demonstrates how voice recognition and IoT can be integrated to create smart, interactive control systems.",
+      "Voice-Controlled Traffic Light is a prototype that lets you change traffic lights using voice commands. A mobile app captures your voice, sends it wirelessly, and a Raspberry Pi Pico W controls the LEDs to simulate real signals. The project shows how voice recognition and IoT can work together in an interactive way.",
     imageUrl: "/traffic-light.jpeg",
     techStack: ["Raspberry Pi", "MicroPython", "C", "MQTT", "Mobile Development"],
     repoUrl:
@@ -31,10 +31,9 @@ const projectsData = [
   },
   {
     title: "Aura Notes",
-    introduction:
-      "A sleek and secure note-taking application designed with a focus on a fluid user experience and modern aesthetics.",
+    introduction: "A sleek and secure note-taking application with a log-in feature.",
     description:
-      "Aura Notes is a full-stack MERN application that allows users to perform CRUD operations on their notes. It features secure user authentication using JSON Web Tokens (JWT) and a responsive, glassmorphism-style UI built with React and Tailwind CSS. The backend is powered by Node.js and Express, with a MongoDB database for persistent storage. Animations are handled by Framer Motion to create an engaging user interface.",
+      "Aura Notes is a full-stack MERN app for creating, editing, and organizing notes. It features JWT-secured authentication, a sleek glassmorphism UI with React + Tailwind, and smooth Framer Motion animations, backed by a Node.js/Express API and MongoDB for persistent storage.",
     imageUrl: "/aura-notes-ss.jpeg",
     techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://aura-notes-xi.vercel.app/login",
@@ -42,10 +41,9 @@ const projectsData = [
   },
   {
     title: "FilmFolio",
-    introduction:
-      "A Netflix-inspired application allowing you to easily keep track of movies you want to watch.",
+    introduction: "A dynamic website where you can keep track of movies you want to watch.",
     description:
-      "FilmFolio is a dynamic web app where users can curate multiple movie watchlists. The application integrates with the TMDB API for real-time movie searches. The robust backend is built with Node.js and Express, utilizing a PostgreSQL database with the Prisma ORM for efficient data management. User authentication is handled securely with JWT, and the frontend is styled with CSS Modules for component-scoped styling.",
+      "FilmFolio is a web app that helps you discover, save, and organize movies into custom watchlists. It features real-time movie search powered by the TMDB API and a simple, user-friendly design for keeping track of what you want to watch next.",
     imageUrl: "/filmfolio-ss.jpeg",
     techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "CSS Modules"],
     liveUrl: "https://filmfolio-mu.vercel.app/",
@@ -61,8 +59,7 @@ export default function Projects() {
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
+      transition={{ duration: 0.5, ease: "easeOut" }}>
       {/* --- VIDEO BACKGROUND REMOVED --- */}
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-bold text-center mb-12">Project Portfolio</h2>
