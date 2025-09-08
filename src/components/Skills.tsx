@@ -284,7 +284,7 @@ export default function Skills() {
 
         {/* --- Technical Skills Section --- */}
         <motion.h3
-          className="text-4xl font-bold text-center mb-20 text-white drop-shadow-md"
+          className="text-5xl font-bold text-center mb-20 text-white drop-shadow-md"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
