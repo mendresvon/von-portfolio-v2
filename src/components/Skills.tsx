@@ -32,7 +32,6 @@ import {
   SiDjango,
   SiFlask,
   SiPytorch,
-  SiTensorflow,
   SiOpencv,
   SiNumpy,
   SiPandas,
@@ -40,9 +39,10 @@ import {
   SiRaspberrypi,
   SiHuggingface,
   SiC,
+  SiPostgresql,
+  SiMongodb,
 } from "react-icons/si";
 import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
-import { MdAppRegistration } from "react-icons/md";
 
 // --- DATA STRUCTURES ---
 const educationData = [
@@ -119,18 +119,19 @@ const skillsData = [
     categoryIcon: <FaBrain />,
     skills: [
       { name: "PyTorch", icon: <SiPytorch /> },
-      { name: "TensorFlow", icon: <SiTensorflow /> },
       { name: "OpenCV", icon: <SiOpencv /> },
       { name: "NumPy", icon: <SiNumpy /> },
       { name: "Pandas", icon: <SiPandas /> },
       { name: "FastAI", icon: <FaRocket /> },
       { name: "Matplotlib", icon: <TbMathFunction /> },
+      { name: "Hugging Face", icon: <SiHuggingface /> },
     ],
   },
   {
     category: "Web Development",
     categoryIcon: <FaGlobe />,
     skills: [
+      { name: "Express", icon: <FaCode /> },
       { name: "React", icon: <FaReact /> },
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Django", icon: <SiDjango /> },
@@ -143,13 +144,13 @@ const skillsData = [
     category: "Tools & Technologies",
     categoryIcon: <FaTools />,
     skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "GitLab", icon: <SiGitlab /> },
       { name: "Docker", icon: <FaDocker /> },
       { name: "Raspberry Pi", icon: <SiRaspberrypi /> },
-      { name: "Gradio", icon: <MdAppRegistration /> },
-      { name: "Hugging Face", icon: <SiHuggingface /> },
     ],
   },
 ];
