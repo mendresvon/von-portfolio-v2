@@ -12,7 +12,7 @@ interface HeroProps {
 }
 
 export default function Hero({ setIsGlowActive }: HeroProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <section
@@ -53,11 +53,12 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
           suppressHydrationWarning={true}
         >
           <TypeAnimation
+            key={i18n.language}
             sequence={[
+              t('hero.roles.0'), 3000,
               t('hero.roles.1'), 3000,
               t('hero.roles.2'), 3000,
               t('hero.roles.3'), 3000,
-              t('hero.roles.4'), 3000,
             ]}
             wrapper="span"
             speed={50}

@@ -8,12 +8,12 @@
   "hero": {
     "name": "Von Breznev A. Mendres",
     "tagline": "with a Passion for Learning and Building Scalable Solutions",
-    "roles": {
-      "1": "Computer Science Student",
-      "2": "Part-Time Teacher",
-      "3": "Future AI/ML Engineer",
-      "4": "Aspiring Software Engineer"
-    }
+    "roles": [
+      "Computer Science Student",
+      "Part-Time Teacher",
+      "Future AI/ML Engineer",
+      "Aspiring Software Engineer"
+    ]
   },
   "about": {
     "title": "About Me",
