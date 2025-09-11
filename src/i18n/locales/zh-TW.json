@@ -44,12 +44,12 @@
       "description": "該專案使用FastAI和PyTorch微調了一個ResNet34模型，然後將其部署到Hugging Face Spaces，並配備了一個互動式的Gradio Web應用程式。使用者可以上傳圖片並即時測試模型，展示了實用的機器學習部署技能。"
     },
     "portfolio": {
-      "title": "個人作品集網站",
+      "title": "Personal Portfolio",
       "introduction": "設計並開發了一個現代化、完全響應式的作品集網站，以展示我的技能、經驗和專案。",
       "description": "這個網站從零開始使用Next.js和TypeScript構建，強調性能和可訪問性。它採用Framer Motion實現流暢的動畫，擁有簡潔的Tailwind CSS佈局，並部署在Vercel上，作為我線上專業形象的中心。"
     },
     "traffic_light": {
-      "title": "聲控智慧交通號誌",
+      "title": "Voice-Controlled Smart Traffic Light",
       "introduction": "創建了一個物聯網原型交通號誌系統，能夠即時響應語音命令。",
       "description": "一個行動應用程式捕捉語音命令，並透過MQTT將其發送到Raspberry Pi Pico W，由它控制LED來模擬交通信號。該專案展示了我結合語音識別、無線通訊和嵌入式系統以實現互動式硬體解決方案的能力。"
     },
