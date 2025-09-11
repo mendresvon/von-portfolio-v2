@@ -4,6 +4,7 @@
 import { motion, Variants } from "framer-motion";
 import { IconContext } from "react-icons";
 import { ReactNode } from "react";
+import { useTranslation } from 'react-i18next';
 
 // --- ICONS ---
 import {
@@ -44,15 +45,16 @@ import {
 } from "react-icons/si";
 import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
 
-// --- DATA STRUCTURES ---
-const educationData = [
+// --- DATA STRUCTURES (Now using t function) ---
+const educationData = (t: any) => ([
   {
     icon: <FaGraduationCap />,
     title: "Southern Taiwan University of Science and Technology",
+    degree: t('skills.educationDegree'),
   },
-];
+]);
 
-const courseworkData = [
+const courseworkData = () => ([
   {
     icon: <FaBookOpen />,
     title: "Harvard University",
@@ -74,9 +76,9 @@ const courseworkData = [
       },
     ],
   },
-];
+]);
 
-const certificationsData = [
+const certificationsData = () => ([
   {
     icon: <FaCertificate />,
     title: "Industry Certifications",
@@ -98,11 +100,11 @@ const certificationsData = [
       },
     ],
   },
-];
+]);
 
-const skillsData = [
+const skillsData = (t: any) => ([
   {
-    category: "Languages",
+    category: t('skills.languages'),
     categoryIcon: <FaCode />,
     skills: [
       { name: "Python", icon: <FaPython /> },
@@ -115,7 +117,7 @@ const skillsData = [
     ],
   },
   {
-    category: "AI & Machine Learning",
+    category: t('skills.ai_ml'),
     categoryIcon: <FaBrain />,
     skills: [
       { name: "PyTorch", icon: <SiPytorch /> },
@@ -128,7 +130,7 @@ const skillsData = [
     ],
   },
   {
-    category: "Web Development",
+    category: t('skills.web_dev'),
     categoryIcon: <FaGlobe />,
     skills: [
       { name: "Express", icon: <FaCode /> },
@@ -141,7 +143,7 @@ const skillsData = [
     ],
   },
   {
-    category: "Tools & Technologies",
+    category: t('skills.tools'),
     categoryIcon: <FaTools />,
     skills: [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
@@ -153,7 +155,7 @@ const skillsData = [
       { name: "Raspberry Pi", icon: <SiRaspberrypi /> },
     ],
   },
-];
+]);
 
 // --- ANIMATION VARIANTS ---
 const cardVariants: Variants = {
@@ -209,6 +211,8 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
 
 // --- MAIN COMPONENT ---
 export default function Skills() {
+  const { t } = useTranslation();
+
   return (
     <motion.section
       id="skills"
@@ -234,22 +238,22 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}>
-          Qualifications
+          {t('skills.title')}
         </motion.h2>
 
         {/* --- Education, Coursework & Certs Section --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
           {/* Education Card */}
-          <InfoCard icon={educationData[0].icon} title={educationData[0].title} index={0}>
+          <InfoCard icon={educationData(t)[0].icon} title={educationData(t)[0].title} index={0}>
             <p>
-              <strong>B.S.</strong> in Computer Science and Information Engineering
+              <strong>B.S.</strong> {educationData(t)[0].degree}
             </p>
           </InfoCard>
 
           {/* Coursework Card */}
-          <InfoCard icon={courseworkData[0].icon} title={courseworkData[0].title} index={1}>
+          <InfoCard icon={courseworkData()[0].icon} title={t('skills.courseworkTitle')} index={1}>
             <ul className="space-y-2">
-              {courseworkData[0].items.map((item) => (
+              {courseworkData()[0].items.map((item) => (
                 <li key={item.courseName}>
                   <a
                     href={item.url}
@@ -264,9 +268,9 @@ export default function Skills() {
           </InfoCard>
 
           {/* Certifications Card */}
-          <InfoCard icon={certificationsData[0].icon} title={certificationsData[0].title} index={2}>
+          <InfoCard icon={certificationsData()[0].icon} title={t('skills.certificationsTitle')} index={2}>
             <ul className="space-y-2">
-              {certificationsData[0].items.map((item) => (
+              {certificationsData()[0].items.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.url}
@@ -290,11 +294,11 @@ export default function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}>
-          Technical Skills
+          {t('skills.techSkillsTitle')}
         </motion.h3>
 
         <div className="grid grid-cols-1 md-grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillsData.map((categoryData, i) => (
+          {skillsData(t).map((categoryData, i) => (
             <motion.div
               key={categoryData.category}
               custom={i + 3} // Continue animation delay

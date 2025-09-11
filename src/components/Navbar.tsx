@@ -4,8 +4,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
-// 1. Define props to accept the state setter function
 interface NavbarProps {
   setIsGlowActive: (isActive: boolean) => void;
 }
@@ -13,6 +14,7 @@ interface NavbarProps {
 export default function Navbar({ setIsGlowActive }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +36,6 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
 
   return (
     <nav
-      // 2. Add mouse event handlers to the nav element
       onMouseEnter={() => setIsGlowActive(true)}
       onMouseLeave={() => setIsGlowActive(false)}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -43,23 +44,25 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="font-bold text-lg">
-          <Link href="#hero">Von Mendres</Link>
+          <Link href="#hero">{t('hero.name')}</Link>
         </div>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           <Link href="#about" className="hover:text-purple-500">
-            About Me
+            {t('navbar.about')}
           </Link>
           <Link href="#skills" className="hover:text-purple-500">
-            Education & Skills
+            {t('navbar.skills')}
           </Link>
           <Link href="#projects" className="hover:text-purple-500">
-            Project Portfolio
+            {t('navbar.projects')}
           </Link>
           <Link href="#contact" className="hover:text-purple-500">
-            Contact Me
+            {t('navbar.contact')}
           </Link>
+          <LanguageSwitcher />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -69,16 +72,16 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
             <Link href="#about" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              About Me
+              {t('navbar.about')}
             </Link>
             <Link href="#skills" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              Education & Skills
+              {t('navbar.skills')}
             </Link>
             <Link href="#projects" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              Project Portfolio
+              {t('navbar.projects')}
             </Link>
             <Link href="#contact" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              Contact Me
+              {t('navbar.contact')}
             </Link>
           </div>
         </div>

@@ -1,9 +1,13 @@
 // Inside src/components/Footer.tsx
+"use client";
+
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -29,7 +33,9 @@ export default function Footer() {
             <SiGmail size={28} />
           </Link>
         </div>
-        <p>&copy; {currentYear} Von Breznev A. Mendres. All Rights Reserved.</p>
+        <p>
+          &copy; {currentYear} Von Breznev A. Mendres. {t("footer.rights")}
+        </p>
       </div>
     </footer>
   );

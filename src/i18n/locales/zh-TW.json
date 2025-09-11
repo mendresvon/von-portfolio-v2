@@ -1,0 +1,97 @@
+{
+  "translation": {
+    "navbar": {
+      "about": "關於我",
+      "skills": "教育與技能",
+      "projects": "專案作品集",
+      "contact": "聯絡我"
+    },
+    "hero": {
+      "name": "門德斯",
+      "tagline": "熱衷於學習和打造可擴展的解決方案",
+      "roles": [
+        "資訊工程系學生",
+        "兼職教師",
+        "未來的 AI/ML 工程師",
+        "有抱負的軟體工程師"
+      ]
+    },
+    "about": {
+      "title": "關於我",
+      "p1": "嗨，我是門德斯，目前是南臺科技大學資訊工程系的三年級學生。我熱衷於探索新技術，並隨時關注科技界的最新趨勢。",
+      "p2": "目前，我專注於在軟體開發和人工智慧領域打下堅實的基礎，同時透過專案和研究不斷挑戰自我。我目前的目標是在台灣找到一份實習工作，讓我有機會應用我的技能，向業界專業人士學習，並為未來在頂尖科技公司的職業生涯做準備。",
+      "p3": "我相信持續成長，無論是透過編寫程式、解決問題還是與他人合作。科技在不斷發展，我也在不斷進步。"
+    },
+    "skills": {
+      "qualificationsTitle": "學經歷",
+      "technicalSkillsTitle": "技術能力",
+      "education": {
+        "title": "南臺科技大學",
+        "degree": "資訊工程學系學士"
+      },
+      "coursework": {
+        "title": "哈佛大學"
+      },
+      "certifications": {
+        "title": "行業認證"
+      },
+      "categories": {
+        "languages": "程式語言",
+        "ai_ml": "人工智慧與機器學習",
+        "web_dev": "網站開發",
+        "tools": "工具與技術"
+      }
+    },
+    "projects": {
+      "title": "專案作品集",
+      "skyvision": {
+        "title": "SkyVision AI",
+        "introduction": "建立並部署了一個深度學習模型，能夠以98%的準確率對鳥、飛機和超人進行分類。",
+        "description": "該專案使用FastAI和PyTorch微調了一個ResNet34模型，然後將其部署到Hugging Face Spaces，並配備了一個互動式的Gradio Web應用程式。使用者可以上傳圖片並即時測試模型，展示了實用的機器學習部署技能。"
+      },
+      "portfolio": {
+        "title": "個人作品集網站",
+        "introduction": "設計並開發了一個現代化、完全響應式的作品集網站，以展示我的技能、經驗和專案。",
+        "description": "這個網站從零開始使用Next.js和TypeScript構建，強調性能和可訪問性。它採用Framer Motion實現流暢的動畫，擁有簡潔的Tailwind CSS佈局，並部署在Vercel上，作為我線上專業形象的中心。"
+      },
+      "traffic_light": {
+        "title": "聲控智慧交通號誌",
+        "introduction": "創建了一個物聯網原型交通號誌系統，能夠即時響應語音命令。",
+        "description": "一個行動應用程式捕捉語音命令，並透過MQTT將其發送到Raspberry Pi Pico W，由它控制LED來模擬交通信號。該專案展示了我結合語音識別、無線通訊和嵌入式系統以實現互動式硬體解決方案的能力。"
+      },
+      "aura_notes": {
+        "title": "Aura Notes",
+        "introduction": "開發了一款安全的、全端堆疊的筆記應用程式，具有身份驗證和流暢的動畫效果。",
+        "description": "這款MERN應用程式採用基於JWT的身份驗證，使用Tailwind CSS和React構建了時尚的玻璃擬態UI，並由Framer Motion驅動動畫過渡效果。筆記儲存在MongoDB中，並透過Node.js/Express API進行可靠的數據管理。"
+      },
+      "filmfolio": {
+        "title": "FilmFolio",
+        "introduction": "建立了一款安全的全端電影待辦清單應用程式，具有使用者驗證和精緻的動畫介面。",
+        "description": "FilmFolio使用TMDB API進行即時電影搜索，並讓使用者創建自定義的觀看清單。它採用JWT身份驗證、帶有CSS模組的簡潔玻璃擬態UI以及Framer Motion動畫，提供精緻的體驗。數據儲存在PostgreSQL中，並使用Prisma和Express API進行管理。"
+      },
+      "card": {
+        "code": "程式碼",
+        "link": "連結",
+        "video": "影片"
+      }
+    },
+    "contact": {
+      "title": "保持聯繫",
+      "intro": "我對新的機會和合作持開放態度。歡迎使用下面的表單給我發送訊息，或直接發送電子郵件至<1>mendresvon@gmail.com</1>。",
+      "form": {
+        "name": "您的姓名",
+        "email": "您的電子郵件",
+        "message": "您的訊息",
+        "submit": "發送訊息"
+      },
+      "submitted": {
+        "title": "謝謝您！",
+        "message": "您的訊息已成功發送。我會盡快回覆您。"
+      }
+    },
+    "footer": {
+      "rights": "版權所有。"
+    }
+  }
+}
+
