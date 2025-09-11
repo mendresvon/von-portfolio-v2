@@ -1,4 +1,4 @@
-// Inside src/components/Footer.tsx
+// src/components/Footer.tsx
 "use client";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -33,7 +33,7 @@ export default function Footer() {
             <SiGmail size={28} />
           </Link>
         </div>
-        <p>
+        <p suppressHydrationWarning={true}>
           &copy; {currentYear} Von Breznev A. Mendres. {t("footer.rights")}
         </p>
       </div>

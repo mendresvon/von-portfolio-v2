@@ -17,7 +17,7 @@ export default function About() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl font-bold text-center mb-12">{t('about.title')}</h2>
+        <h2 className="text-5xl font-bold text-center mb-12" suppressHydrationWarning={true}>{t('about.title')}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Column */}
@@ -33,13 +33,13 @@ export default function About() {
 
           {/* Text Column */}
           <div>
-            <p className="text-xl text-gray-300 leading-relaxed mb-4">
+            <p className="text-xl text-gray-300 leading-relaxed mb-4" suppressHydrationWarning={true}>
               {t('about.p1')}
             </p>
-            <p className="text-xl text-gray-300 leading-relaxed mb-4">
+            <p className="text-xl text-gray-300 leading-relaxed mb-4" suppressHydrationWarning={true}>
               {t('about.p2')}
             </p>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed" suppressHydrationWarning={true}>
               {t('about.p3')}
             </p>
           </div>

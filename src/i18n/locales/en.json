@@ -1,97 +1,94 @@
 {
-  "translation": {
-    "navbar": {
-      "about": "About Me",
-      "skills": "Education & Skills",
-      "projects": "Project Portfolio",
-      "contact": "Contact Me"
-    },
-    "hero": {
-      "name": "Von Breznev A. Mendres",
-      "tagline": "with a Passion for Learning and Building Scalable Solutions",
-      "roles": {
-        "1": "Computer Science Student",
-        "2": "Part-Time Teacher",
-        "3": "Future AI/ML Engineer",
-        "4": "Aspiring Software Engineer"
-      }
-    },
-    "about": {
-      "title": "About Me",
-      "p1": "Hi, I’m Von Mendres, currently a 3rd-year Computer Science student at Southern Taiwan University of Science and Technology (STUST). I’m passionate about exploring new technologies and keeping up with the latest trends in the tech world.",
-      "p2": "Right now, I’m focused on building a strong foundation in software development and artificial intelligence while continuously challenging myself through projects and research. My current goal is to secure an internship in Taiwan that will allow me to apply my skills, learn from industry professionals, and prepare for a future career in top tech companies.",
-      "p3": "I believe in continuous growth, whether it’s through coding, problem-solving, or collaborating with others. Technology is always evolving, and so am I."
-    },
-    "skills": {
-      "qualificationsTitle": "Qualifications",
-      "technicalSkillsTitle": "Technical Skills",
-      "education": {
-        "title": "Southern Taiwan University of Science and Technology",
-        "degree": "B.S. in Computer Science and Information Engineering"
-      },
-      "coursework": {
-        "title": "Harvard University"
-      },
-      "certifications": {
-        "title": "Industry Certifications"
-      },
-      "categories": {
-        "languages": "Languages",
-        "ai_ml": "AI & Machine Learning",
-        "web_dev": "Web Development",
-        "tools": "Tools & Technologies"
-      }
-    },
-    "projects": {
-      "title": "Project Portfolio",
-      "skyvision": {
-        "title": "SkyVision AI",
-        "introduction": "Built and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
-        "description": "This project fine-tunes a ResNet34 model using FastAI and PyTorch, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills."
-      },
-      "portfolio": {
-        "title": "Personal Portfolio",
-        "introduction": "Designed and developed a modern, fully responsive portfolio website to showcase my skills, experience, and projects.",
-        "description": "Built from scratch with Next.js and TypeScript, this site emphasizes performance and accessibility. It features smooth animations with Framer Motion, a clean Tailwind CSS layout, and is deployed on Vercel, serving as my professional hub online."
-      },
-      "traffic_light": {
-        "title": "Voice-Controlled Smart Traffic Light",
-        "introduction": "Created an IoT prototype traffic light system that responds to voice commands in real time.",
-        "description": "A mobile app captures voice commands and sends them via MQTT to a Raspberry Pi Pico W, which controls LEDs to simulate traffic signals. This project demonstrates my ability to combine voice recognition, wireless communication, and embedded systems for interactive hardware solutions."
-      },
-      "aura_notes": {
-        "title": "Aura Notes",
-        "introduction": "Developed a secure, full-stack note-taking application with authentication and smooth animations.",
-        "description": "This MERN app features JWT-based authentication, a stylish glassmorphism UI built with Tailwind CSS and React, and animated transitions powered by Framer Motion. Notes are stored in MongoDB with a Node.js/Express API for reliable data management."
-      },
-      "filmfolio": {
-        "title": "FilmFolio",
-        "introduction": "Built a secure, full-stack movie watchlist application with user authentication and a polished, animated interface.",
-        "description": "FilmFolio uses the TMDB API for real-time movie search and lets users create custom watchlists. It features JWT authentication, a clean glassmorphism UI with CSS Modules, and Framer Motion animations for a polished experience. Data is stored in PostgreSQL and managed with Prisma and an Express API."
-      },
-      "card": {
-        "code": "Code",
-        "link": "Link",
-        "video": "Video"
-      }
-    },
-    "contact": {
-      "title": "Let's Connect",
-      "intro": "I'm open to new opportunities and collaborations. Feel free to send me a message using the form below or email me directly at <1>mendresvon@gmail.com</1>.",
-      "form": {
-        "name": "Your Name",
-        "email": "Your Email",
-        "message": "Your Message",
-        "submit": "Send Message"
-      },
-      "submitted": {
-        "title": "Thank you!",
-        "message": "Your message has been sent. I'll get back to you shortly."
-      }
-    },
-    "footer": {
-      "rights": "All Rights Reserved."
+  "navbar": {
+    "about": "About Me",
+    "skills": "Education & Skills",
+    "projects": "Project Portfolio",
+    "contact": "Contact Me"
+  },
+  "hero": {
+    "name": "Von Breznev A. Mendres",
+    "tagline": "with a Passion for Learning and Building Scalable Solutions",
+    "roles": {
+      "1": "Computer Science Student",
+      "2": "Part-Time Teacher",
+      "3": "Future AI/ML Engineer",
+      "4": "Aspiring Software Engineer"
     }
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Hi, I’m Von Mendres, currently a 3rd-year Computer Science student at Southern Taiwan University of Science and Technology (STUST). I’m passionate about exploring new technologies and keeping up with the latest trends in the tech world.",
+    "p2": "Right now, I’m focused on building a strong foundation in software development and artificial intelligence while continuously challenging myself through projects and research. My current goal is to secure an internship in Taiwan that will allow me to apply my skills, learn from industry professionals, and prepare for a future career in top tech companies.",
+    "p3": "I believe in continuous growth, whether it’s through coding, problem-solving, or collaborating with others. Technology is always evolving, and so am I."
+  },
+  "skills": {
+    "qualificationsTitle": "Qualifications",
+    "technicalSkillsTitle": "Technical Skills",
+    "education": {
+      "title": "Southern Taiwan University of Science and Technology",
+      "degree": "B.S. in Computer Science and Information Engineering"
+    },
+    "coursework": {
+      "title": "Harvard University"
+    },
+    "certifications": {
+      "title": "Industry Certifications"
+    },
+    "categories": {
+      "languages": "Languages",
+      "ai_ml": "AI & Machine Learning",
+      "web_dev": "Web Development",
+      "tools": "Tools & Technologies"
+    }
+  },
+  "projects": {
+    "title": "Project Portfolio",
+    "skyvision": {
+      "title": "SkyVision AI",
+      "introduction": "Built and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
+      "description": "This project fine-tunes a ResNet34 model using FastAI and PyTorch, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "introduction": "Designed and developed a modern, fully responsive portfolio website to showcase my skills, experience, and projects.",
+      "description": "Built from scratch with Next.js and TypeScript, this site emphasizes performance and accessibility. It features smooth animations with Framer Motion, a clean Tailwind CSS layout, and is deployed on Vercel, serving as my professional hub online."
+    },
+    "traffic_light": {
+      "title": "Voice-Controlled Smart Traffic Light",
+      "introduction": "Created an IoT prototype traffic light system that responds to voice commands in real time.",
+      "description": "A mobile app captures voice commands and sends them via MQTT to a Raspberry Pi Pico W, which controls LEDs to simulate traffic signals. This project demonstrates my ability to combine voice recognition, wireless communication, and embedded systems for interactive hardware solutions."
+    },
+    "aura_notes": {
+      "title": "Aura Notes",
+      "introduction": "Developed a secure, full-stack note-taking application with authentication and smooth animations.",
+      "description": "This MERN app features JWT-based authentication, a stylish glassmorphism UI built with Tailwind CSS and React, and animated transitions powered by Framer Motion. Notes are stored in MongoDB with a Node.js/Express API for reliable data management."
+    },
+    "filmfolio": {
+      "title": "FilmFolio",
+      "introduction": "Built a secure, full-stack movie watchlist application with user authentication and a polished, animated interface.",
+      "description": "FilmFolio uses the TMDB API for real-time movie search and lets users create custom watchlists. It features JWT authentication, a clean glassmorphism UI with CSS Modules, and Framer Motion animations for a polished experience. Data is stored in PostgreSQL and managed with Prisma and an Express API."
+    },
+    "card": {
+      "code": "Code",
+      "link": "Link",
+      "video": "Video"
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "intro": "I'm open to new opportunities and collaborations. Feel free to send me a message using the form below or email me directly at <1>mendresvon@gmail.com</1>.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message"
+    },
+    "submitted": {
+      "title": "Thank you!",
+      "message": "Your message has been sent. I'll get back to you shortly."
+    }
+  },
+  "footer": {
+    "rights": "All Rights Reserved."
   }
 }
-

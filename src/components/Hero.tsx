@@ -5,23 +5,22 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { useTranslation } from "react-i18next";
 
-// 1. Define props to accept the state setter
 interface HeroProps {
   setIsGlowActive: (isActive: boolean) => void;
 }
 
 export default function Hero({ setIsGlowActive }: HeroProps) {
+  const { t } = useTranslation();
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
-      // 2. Add mouse event handlers here
       onMouseEnter={() => setIsGlowActive(true)}
       onMouseLeave={() => setIsGlowActive(false)}
     >
-      {/* The GlowingCursor component is no longer here */}
-
       {/* Video Background */}
       <video
         autoPlay
@@ -41,8 +40,9 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold text-white"
+          suppressHydrationWarning={true}
         >
-          Von Breznev A. Mendres
+          {t('hero.name')}
         </motion.h1>
 
         <motion.p
@@ -50,13 +50,14 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-4 text-lg md:text-xl text-gray-300"
+          suppressHydrationWarning={true}
         >
           <TypeAnimation
             sequence={[
-              "Computer Science Student", 3000,
-              "Part-Time Teacher", 3000,
-              "Future AI/ML Engineer", 3000,
-              "Aspiring Software Engineer", 3000,
+              t('hero.roles.1'), 3000,
+              t('hero.roles.2'), 3000,
+              t('hero.roles.3'), 3000,
+              t('hero.roles.4'), 3000,
             ]}
             wrapper="span"
             speed={50}
@@ -64,7 +65,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
             repeat={Infinity}
           />{" "}
           <br />
-          with a Passion for Learning and Building Scalable Solutions
+          {t('hero.tagline')}
         </motion.p>
 
         <motion.div

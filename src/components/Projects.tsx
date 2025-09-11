@@ -29,9 +29,9 @@ export default function Projects() {
       repoUrl: "https://github.com/mendresvon/von-portfolio-v2",
     },
     {
-      title: t("projects.trafficLight.title"),
-      introduction: t("projects.trafficLight.introduction"),
-      description: t("projects.trafficLight.description"),
+      title: t("projects.traffic_light.title"),
+      introduction: t("projects.traffic_light.introduction"),
+      description: t("projects.traffic_light.description"),
       imageUrl: "/traffic-light.jpeg",
       techStack: ["Raspberry Pi", "MicroPython", "C", "MQTT", "Mobile Development"],
       repoUrl:
@@ -39,9 +39,9 @@ export default function Projects() {
       videoUrl: "https://youtu.be/nRs0o199rpQ",
     },
     {
-      title: t("projects.auraNotes.title"),
-      introduction: t("projects.auraNotes.introduction"),
-      description: t("projects.auraNotes.description"),
+      title: t("projects.aura_notes.title"),
+      introduction: t("projects.aura_notes.introduction"),
+      description: t("projects.aura_notes.description"),
       imageUrl: "/aura-notes-ss.jpeg",
       techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS", "Framer Motion"],
       liveUrl: "https://aura-notes-xi.vercel.app/login",
@@ -67,7 +67,9 @@ export default function Projects() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl font-bold text-center mb-12">{t("projects.title")}</h2>
+        <h2 className="text-5xl font-bold text-center mb-12" suppressHydrationWarning={true}>
+          {t("projects.title")}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {projectsData.map((project) => (
@@ -78,4 +80,3 @@ export default function Projects() {
     </motion.section>
   );
 }
-

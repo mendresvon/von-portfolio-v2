@@ -43,8 +43,8 @@ export default function Contact() {
   if (submitted) {
     return (
       <section id="contact" className="py-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">{t("contact.submitted.title")}</h2>
-        <p className="text-lg text-gray-300">{t("contact.submitted.message")}</p>
+        <h2 className="text-3xl font-bold mb-4" suppressHydrationWarning={true}>{t("contact.submitted.title")}</h2>
+        <p className="text-lg text-gray-300" suppressHydrationWarning={true}>{t("contact.submitted.message")}</p>
       </section>
     );
   }
@@ -58,8 +58,8 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
-        <h2 className="text-5xl font-bold mb-8">{t("contact.title")}</h2>
-        <p className="text-gray-400 mb-8">
+        <h2 className="text-5xl font-bold mb-8" suppressHydrationWarning={true}>{t("contact.title")}</h2>
+        <p className="text-gray-400 mb-8" suppressHydrationWarning={true}>
           <Trans i18nKey="contact.intro">
             I&apos;m open to new opportunities and collaborations. Feel free to send me a message
             using the form below or email me directly at{" "}
@@ -128,7 +128,9 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-purple-500/40 transition-all duration-300 ease-in-out">
+            className="bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-purple-500/40 transition-all duration-300 ease-in-out"
+            suppressHydrationWarning={true}
+          >
             {t("contact.form.submit")}
           </button>
         </form>
@@ -136,4 +138,3 @@ export default function Contact() {
     </motion.section>
   );
 }
-

@@ -4,8 +4,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarProps {
   setIsGlowActive: (isActive: boolean) => void;
@@ -40,24 +40,23 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
       onMouseLeave={() => setIsGlowActive(false)}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen ? "bg-gray-900/80 backdrop-blur-sm shadow-md" : "bg-transparent"
-      }`}
-    >
+      }`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="font-bold text-lg">
-          <Link href="#hero">{t('hero.name')}</Link>
+        <div className="font-bold text-lg" suppressHydrationWarning={true}>
+          <Link href="#hero">Von Mendres「馬盛中」</Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#about" className="hover:text-purple-500">
-            {t('navbar.about')}
+          <Link href="#about" className="hover:text-purple-500" suppressHydrationWarning={true}>
+            {t("navbar.about")}
           </Link>
-          <Link href="#skills" className="hover:text-purple-500">
-            {t('navbar.skills')}
+          <Link href="#skills" className="hover:text-purple-500" suppressHydrationWarning={true}>
+            {t("navbar.skills")}
           </Link>
-          <Link href="#projects" className="hover:text-purple-500">
-            {t('navbar.projects')}
+          <Link href="#projects" className="hover:text-purple-500" suppressHydrationWarning={true}>
+            {t("navbar.projects")}
           </Link>
-          <Link href="#contact" className="hover:text-purple-500">
-            {t('navbar.contact')}
+          <Link href="#contact" className="hover:text-purple-500" suppressHydrationWarning={true}>
+            {t("navbar.contact")}
           </Link>
           <LanguageSwitcher />
         </div>
@@ -71,17 +70,33 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
-            <Link href="#about" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              {t('navbar.about')}
+            <Link
+              href="#about"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-purple-500"
+              suppressHydrationWarning={true}>
+              {t("navbar.about")}
             </Link>
-            <Link href="#skills" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              {t('navbar.skills')}
+            <Link
+              href="#skills"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-purple-500"
+              suppressHydrationWarning={true}>
+              {t("navbar.skills")}
             </Link>
-            <Link href="#projects" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              {t('navbar.projects')}
+            <Link
+              href="#projects"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-purple-500"
+              suppressHydrationWarning={true}>
+              {t("navbar.projects")}
             </Link>
-            <Link href="#contact" onClick={handleLinkClick} className="text-lg hover:text-purple-500">
-              {t('navbar.contact')}
+            <Link
+              href="#contact"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-purple-500"
+              suppressHydrationWarning={true}>
+              {t("navbar.contact")}
             </Link>
           </div>
         </div>

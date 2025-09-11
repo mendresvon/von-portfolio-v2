@@ -49,8 +49,8 @@ import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
 const educationData = (t: any) => ([
   {
     icon: <FaGraduationCap />,
-    title: "Southern Taiwan University of Science and Technology",
-    degree: t('skills.educationDegree'),
+    title: t('skills.education.title'),
+    degree: t('skills.education.degree'),
   },
 ]);
 
@@ -104,7 +104,8 @@ const certificationsData = () => ([
 
 const skillsData = (t: any) => ([
   {
-    category: t('skills.languages'),
+    id: "languages",
+    category: t('skills.categories.languages'),
     categoryIcon: <FaCode />,
     skills: [
       { name: "Python", icon: <FaPython /> },
@@ -117,7 +118,8 @@ const skillsData = (t: any) => ([
     ],
   },
   {
-    category: t('skills.ai_ml'),
+    id: "ai_ml",
+    category: t('skills.categories.ai_ml'),
     categoryIcon: <FaBrain />,
     skills: [
       { name: "PyTorch", icon: <SiPytorch /> },
@@ -130,7 +132,8 @@ const skillsData = (t: any) => ([
     ],
   },
   {
-    category: t('skills.web_dev'),
+    id: "web_dev",
+    category: t('skills.categories.web_dev'),
     categoryIcon: <FaGlobe />,
     skills: [
       { name: "Express", icon: <FaCode /> },
@@ -143,7 +146,8 @@ const skillsData = (t: any) => ([
     ],
   },
   {
-    category: t('skills.tools'),
+    id: "tools",
+    category: t('skills.categories.tools'),
     categoryIcon: <FaTools />,
     skills: [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
@@ -203,7 +207,7 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
     <div className="card-glow" />
     <div className="flex flex-col items-center text-center">
       <div className="text-purple-400 text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+      <h3 className="text-2xl font-bold text-white mb-2" suppressHydrationWarning={true}>{title}</h3>
       <div className="text-gray-300 text-lg">{children}</div>
     </div>
   </motion.div>
@@ -237,21 +241,23 @@ export default function Skills() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6 }}>
-          {t('skills.title')}
+          transition={{ duration: 0.6 }}
+          suppressHydrationWarning={true}
+        >
+          {t('skills.qualificationsTitle')}
         </motion.h2>
 
         {/* --- Education, Coursework & Certs Section --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
           {/* Education Card */}
           <InfoCard icon={educationData(t)[0].icon} title={educationData(t)[0].title} index={0}>
-            <p>
+            <p suppressHydrationWarning={true}>
               <strong>B.S.</strong> {educationData(t)[0].degree}
             </p>
           </InfoCard>
 
           {/* Coursework Card */}
-          <InfoCard icon={courseworkData()[0].icon} title={t('skills.courseworkTitle')} index={1}>
+          <InfoCard icon={courseworkData()[0].icon} title={t('skills.coursework.title')} index={1}>
             <ul className="space-y-2">
               {courseworkData()[0].items.map((item) => (
                 <li key={item.courseName}>
@@ -268,7 +274,7 @@ export default function Skills() {
           </InfoCard>
 
           {/* Certifications Card */}
-          <InfoCard icon={certificationsData()[0].icon} title={t('skills.certificationsTitle')} index={2}>
+          <InfoCard icon={certificationsData()[0].icon} title={t('skills.certifications.title')} index={2}>
             <ul className="space-y-2">
               {certificationsData()[0].items.map((item) => (
                 <li key={item.name}>
@@ -293,21 +299,25 @@ export default function Skills() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}>
-          {t('skills.techSkillsTitle')}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          suppressHydrationWarning={true}
+        >
+          {t('skills.technicalSkillsTitle')}
         </motion.h3>
 
-        <div className="grid grid-cols-1 md-grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillsData(t).map((categoryData, i) => (
             <motion.div
-              key={categoryData.category}
-              custom={i + 3} // Continue animation delay
+              key={categoryData.id}
+              custom={i + 3}
               variants={cardVariants}
               className="group relative backdrop-blur-md bg-gradient-to-br from-indigo-950/50 to-black/90 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-purple-400/50">
               <div className="card-glow" />
               <motion.h3
                 className="text-2xl mb-6 text-white flex items-center justify-center gap-3 border-b border-purple-500/30 pb-3"
-                transition={{ duration: 0.2 }}>
+                transition={{ duration: 0.2 }}
+                suppressHydrationWarning={true}
+              >
                 {categoryData.categoryIcon}
                 {categoryData.category}
               </motion.h3>
