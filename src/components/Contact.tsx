@@ -43,8 +43,12 @@ export default function Contact() {
   if (submitted) {
     return (
       <section id="contact" className="py-20 text-center">
-        <h2 className="text-3xl font-bold mb-4" suppressHydrationWarning={true}>{t("contact.submitted.title")}</h2>
-        <p className="text-lg text-gray-300" suppressHydrationWarning={true}>{t("contact.submitted.message")}</p>
+        <h2 className="text-3xl font-bold mb-4" suppressHydrationWarning={true}>
+          {t("contact.submitted.title")}
+        </h2>
+        <p className="text-lg text-gray-300" suppressHydrationWarning={true}>
+          {t("contact.submitted.message")}
+        </p>
       </section>
     );
   }
@@ -58,18 +62,23 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6 max-w-2xl text-center">
-        <h2 className="text-5xl font-bold mb-8" suppressHydrationWarning={true}>{t("contact.title")}</h2>
+        <h2 className="text-5xl font-bold mb-8" suppressHydrationWarning={true}>
+          {t("contact.title")}
+        </h2>
         <p className="text-gray-400 mb-8" suppressHydrationWarning={true}>
-          <Trans i18nKey="contact.intro">
+          <Trans
+            i18nKey="contact.intro"
+            components={{
+              1: (
+                <a
+                  href="mailto:mendresvon@gmail.com"
+                  target="_blank"
+                  className="text-purple-600 hover:underline font-semibold"
+                />
+              ),
+            }}>
             I&apos;m open to new opportunities and collaborations. Feel free to send me a message
             using the form below or email me directly at{" "}
-            <a
-              href="mailto:mendresvon@gmail.com"
-              target="_blank"
-              className="text-purple-600 hover:underline font-semibold">
-              mendresvon@gmail.com
-            </a>
-            .
           </Trans>
         </p>
 
@@ -129,8 +138,7 @@ export default function Contact() {
           <button
             type="submit"
             className="bg-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-purple-700 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-purple-500/40 transition-all duration-300 ease-in-out"
-            suppressHydrationWarning={true}
-          >
+            suppressHydrationWarning={true}>
             {t("contact.form.submit")}
           </button>
         </form>
