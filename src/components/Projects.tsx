@@ -37,7 +37,7 @@ const projectsData = [
     imageUrl: "/aura-notes-ss.jpeg",
     techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://aura-notes-xi.vercel.app/login",
-    repoUrl: "https://github.com/mendresvon/aura-notes-frontend",
+    repoUrl: "https://github.com/mendresvon/Aura-Notes", // <-- Updated Link
   },
   {
     title: "FilmFolio",
@@ -47,7 +47,7 @@ const projectsData = [
     imageUrl: "/filmfolio-ss.jpeg",
     techStack: ["PostgreSQL", "Express", "React", "Node.js", "Prisma", "JWT", "CSS Modules"],
     liveUrl: "https://filmfolio-mu.vercel.app/",
-    repoUrl: "https://github.com/mendresvon/filmfolio-frontend",
+    repoUrl: "https://github.com/mendresvon/FilmFolio", // <-- Updated Link
   },
 ];
 
@@ -55,12 +55,11 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-20 bg-black" // --- UPDATED THIS LINE ---
+      className="py-20 bg-black"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
-      {/* --- VIDEO BACKGROUND REMOVED --- */}
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-bold text-center mb-12">Project Portfolio</h2>
 
