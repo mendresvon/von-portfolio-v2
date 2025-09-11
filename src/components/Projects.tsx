@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 
 const projectsData = [
   {
-    title: "AI Image Classifier",
+    title: "SkyVision AI",
     introduction:
-      "Trained a model and built an AI application that can tell the difference between 3 classes of objects with 98% accuracy.",
+      "Built and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
     description:
-      "Image Classifier Web App is a deep learning project that can tell apart birds, airplanes, and even Superman with 98% accuracy. Built with a fine-tuned ResNet34 model and deployed on Hugging Face Spaces, it features an interactive web app where anyone can test the model in real time.",
+      "This project fine-tunes a ResNet34 model using FastAI and PyTorch, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills.",
     imageUrl: "/ai-classifier.png",
     techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Hugging Face", "ResNet"],
     liveUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman",
@@ -18,11 +18,22 @@ const projectsData = [
     videoUrl: "https://youtu.be/Gygq5JIcZ_o",
   },
   {
-    title: "Voice-Controlled Traffic Light",
+    title: "Personal Portfolio",
     introduction:
-      "Created a mini traffic light system that changes colors just by listening to voice commands through a mobile app.",
+      "Designed and developed a modern, fully responsive portfolio website to showcase my skills, experience, and projects.",
     description:
-      "Voice-Controlled Traffic Light is a prototype that lets you change traffic lights using voice commands. A mobile app captures your voice, sends it wirelessly, and a Raspberry Pi Pico W controls the LEDs to simulate real signals. The project shows how voice recognition and IoT can work together in an interactive way.",
+      "Built from scratch with Next.js and TypeScript, this site emphasizes performance and accessibility. It features smooth animations with Framer Motion, a clean Tailwind CSS layout, and is deployed on Vercel, serving as my professional hub online.",
+    imageUrl: "/portfolio-screenshot.png", //
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+    liveUrl: "https://von-mendres-portfolio.vercel.app/",
+    repoUrl: "https://github.com/mendresvon/von-portfolio-v2",
+  },
+  {
+    title: "Voice-Controlled Smart Traffic Light",
+    introduction:
+      "Created an IoT prototype traffic light system that responds to voice commands in real time.",
+    description:
+      "A mobile app captures voice commands and sends them via MQTT to a Raspberry Pi Pico W, which controls LEDs to simulate traffic signals. This project demonstrates my ability to combine voice recognition, wireless communication, and embedded systems for interactive hardware solutions.",
     imageUrl: "/traffic-light.jpeg",
     techStack: ["Raspberry Pi", "MicroPython", "C", "MQTT", "Mobile Development"],
     repoUrl:
@@ -31,23 +42,25 @@ const projectsData = [
   },
   {
     title: "Aura Notes",
-    introduction: "A sleek and secure note-taking application with a log-in feature.",
+    introduction:
+      "Developed a secure, full-stack note-taking application with authentication and smooth animations.",
     description:
-      "Aura Notes is a full-stack MERN app for creating, editing, and organizing notes. It features JWT-secured authentication, a sleek glassmorphism UI with React + Tailwind, and smooth Framer Motion animations, backed by a Node.js/Express API and MongoDB for persistent storage.",
+      "This MERN app features JWT-based authentication, a stylish glassmorphism UI built with Tailwind CSS and React, and animated transitions powered by Framer Motion. Notes are stored in MongoDB with a Node.js/Express API for reliable data management.",
     imageUrl: "/aura-notes-ss.jpeg",
     techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://aura-notes-xi.vercel.app/login",
-    repoUrl: "https://github.com/mendresvon/Aura-Notes", // <-- Updated Link
+    repoUrl: "https://github.com/mendresvon/Aura-Notes",
   },
   {
     title: "FilmFolio",
-    introduction: "A watchlist tracker to keep track of movies you want to watch.",
+    introduction:
+      "Built a secure, full-stack movie watchlist application with user authentication and a polished, animated interface",
     description:
-      "FilmFolio is a web app that helps you discover, save, and organize movies into custom watchlists. It features real-time movie search powered by the TMDB API and a simple, user-friendly design for keeping track of what you want to watch next.",
+      "FilmFolio uses the TMDB API for real-time movie search and lets users create custom watchlists. It features JWT authentication, a clean glassmorphism UI with CSS Modules, and Framer Motion animations for a polished experience. Data is stored in PostgreSQL and managed with Prisma and an Express API.",
     imageUrl: "/filmfolio-ss.jpeg",
     techStack: ["PostgreSQL", "Express", "React", "Node.js", "Prisma", "JWT", "CSS Modules"],
     liveUrl: "https://filmfolio-mu.vercel.app/",
-    repoUrl: "https://github.com/mendresvon/FilmFolio", // <-- Updated Link
+    repoUrl: "https://github.com/mendresvon/FilmFolio",
   },
 ];
 
