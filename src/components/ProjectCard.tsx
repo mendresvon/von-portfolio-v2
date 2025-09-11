@@ -1,7 +1,7 @@
 // src/components/ProjectCard.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaExternalLinkAlt, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaGlobe, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 interface ProjectCardProps {
@@ -77,7 +77,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.liveUrl}
                 target="_blank"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                <FaExternalLinkAlt size={20} /> Live Demo
+                <FaGlobe size={20} /> Link
               </Link>
             )}
             {project.videoUrl && (
