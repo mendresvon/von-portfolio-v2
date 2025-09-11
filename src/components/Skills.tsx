@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { IconContext } from "react-icons";
 import { ReactNode } from "react";
 import { useTranslation } from 'react-i18next';
+import { TFunction } from "i18next"; // <-- IMPORT THE CORRECT TYPE
 
 // --- ICONS ---
 import {
@@ -46,7 +47,7 @@ import {
 import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
 
 // --- DATA STRUCTURES (Now using t function) ---
-const educationData = (t: any) => ([
+const educationData = (t: TFunction) => ([ // <-- USE TFunction TYPE
   {
     icon: <FaGraduationCap />,
     title: t('skills.education.title'),
@@ -102,7 +103,7 @@ const certificationsData = () => ([
   },
 ]);
 
-const skillsData = (t: any) => ([
+const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
   {
     id: "languages",
     category: t('skills.categories.languages'),
