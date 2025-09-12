@@ -1,4 +1,3 @@
-// src/components/ProjectCard.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaGlobe, FaYoutube } from "react-icons/fa";

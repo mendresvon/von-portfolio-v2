@@ -1,13 +1,13 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react"; // <-- Import hooks
+import { useState, useEffect } from "react";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
 
-  // This effect runs only once on the client, after the component has mounted.
+  // Ensures component is mounted on the client to prevent hydration mismatches.
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -16,9 +16,7 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
-  // Before the component is mounted, we can't know the client's language.
-  // To avoid a hydration mismatch, we render a static placeholder that
-  // exactly matches what the server would render (based on the 'en' fallback).
+  // Render a placeholder on the server to avoid a hydration mismatch.
   if (!isMounted) {
     return (
       <div className="flex items-center space-x-2">
@@ -32,7 +30,6 @@ const LanguageSwitcher = () => {
     );
   }
 
-  // After mounting, we can safely render the component with the correct client-side language.
   return (
     <div className="flex items-center space-x-2">
       <button

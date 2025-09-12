@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 "use client";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";

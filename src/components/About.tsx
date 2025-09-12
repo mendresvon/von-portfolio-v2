@@ -1,9 +1,8 @@
-// src/components/About.tsx
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function About() {
   const { t } = useTranslation();
@@ -17,10 +16,11 @@ export default function About() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}>
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl font-bold text-center mb-12" suppressHydrationWarning={true}>{t('about.title')}</h2>
+        <h2 className="text-5xl font-bold text-center mb-12" suppressHydrationWarning={true}>
+          {t("about.title")}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image Column */}
           <div className="flex justify-center">
             <Image
               src="/profile.png"
@@ -31,16 +31,15 @@ export default function About() {
             />
           </div>
 
-          {/* Text Column */}
           <div>
             <p className="text-xl text-gray-300 leading-relaxed mb-4" suppressHydrationWarning={true}>
-              {t('about.p1')}
+              {t("about.p1")}
             </p>
             <p className="text-xl text-gray-300 leading-relaxed mb-4" suppressHydrationWarning={true}>
-              {t('about.p2')}
+              {t("about.p2")}
             </p>
             <p className="text-xl text-gray-300 leading-relaxed" suppressHydrationWarning={true}>
-              {t('about.p3')}
+              {t("about.p3")}
             </p>
           </div>
         </div>

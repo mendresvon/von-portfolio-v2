@@ -1,4 +1,3 @@
-// src/components/Hero.tsx
 "use client";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -23,7 +22,6 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
       onMouseEnter={() => setIsGlowActive(true)}
       onMouseLeave={() => setIsGlowActive(false)}>
-      {/* Video Background */}
       <video
         autoPlay
         loop
@@ -34,7 +32,6 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
         Your browser does not support the video tag.
       </video>
 
-      {/* Content */}
       <div className="relative z-10 max-w-2xl px-4">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

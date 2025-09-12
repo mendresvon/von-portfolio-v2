@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 "use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
