@@ -33,7 +33,7 @@ export default function Projects() {
       introduction: t("projects.traffic_light.introduction"),
       description: t("projects.traffic_light.description"),
       imageUrl: "/traffic-light.jpeg",
-      techStack: ["ESP32", "Raspberry Pi", "MicroPython", "C", "MQTT", "Mobile Development"],
+      techStack: ["ESP32", "MicroPython", "C", "MQTT", "Mobile Development"],
       repoUrl:
         "https://github.com/mendresvon/Project-Portfolio/tree/main/Voice%20Controlled%20Traffic%20Control",
       videoUrl: "https://youtu.be/nRs0o199rpQ",

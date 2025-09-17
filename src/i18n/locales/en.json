@@ -56,7 +56,7 @@
     "traffic_light": {
       "title": "Voice-Controlled Smart Traffic Light",
       "introduction": "Created an IoT prototype traffic light system that responds to voice commands in real time.",
-      "description": "A mobile app captures voice commands and sends them via MQTT to an ESP32 / Raspberry Pi, which controls LEDs to simulate traffic signals. This project demonstrates my ability to combine voice recognition, wireless communication, and embedded systems for interactive hardware solutions."
+      "description": "A mobile app captures voice commands and sends them via MQTT to an ESP32, which controls LEDs to simulate traffic signals. This project demonstrates my ability to combine voice recognition, wireless communication, and embedded systems for interactive hardware solutions."
     },
     "aura_notes": {
       "title": "Aura Notes",
