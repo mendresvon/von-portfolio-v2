@@ -20,23 +20,23 @@ export default function Projects() {
       videoUrl: "https://youtu.be/Gygq5JIcZ_o",
     },
     {
-      title: t("projects.portfolio.title"),
-      introduction: t("projects.portfolio.introduction"),
-      description: t("projects.portfolio.description"),
-      imageUrl: "/portfolio-screenshot.png",
-      techStack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
-      liveUrl: "https://von-mendres-portfolio.vercel.app/",
-      repoUrl: "https://github.com/mendresvon/von-portfolio-v2",
-    },
-    {
       title: t("projects.traffic_light.title"),
       introduction: t("projects.traffic_light.introduction"),
       description: t("projects.traffic_light.description"),
       imageUrl: "/traffic-light.jpeg",
-      techStack: ["ESP32", "MicroPython", "C", "MQTT", "Mobile Development"],
+      techStack: ["C++", "ESP 32", "MQTT", "Embedded Systems", "Mobile App Development"],
       repoUrl:
         "https://github.com/mendresvon/Project-Portfolio/tree/main/Voice%20Controlled%20Traffic%20Control",
       videoUrl: "https://youtu.be/nRs0o199rpQ",
+    },
+    {
+      title: t("projects.portfolio.title"),
+      introduction: t("projects.portfolio.introduction"),
+      description: t("projects.portfolio.description"),
+      imageUrl: "/portfolio-screenshot.png",
+      techStack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "https://von-mendres-portfolio.vercel.app/",
+      repoUrl: "https://github.com/mendresvon/von-portfolio-v2",
     },
     {
       title: t("projects.aura_notes.title"),
@@ -44,8 +44,8 @@ export default function Projects() {
       description: t("projects.aura_notes.description"),
       imageUrl: "/aura-notes-ss.jpeg",
       techStack: [
-        "MongoDB",
         "JavaScript",
+        "MongoDB",
         "Express",
         "React",
         "Node.js",
@@ -62,8 +62,8 @@ export default function Projects() {
       description: t("projects.filmfolio.description"),
       imageUrl: "/filmfolio-ss.jpeg",
       techStack: [
-        "PostgreSQL",
         "JavaScript",
+        "PostgreSQL",
         "Express",
         "React",
         "Node.js",
