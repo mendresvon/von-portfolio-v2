@@ -4,7 +4,7 @@
 import { motion, Variants } from "framer-motion";
 import { IconContext } from "react-icons";
 import { ReactNode } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next"; // <-- IMPORT THE CORRECT TYPE
 
 // --- ICONS ---
@@ -38,7 +38,7 @@ import {
   SiNumpy,
   SiPandas,
   SiGitlab,
-  SiRaspberrypi,
+  SiKubernetes,
   SiHuggingface,
   SiC,
   SiPostgresql,
@@ -47,15 +47,16 @@ import {
 import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
 
 // --- DATA STRUCTURES (Now using t function) ---
-const educationData = (t: TFunction) => ([ // <-- USE TFunction TYPE
+const educationData = (t: TFunction) => [
+  // <-- USE TFunction TYPE
   {
     icon: <FaGraduationCap />,
-    title: t('skills.education.title'),
-    degree: t('skills.education.degree'),
+    title: t("skills.education.title"),
+    degree: t("skills.education.degree"),
   },
-]);
+];
 
-const courseworkData = () => ([
+const courseworkData = () => [
   {
     icon: <FaBookOpen />,
     title: "Harvard University",
@@ -77,9 +78,9 @@ const courseworkData = () => ([
       },
     ],
   },
-]);
+];
 
-const certificationsData = () => ([
+const certificationsData = () => [
   {
     icon: <FaCertificate />,
     title: "Industry Certifications",
@@ -101,12 +102,13 @@ const certificationsData = () => ([
       },
     ],
   },
-]);
+];
 
-const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
+const skillsData = (t: TFunction) => [
+  // <-- USE TFunction TYPE
   {
     id: "languages",
-    category: t('skills.categories.languages'),
+    category: t("skills.categories.languages"),
     categoryIcon: <FaCode />,
     skills: [
       { name: "Python", icon: <FaPython /> },
@@ -120,7 +122,7 @@ const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
   },
   {
     id: "ai_ml",
-    category: t('skills.categories.ai_ml'),
+    category: t("skills.categories.ai_ml"),
     categoryIcon: <FaBrain />,
     skills: [
       { name: "PyTorch", icon: <SiPytorch /> },
@@ -134,7 +136,7 @@ const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
   },
   {
     id: "web_dev",
-    category: t('skills.categories.web_dev'),
+    category: t("skills.categories.web_dev"),
     categoryIcon: <FaGlobe />,
     skills: [
       { name: "Express", icon: <FaCode /> },
@@ -148,7 +150,7 @@ const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
   },
   {
     id: "tools",
-    category: t('skills.categories.tools'),
+    category: t("skills.categories.tools"),
     categoryIcon: <FaTools />,
     skills: [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
@@ -157,10 +159,10 @@ const skillsData = (t: TFunction) => ([ // <-- USE TFunction TYPE
       { name: "GitHub", icon: <FaGithub /> },
       { name: "GitLab", icon: <SiGitlab /> },
       { name: "Docker", icon: <FaDocker /> },
-      { name: "Raspberry Pi", icon: <SiRaspberrypi /> },
+      { name: "Kubernetes", icon: <SiKubernetes /> },
     ],
   },
-]);
+];
 
 // --- ANIMATION VARIANTS ---
 const cardVariants: Variants = {
@@ -208,7 +210,9 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
     <div className="card-glow" />
     <div className="flex flex-col items-center text-center">
       <div className="text-purple-400 text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-white mb-2" suppressHydrationWarning={true}>{title}</h3>
+      <h3 className="text-2xl font-bold text-white mb-2" suppressHydrationWarning={true}>
+        {title}
+      </h3>
       <div className="text-gray-300 text-lg">{children}</div>
     </div>
   </motion.div>
@@ -243,9 +247,8 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
-          suppressHydrationWarning={true}
-        >
-          {t('skills.qualificationsTitle')}
+          suppressHydrationWarning={true}>
+          {t("skills.qualificationsTitle")}
         </motion.h2>
 
         {/* --- Education, Coursework & Certs Section --- */}
@@ -258,7 +261,7 @@ export default function Skills() {
           </InfoCard>
 
           {/* Coursework Card */}
-          <InfoCard icon={courseworkData()[0].icon} title={t('skills.coursework.title')} index={1}>
+          <InfoCard icon={courseworkData()[0].icon} title={t("skills.coursework.title")} index={1}>
             <ul className="space-y-2">
               {courseworkData()[0].items.map((item) => (
                 <li key={item.courseName}>
@@ -275,7 +278,10 @@ export default function Skills() {
           </InfoCard>
 
           {/* Certifications Card */}
-          <InfoCard icon={certificationsData()[0].icon} title={t('skills.certifications.title')} index={2}>
+          <InfoCard
+            icon={certificationsData()[0].icon}
+            title={t("skills.certifications.title")}
+            index={2}>
             <ul className="space-y-2">
               {certificationsData()[0].items.map((item) => (
                 <li key={item.name}>
@@ -301,9 +307,8 @@ export default function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          suppressHydrationWarning={true}
-        >
-          {t('skills.technicalSkillsTitle')}
+          suppressHydrationWarning={true}>
+          {t("skills.technicalSkillsTitle")}
         </motion.h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -317,8 +322,7 @@ export default function Skills() {
               <motion.h3
                 className="text-2xl mb-6 text-white flex items-center justify-center gap-3 border-b border-purple-500/30 pb-3"
                 transition={{ duration: 0.2 }}
-                suppressHydrationWarning={true}
-              >
+                suppressHydrationWarning={true}>
                 {categoryData.categoryIcon}
                 {categoryData.category}
               </motion.h3>
