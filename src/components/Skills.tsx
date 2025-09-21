@@ -155,11 +155,11 @@ const skillsData = (t: TFunction) => [
     skills: [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Docker", icon: <FaDocker /> },
+      { name: "Kubernetes", icon: <SiKubernetes /> },
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "GitLab", icon: <SiGitlab /> },
-      { name: "Docker", icon: <FaDocker /> },
-      { name: "Kubernetes", icon: <SiKubernetes /> },
     ],
   },
 ];
