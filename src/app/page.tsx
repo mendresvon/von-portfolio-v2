@@ -2,11 +2,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { I18nextProvider, useTranslation } from 'react-i18next';
-import i18n from '../i18n';
+import { I18nextProvider, useTranslation } from "react-i18next";
+import i18n from "../i18n";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
@@ -27,7 +28,7 @@ export default function Home() {
   const { t, i18n: i18n_translation } = useTranslation();
 
   useEffect(() => {
-    document.title = `${t('hero.name')} | Portfolio`;
+    document.title = `${t("hero.name")} | Portfolio`;
   }, [i18n_translation.language, t]);
 
   return (
@@ -38,6 +39,7 @@ export default function Home() {
         <Navbar setIsGlowActive={setIsGlowActive} />
         <Hero setIsGlowActive={setIsGlowActive} />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />

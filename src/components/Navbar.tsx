@@ -48,6 +48,12 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
           <Link href="#about" className="hover:text-purple-500" suppressHydrationWarning={true}>
             {t("navbar.about")}
           </Link>
+          <Link
+            href="#experience"
+            className="hover:text-purple-500"
+            suppressHydrationWarning={true}>
+            {t("navbar.experience")}
+          </Link>
           <Link href="#skills" className="hover:text-purple-500" suppressHydrationWarning={true}>
             {t("navbar.skills")}
           </Link>
@@ -75,6 +81,13 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
               className="text-lg hover:text-purple-500"
               suppressHydrationWarning={true}>
               {t("navbar.about")}
+            </Link>
+            <Link
+              href="#experience"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-purple-500"
+              suppressHydrationWarning={true}>
+              {t("navbar.experience")}
             </Link>
             <Link
               href="#skills"
