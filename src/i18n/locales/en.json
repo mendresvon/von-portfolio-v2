@@ -26,37 +26,71 @@
     "title": "Work Experience",
     "jobs": [
       {
-        "role": "AI Laboratory Member",
+        "role": "AI Laboratory Research Assistant",
         "company": "Southern Taiwan University of Technology",
         "period": "May 2025 - Present",
         "description": [
-          "Collaborate with post-graduate students on AI/ML projects.",
-          "Specialize in building LLM, RAG, NLP, Computer Vision & Image Recognition models.",
-          "Utilize PyTorch for training and developing deep learning models."
+          "Fine-tuned a Convolutional Neural Network (CNN) using PyTorch and FastAI for a multi-class image classification task, achieving 98% accuracy on the test set.",
+          "Developed and deployed the fine-tuned model as an end-to-end application on Hugging Face Spaces, creating an interactive demo for real-time inference.",
+          "Built practical computer vision utilities using OpenCV for object detection, implementing algorithms to identify and localize objects within static images."
         ],
-        "skills": ["PyTorch", "LLM", "RAG", "NLP", "Computer Vision", "Machine Learning"]
+        "skills": [
+          "PyTorch",
+          "FastAI",
+          "CNN",
+          "OpenCV",
+          "Hugging Face Spaces",
+          "Computer Vision",
+          "Machine Learning"
+        ]
       },
       {
-        "role": "Teacher of Life and Business English",
+        "role": "Life and Business English Teacher",
         "company": "ASPECT Interactive English",
         "period": "Oct 2023 - Present",
         "description": [
-          "Taught Business and Daily-Life English to Taiwanese Adults.",
-          "Designed lesson plans to accommodate industry trends.",
-          "Instructed working professionals, graduate students, and high school students."
+          "Instructed a diverse audience of working professionals, graduate students, college, and high-school students in Business and Daily English topics.",
+          "Designed and executed tailored lesson plans to meet specific industry needs and professional development goals of adult learners.",
+          "Distilled complex subject matter into clear, understandable, and engaging lessons, demonstrating strong communication and presentation skills."
         ],
-        "skills": ["Business English", "Class Management", "Lesson Planning"]
+        "skills": [
+          "Business English",
+          "Curriculum Design",
+          "Lesson Planning",
+          "Public Speaking",
+          "Communication"
+        ]
       },
       {
         "role": "English Language Teacher",
         "company": "Gram English",
-        "period": "Jan 2022 - Present",
+        "period": "Jan 2023 - Present",
         "description": [
-          "Developed a dynamic curriculum to improve students' oral fluency and confidence.",
-          "Planned and delivered engaging lessons for students from elementary to junior high.",
-          "Maintained a positive and disciplined classroom environment."
+          "Developed and implemented a specialized speaking curriculum from the ground up, focusing on improving student fluency, pronunciation, and confidence.",
+          "Adapted teaching materials and methodologies to effectively engage students across a wide range of ages (elementary to junior high school) and proficiency levels.",
+          "Managed classroom dynamics to foster a disciplined, supportive, and active learning environment."
         ],
-        "skills": ["Teaching English", "Curriculum Development", "Classroom Management"]
+        "skills": [
+          "English Teaching",
+          "Curriculum Development",
+          "Classroom Management",
+          "Public Speaking"
+        ]
+      },
+      {
+        "role": "English Language Teacher",
+        "company": "Joy English School",
+        "period": "Oct 2023 - Mar 2025",
+        "description": [
+          "Planned and delivered structured English lessons to young learners aged 6-15, simplifying concepts for effective learning.",
+          "Assessed student progress through quizzes and assignments, providing constructive feedback to support their development."
+        ],
+        "skills": [
+          "English Teaching",
+          "Lesson Planning",
+          "Student Assessment",
+          "Constructive Feedback"
+        ]
       }
     ]
   },
