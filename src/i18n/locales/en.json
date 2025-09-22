@@ -1,6 +1,7 @@
 {
   "navbar": {
     "about": "About Me",
+    "experience": "Experience",
     "skills": "Education & Skills",
     "projects": "Project Portfolio",
     "contact": "Contact Me"
@@ -20,6 +21,44 @@
     "p1": "Hi, I’m Von Mendres, currently a 3rd-year Computer Science student at Southern Taiwan University of Science and Technology (STUST). I’m passionate about exploring new technologies and keeping up with the latest trends in the tech world.",
     "p2": "Right now, I’m focused on building a strong foundation in software development and artificial intelligence while continuously challenging myself through projects and research. My current goal is to secure an internship in Taiwan that will allow me to apply my skills, learn from industry professionals, and prepare for a future career in top tech companies.",
     "p3": "I believe in continuous growth, whether it’s through coding, problem-solving, or collaborating with others. Technology is always evolving, and so am I."
+  },
+  "experience": {
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "role": "AI Laboratory Member",
+        "company": "Southern Taiwan University of Technology",
+        "period": "May 2025 - Present",
+        "description": [
+          "Collaborate with post-graduate students on AI/ML projects.",
+          "Specialize in building LLM, RAG, NLP, Computer Vision & Image Recognition models.",
+          "Utilize PyTorch for training and developing deep learning models."
+        ],
+        "skills": ["PyTorch", "LLM", "RAG", "NLP", "Computer Vision", "Machine Learning"]
+      },
+      {
+        "role": "Teacher of Life and Business English",
+        "company": "ASPECT Interactive English",
+        "period": "Oct 2023 - Present",
+        "description": [
+          "Taught Business and Daily-Life English to Taiwanese Adults.",
+          "Designed lesson plans to accommodate industry trends.",
+          "Instructed working professionals, graduate students, and high school students."
+        ],
+        "skills": ["Business English", "Class Management", "Lesson Planning"]
+      },
+      {
+        "role": "English Language Teacher",
+        "company": "Gram English",
+        "period": "Jan 2022 - Present",
+        "description": [
+          "Developed a dynamic curriculum to improve students' oral fluency and confidence.",
+          "Planned and delivered engaging lessons for students from elementary to junior high.",
+          "Maintained a positive and disciplined classroom environment."
+        ],
+        "skills": ["Teaching English", "Curriculum Development", "Classroom Management"]
+      }
+    ]
   },
   "skills": {
     "qualificationsTitle": "Qualifications",
