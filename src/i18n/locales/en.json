@@ -33,15 +33,6 @@
           "Fine-tuned a Convolutional Neural Network (CNN) using PyTorch and FastAI for a multi-class image classification task, achieving 98% accuracy on the test set.",
           "Developed and deployed the fine-tuned model as an end-to-end application on Hugging Face Spaces, creating an interactive demo for real-time inference.",
           "Built practical computer vision utilities using OpenCV for object detection, implementing algorithms to identify and localize objects within static images."
-        ],
-        "skills": [
-          "PyTorch",
-          "FastAI",
-          "CNN",
-          "OpenCV",
-          "Hugging Face Spaces",
-          "Computer Vision",
-          "Machine Learning"
         ]
       },
       {
@@ -52,13 +43,6 @@
           "Instructed a diverse audience of working professionals, graduate students, college, and high-school students in Business and Daily English topics.",
           "Designed and executed tailored lesson plans to meet specific industry needs and professional development goals of adult learners.",
           "Distilled complex subject matter into clear, understandable, and engaging lessons, demonstrating strong communication and presentation skills."
-        ],
-        "skills": [
-          "Business English",
-          "Curriculum Design",
-          "Lesson Planning",
-          "Public Speaking",
-          "Communication"
         ]
       },
       {
@@ -69,12 +53,6 @@
           "Developed and implemented a specialized speaking curriculum from the ground up, focusing on improving student fluency, pronunciation, and confidence.",
           "Adapted teaching materials and methodologies to effectively engage students across a wide range of ages (elementary to junior high school) and proficiency levels.",
           "Managed classroom dynamics to foster a disciplined, supportive, and active learning environment."
-        ],
-        "skills": [
-          "English Teaching",
-          "Curriculum Development",
-          "Classroom Management",
-          "Public Speaking"
         ]
       },
       {
@@ -84,12 +62,6 @@
         "description": [
           "Planned and delivered structured English lessons to young learners aged 6-15, simplifying concepts for effective learning.",
           "Assessed student progress through quizzes and assignments, providing constructive feedback to support their development."
-        ],
-        "skills": [
-          "English Teaching",
-          "Lesson Planning",
-          "Student Assessment",
-          "Constructive Feedback"
         ]
       }
     ]

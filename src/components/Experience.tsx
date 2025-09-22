@@ -10,7 +10,6 @@ interface Job {
   company: string;
   period: string;
   description: string[];
-  skills: string[];
 }
 
 // Define the type for the entire experience section data
@@ -84,21 +83,11 @@ export default function Experience() {
                   <span>{job.period}</span>
                 </div>
 
-                <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {job.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
-
-                <div className="flex flex-wrap gap-2">
-                  {job.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="bg-purple-900/50 text-purple-200 text-xs font-medium px-2.5 py-1 rounded-full">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </div>
             </motion.div>
           ))}
@@ -107,4 +96,3 @@ export default function Experience() {
     </motion.section>
   );
 }
-
