@@ -23,7 +23,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <Image
-              src="/profile.png"
+              src="/profile.jpg"
               alt="Von Mendres"
               width={400}
               height={400}
