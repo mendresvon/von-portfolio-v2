@@ -43,7 +43,7 @@ export default function Experience() {
   return (
     <motion.section
       id="experience"
-      className="py-20 bg-grid"
+      className="py-20 bg-grid-dark"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}>

@@ -224,11 +224,10 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="py-28 relative overflow-hidden bg-grid"
+      className="py-28 relative overflow-hidden bg-grid-dark"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}>
-      <div className="absolute inset-0 bg-slate-900/60 z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.h2

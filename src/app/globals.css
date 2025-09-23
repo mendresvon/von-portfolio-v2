@@ -26,3 +26,11 @@ body {
   background-size: 3rem 3rem;
   background-position: top center;
 }
+
+.bg-grid-dark {
+  background-color: #020617; /* bg-slate-950 */
+  background-image: linear-gradient(#1e293b 1px, transparent 1px),
+    linear-gradient(to right, #1e293b 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  background-position: top center;
+}
