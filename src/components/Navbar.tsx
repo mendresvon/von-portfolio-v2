@@ -45,22 +45,22 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
           <Link href="#hero">Von Mendres「馬盛中」</Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#about" className="hover:text-purple-500" suppressHydrationWarning={true}>
+          <Link href="#about" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.about")}
           </Link>
-          <Link href="#skills" className="hover:text-purple-500" suppressHydrationWarning={true}>
+          <Link href="#skills" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.skills")}
           </Link>
-          <Link href="#projects" className="hover:text-purple-500" suppressHydrationWarning={true}>
+          <Link href="#projects" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.projects")}
           </Link>
           <Link
             href="#experience"
-            className="hover:text-purple-500"
+            className="hover:text-teal-400 transition-colors"
             suppressHydrationWarning={true}>
             {t("navbar.experience")}
           </Link>
-          <Link href="#contact" className="hover:text-purple-500" suppressHydrationWarning={true}>
+          <Link href="#contact" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.contact")}
           </Link>
           <LanguageSwitcher />
@@ -78,35 +78,35 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
             <Link
               href="#about"
               onClick={handleLinkClick}
-              className="text-lg hover:text-purple-500"
+              className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.about")}
             </Link>
             <Link
               href="#experience"
               onClick={handleLinkClick}
-              className="text-lg hover:text-purple-500"
+              className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.experience")}
             </Link>
             <Link
               href="#skills"
               onClick={handleLinkClick}
-              className="text-lg hover:text-purple-500"
+              className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.skills")}
             </Link>
             <Link
               href="#projects"
               onClick={handleLinkClick}
-              className="text-lg hover:text-purple-500"
+              className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.projects")}
             </Link>
             <Link
               href="#contact"
               onClick={handleLinkClick}
-              className="text-lg hover:text-purple-500"
+              className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.contact")}
             </Link>

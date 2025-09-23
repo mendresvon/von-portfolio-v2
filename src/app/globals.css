@@ -4,40 +4,25 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #0f172a; /* bg-slate-900 */
+  color: #e2e8f0; /* text-slate-200 */
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.card-glow::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem; /* This must match the card's rounded-xl */
-  padding: 1px; /* This controls the thickness of the glow border */
-  background: conic-gradient(from 180deg at 50% 50%, #6b21a8, #3730a3, #86198f, #6b21a8);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Allows clicks to pass through the glow */
+.text-gradient {
+  background-image: linear-gradient(to right, #3b82f6, #2dd4bf); /* blue-500 to teal-400 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* This makes the glow visible when hovering the parent card (`group`) */
-.group:hover .card-glow::before {
-  opacity: 1;
+.bg-grid {
+  background-color: #0f172a; /* bg-slate-900 */
+  background-image: linear-gradient(#1e293b 1px, transparent 1px),
+    linear-gradient(to right, #1e293b 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  background-position: top center;
 }

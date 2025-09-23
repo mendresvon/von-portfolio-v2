@@ -33,6 +33,13 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
       </video>
 
       <div className="relative z-10 max-w-2xl px-4">
+        <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-lg md:text-xl font-mono mb-4 text-gradient">
+            Hi, my name is
+        </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +69,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
             ]}
             wrapper="span"
             speed={typingSpeed} // Use the dynamic speed here
-            className="font-semibold text-purple-400"
+            className="font-semibold text-gradient"
             repeat={Infinity}
           />{" "}
           <br />
@@ -78,21 +85,21 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
             href="https://www.linkedin.com/in/vonmendres/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition-colors">
+            className="text-gray-400 hover:text-teal-400 transition-colors">
             <FaLinkedin size={32} />
           </a>
           <a
             href="https://github.com/mendresvon"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors">
+            className="text-gray-400 hover:text-teal-400 transition-colors">
             <FaGithub size={32} />
           </a>
           <a
             href="mailto:mendresvon@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-red-500 transition-colors">
+            className="text-gray-400 hover:text-teal-400 transition-colors">
             <SiGmail size={32} />
           </a>
         </motion.div>

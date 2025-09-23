@@ -43,7 +43,7 @@ export default function Experience() {
   return (
     <motion.section
       id="experience"
-      className="py-20 bg-gray-900"
+      className="py-20 bg-grid"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}>
@@ -56,7 +56,7 @@ export default function Experience() {
           {experienceData.title}
         </motion.h2>
 
-        <div className="relative border-l-2 border-purple-500/30 pl-10">
+        <div className="relative border-l-2 border-teal-500/30 pl-10">
           {experienceData.jobs.map((job, index) => (
             <motion.div
               key={index}
@@ -67,11 +67,11 @@ export default function Experience() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}>
               {/* Timeline Dot */}
-              <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full bg-purple-500 ring-8 ring-gray-900"></div>
+              <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full bg-teal-500 ring-8 ring-slate-900"></div>
 
-              <div className="bg-gray-800/50 backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+              <div className="bg-gray-800/50 backdrop-blur-md p-6 rounded-lg shadow-lg hover:shadow-teal-500/20 transition-shadow duration-300">
                 <div className="flex items-center mb-2">
-                  <FaBriefcase className="text-purple-400 mr-3" />
+                  <FaBriefcase className="text-teal-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{job.role}</h3>
                 </div>
 

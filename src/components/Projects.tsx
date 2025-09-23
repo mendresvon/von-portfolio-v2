@@ -1,4 +1,3 @@
-// src/components/Projects.tsx
 "use client";
 
 import ProjectCard from "./ProjectCard";
@@ -79,7 +78,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-20 bg-black"
+      className="py-20 bg-grid"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

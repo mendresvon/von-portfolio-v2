@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="h-full">
       <div
         className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden flex flex-col h-full 
-                   transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/40">
+                   transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/40">
         {imageLinkUrl ? (
           <Link href={imageLinkUrl} target="_blank">
             <div className="relative w-full h-48 cursor-pointer group">
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-purple-900 text-purple-200 text-xs font-medium px-2 py-1 rounded-md">
+                  className="bg-sky-900 text-sky-200 text-xs font-medium px-2 py-1 rounded-md">
                   {tech}
                 </span>
               ))}

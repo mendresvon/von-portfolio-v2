@@ -10,19 +10,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-gray-300 py-8">
+    <footer className="bg-slate-900 text-gray-300 py-8">
       <div className="container mx-auto px-6 text-center">
         <div className="flex justify-center gap-6 mb-4">
           <Link
             href="https://github.com/mendresvon"
             target="_blank"
-            className="hover:text-white transition-colors">
+            className="hover:text-teal-400 transition-colors">
             <FaGithub size={28} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/vonmendres/"
             target="_blank"
-            className="hover:text-blue-500 transition-colors">
+            className="hover:text-teal-400 transition-colors">
             <FaLinkedin size={28} />
           </Link>
           <Link

@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
   if (!isMounted) {
     return (
       <div className="flex items-center space-x-2">
-        <button className="px-3 py-1 text-sm rounded-md transition-colors bg-purple-600 text-white">
+        <button className="px-3 py-1 text-sm rounded-md transition-colors bg-teal-600 text-white">
           EN
         </button>
         <button className="px-3 py-1 text-sm rounded-md transition-colors hover:bg-gray-700">
@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
         onClick={() => changeLanguage("en")}
         className={`px-3 py-1 text-sm rounded-md transition-colors ${
           i18n.language === "en" || i18n.language.startsWith("en-")
-            ? "bg-purple-600 text-white"
+            ? "bg-teal-600 text-white"
             : "hover:bg-gray-700"
         }`}>
         EN
@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
         onClick={() => changeLanguage("zh-TW")}
         className={`px-3 py-1 text-sm rounded-md transition-colors ${
           i18n.language === "zh-TW"
-            ? "bg-purple-600 text-white"
+            ? "bg-teal-600 text-white"
             : "hover:bg-gray-700"
         }`}>
         繁

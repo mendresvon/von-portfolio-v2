@@ -10,7 +10,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="py-20 bg-slate-950"
+      className="py-20 bg-grid"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
