@@ -5,7 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { IconContext } from "react-icons";
 import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { TFunction } from "i18next"; // <-- IMPORT THE CORRECT TYPE
+import { TFunction } from "i18next";
 
 // --- ICONS ---
 import {
@@ -48,7 +48,6 @@ import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
 
 // --- DATA STRUCTURES (Now using t function) ---
 const educationData = (t: TFunction) => [
-  // <-- USE TFunction TYPE
   {
     icon: <FaGraduationCap />,
     title: t("skills.education.title"),
@@ -105,7 +104,6 @@ const certificationsData = () => [
 ];
 
 const skillsData = (t: TFunction) => [
-  // <-- USE TFunction TYPE
   {
     id: "languages",
     category: t("skills.categories.languages"),
@@ -206,7 +204,7 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
   <motion.div
     custom={index}
     variants={cardVariants}
-    className="group relative backdrop-blur-md bg-gradient-to-br from-slate-900/50 to-black/80 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-teal-400/50">
+    className="group relative backdrop-blur-md bg-gradient-to-br from-slate-900/50 to-black/80 p-6 rounded-xl border border-teal-500/30 shadow-[0_0_10px_rgba(45,212,191,0.2)] h-full transition-all duration-300 hover:!scale-[1.03] hover:border-teal-400/70 hover:shadow-[0_0_25px_rgba(45,212,191,0.6)]">
     <div className="flex flex-col items-center text-center">
       <div className="text-teal-400 text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-white mb-2" suppressHydrationWarning={true}>
@@ -228,6 +226,7 @@ export default function Skills() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}>
+      <div className="absolute inset-0 bg-slate-900/60 z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.h2
@@ -306,7 +305,7 @@ export default function Skills() {
               key={categoryData.id}
               custom={i + 3}
               variants={cardVariants}
-              className="group relative backdrop-blur-md bg-gradient-to-br from-slate-900/50 to-black/80 p-6 rounded-xl shadow-2xl border border-white/10 h-full transition-all duration-300 hover:!scale-[1.03] hover:border-teal-400/50">
+              className="group relative backdrop-blur-md bg-gradient-to-br from-slate-900/50 to-black/80 p-6 rounded-xl border border-teal-500/30 shadow-[0_0_10px_rgba(45,212,191,0.2)] h-full transition-all duration-300 hover:!scale-[1.03] hover:border-teal-400/70 hover:shadow-[0_0_25px_rgba(45,212,191,0.6)]">
               <motion.h3
                 className="text-2xl mb-6 text-white flex items-center justify-center gap-3 border-b border-teal-500/30 pb-3"
                 transition={{ duration: 0.2 }}

@@ -26,8 +26,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="h-full">
       <div
-        className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden flex flex-col h-full 
-                   transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/40">
+        className="bg-gray-800/50 backdrop-blur-md rounded-lg overflow-hidden flex flex-col h-full 
+                   border border-teal-500/30 shadow-[0_0_10px_rgba(45,212,191,0.2)] transition-all duration-300 hover:border-teal-400/70 hover:shadow-[0_0_25px_rgba(45,212,191,0.6)]">
         {imageLinkUrl ? (
           <Link href={imageLinkUrl} target="_blank">
             <div className="relative w-full h-48 cursor-pointer group">
