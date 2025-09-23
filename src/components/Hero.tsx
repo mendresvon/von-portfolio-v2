@@ -32,7 +32,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
         Your browser does not support the video tag.
       </video>
 
-      <div className="relative z-10 max-w-2xl px-4">
+      <div className="relative z-10 max-w-6xl px-4">
         <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
