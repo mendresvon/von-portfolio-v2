@@ -17,8 +17,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const imageLinkUrl =
-    project.title === "Voice-Controlled Traffic Light" ? project.videoUrl : project.liveUrl;
+  // If a live URL exists, use it; otherwise, fall back to the video URL.
+  const imageLinkUrl = project.liveUrl ?? project.videoUrl;
 
   return (
     <motion.div
