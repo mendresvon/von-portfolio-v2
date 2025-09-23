@@ -114,7 +114,7 @@ export default function Contact() {
               name="name"
               placeholder={t("contact.form.name")}
               required
-              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-colors duration-300"
+              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-all duration-300"
             />
           </div>
           <div className="mb-4">
@@ -123,7 +123,7 @@ export default function Contact() {
               name="email"
               placeholder={t("contact.form.email")}
               required
-              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-colors duration-300"
+              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-all duration-300"
             />
           </div>
           <div className="mb-4">
@@ -132,11 +132,11 @@ export default function Contact() {
               placeholder={t("contact.form.message")}
               rows={5}
               required
-              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-colors duration-300"></textarea>
+              className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-transparent border border-gray-600 placeholder-gray-400 hover:border-teal-500 transition-all duration-300"></textarea>
           </div>
           <button
             type="submit"
-            className="bg-teal-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-700 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-teal-500/40 transition-all duration-300 ease-in-out"
+            className="bg-teal-600 text-white font-bold py-3 px-8 rounded-lg shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-[0_0_20px_rgba(45,212,191,0.7)]"
             suppressHydrationWarning={true}>
             {t("contact.form.submit")}
           </button>
