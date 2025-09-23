@@ -8,7 +8,7 @@
   },
   "hero": {
     "name": "Von Breznev A. Mendres",
-    "tagline": "with a Passion for Learning and Building Scalable Solutions",
+    "tagline": "\"The day you stop learning is the day you stop living.\"",
     "roles": [
       "Computer Science Student",
       "Part-Time Teacher",
@@ -18,9 +18,9 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "Hi, I’m Von Mendres, currently a 3rd-year Computer Science student at Southern Taiwan University of Science and Technology (STUST). I’m passionate about exploring new technologies and keeping up with the latest trends in the tech world.",
-    "p2": "Right now, I’m focused on building a strong foundation in software development and artificial intelligence while continuously challenging myself through projects and research. My current goal is to secure an internship in Taiwan that will allow me to apply my skills, learn from industry professionals, and prepare for a future career in top tech companies.",
-    "p3": "I believe in continuous growth, whether it’s through coding, problem-solving, or collaborating with others. Technology is always evolving, and so am I."
+    "p1": "Hi everyone, I’m Von, a Filipino student in Taiwan, currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
+    "p2": "Guided by my personal motto, “The day you stop learning is the day you stop living,” I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
+    "p3": "I am currently seeking an internship in Taiwan where I can apply my skills, collaborate with industry professionals, and gain hands-on experience to prepare myself for a career in Taiwan."
   },
   "experience": {
     "title": "Work Experience",
