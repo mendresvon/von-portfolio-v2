@@ -39,9 +39,9 @@ export default function Home() {
         <Navbar setIsGlowActive={setIsGlowActive} />
         <Hero setIsGlowActive={setIsGlowActive} />
         <About />
-        <Experience />
         <Skills />
         <Projects />
+        <Experience />
         <Contact />
         <Footer />
       </main>
