@@ -114,8 +114,7 @@ const skillsData = (t: TFunction) => [
       { name: "C++", icon: <TbBrandCpp /> },
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "HTML5", icon: <FaHtml5 /> },
-      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "HTML, CSS", icon: <FaHtml5 /> },
     ],
   },
   {
@@ -125,11 +124,9 @@ const skillsData = (t: TFunction) => [
     skills: [
       { name: "PyTorch", icon: <SiPytorch /> },
       { name: "OpenCV", icon: <SiOpencv /> },
+      { name: "FastAI", icon: <FaRocket /> },
       { name: "NumPy", icon: <SiNumpy /> },
       { name: "Pandas", icon: <SiPandas /> },
-      { name: "FastAI", icon: <FaRocket /> },
-      { name: "Matplotlib", icon: <TbMathFunction /> },
-      { name: "Hugging Face", icon: <SiHuggingface /> },
     ],
   },
   {
@@ -137,13 +134,13 @@ const skillsData = (t: TFunction) => [
     category: t("skills.categories.web_dev"),
     categoryIcon: <FaGlobe />,
     skills: [
-      { name: "Express", icon: <FaCode /> },
+      { name: "MERN, PERN Stack", icon: <FaCode /> },
       { name: "React", icon: <FaReact /> },
-      { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Django", icon: <SiDjango /> },
       { name: "Flask", icon: <SiFlask /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss /> },
       { name: "Bootstrap", icon: <FaBootstrap /> },
+      // { name: "CSS3", icon: <FaCss3Alt /> },
     ],
   },
   {
