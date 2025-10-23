@@ -63,17 +63,17 @@ const courseworkData = () => [
       {
         courseName: "Computer Science",
         courseCode: "CS50x",
-        url: "https://courses.edx.org/certificates/306e79cc5c8843e7894d757ea38da308",
+        url: "https://certificates.cs50.io/ca725574-9d0f-48d9-bd78-19fa78241779.pdf?size=letter",
       },
       {
         courseName: "Understanding Technology",
         courseCode: "CS50T",
-        url: "https://courses.edx.org/certificates/18eb1dee4f3941af862cc850041b24a1",
+        url: "https://certificates.cs50.io/af766a85-6434-42d1-b271-e04b39ccb6a1.pdf?size=letter",
       },
       {
         courseName: "Programming with Python",
         courseCode: "CS50P",
-        url: "https://courses.edx.org/certificates/ab4eafa8037c40bbb1c721c0067362af",
+        url: "https://certificates.cs50.io/e58bc053-4269-4012-8be6-41dd1d92af68.pdf?size=letter",
       },
     ],
   },
