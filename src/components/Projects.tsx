@@ -45,6 +45,7 @@ export default function Projects() {
       ],
       liveUrl: "https://filmfolio-mu.vercel.app/",
       repoUrl: "https://github.com/mendresvon/FilmFolio",
+      videoUrl: "https://youtu.be/T5hhrOQvQP8",
     },
     {
       title: t("projects.aura_notes.title"),
@@ -63,6 +64,7 @@ export default function Projects() {
       ],
       liveUrl: "https://aura-notes-xi.vercel.app/login",
       repoUrl: "https://github.com/mendresvon/Aura-Notes",
+      videoUrl: "https://youtu.be/9jRglvw2vF4",
     },
     {
       title: t("projects.portfolio.title"),
