@@ -76,7 +76,7 @@
     "title": "專案作品集",
     "skyvision": {
       "title": "SkyVision AI",
-      "introduction": "開發並部署了一個深度學習模型，能夠以98%的準確率對鳥、飛機和超人進行分類。",
+      "introduction": "訓練了一個深度學習模型並部署至線上，能以 98% 的準確率分類鳥、飛機和超人。",
       "description": "該專案使用 FastAI 和 PyTorch 訓練了一個 ResNet34 模型，並將其部署到 Hugging Face Spaces，搭配一個互動式的 Gradio Web 應用程式。使用者可以上傳圖片並即時測試模型，展現了實用的機器學習部署能力。"
     },
     "portfolio": {

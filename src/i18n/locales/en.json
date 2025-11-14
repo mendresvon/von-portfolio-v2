@@ -81,8 +81,8 @@
     "title": "Project Portfolio",
     "skyvision": {
       "title": "SkyVision AI",
-      "introduction": "Fine-tuned and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
-      "description": "This project fine-tunes a ResNet34 model using FastAI and PyTorch, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills."
+      "introduction": "Trained and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
+      "description": "This project trains a ResNet34 model using FastAI and PyTorch, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills."
     },
     "portfolio": {
       "title": "Personal Portfolio",
