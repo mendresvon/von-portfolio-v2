@@ -10,14 +10,12 @@ import { TFunction } from "i18next";
 // --- ICONS ---
 import {
   FaPython,
-  FaReact,
-  FaNodeJs,
+  FaJava,
   FaGitAlt,
   FaGithub,
   FaDocker,
   FaHtml5,
   FaCss3Alt,
-  FaBootstrap,
   FaBrain,
   FaCode,
   FaGlobe,
@@ -26,11 +24,10 @@ import {
   FaBookOpen,
   FaCertificate,
   FaRocket,
+  FaLayerGroup,
 } from "react-icons/fa";
 import {
-  SiTypescript,
   SiJavascript,
-  SiTailwindcss,
   SiDjango,
   SiFlask,
   SiPytorch,
@@ -39,14 +36,12 @@ import {
   SiPandas,
   SiGitlab,
   SiKubernetes,
-  SiHuggingface,
   SiC,
-  SiPostgresql,
   SiMongodb,
+  SiGithubactions,
 } from "react-icons/si";
-import { TbBrandCpp, TbMathFunction } from "react-icons/tb";
+import { TbBrandCpp, TbSql } from "react-icons/tb";
 
-// --- DATA STRUCTURES (Now using t function) ---
 const educationData = (t: TFunction) => [
   {
     icon: <FaGraduationCap />,
@@ -111,36 +106,10 @@ const skillsData = (t: TFunction) => [
     skills: [
       { name: "Python", icon: <FaPython /> },
       { name: "C", icon: <SiC /> },
-      { name: "C++", icon: <TbBrandCpp /> },
+      { name: "SQL", icon: <TbSql /> },
       { name: "JavaScript", icon: <SiJavascript /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "HTML, CSS", icon: <FaHtml5 /> },
-    ],
-  },
-  {
-    id: "ai_ml",
-    category: t("skills.categories.ai_ml"),
-    categoryIcon: <FaBrain />,
-    skills: [
-      { name: "PyTorch", icon: <SiPytorch /> },
-      { name: "OpenCV", icon: <SiOpencv /> },
-      { name: "FastAI", icon: <FaRocket /> },
-      { name: "NumPy", icon: <SiNumpy /> },
-      { name: "Pandas", icon: <SiPandas /> },
-    ],
-  },
-  {
-    id: "web_dev",
-    category: t("skills.categories.web_dev"),
-    categoryIcon: <FaGlobe />,
-    skills: [
-      { name: "MERN, PERN Stack", icon: <FaCode /> },
-      { name: "React", icon: <FaReact /> },
-      { name: "Django", icon: <SiDjango /> },
-      { name: "Flask", icon: <SiFlask /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-      { name: "Bootstrap", icon: <FaBootstrap /> },
-      // { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "C++", icon: <TbBrandCpp /> },
+      { name: "Java", icon: <FaJava /> },
     ],
   },
   {
@@ -148,18 +117,42 @@ const skillsData = (t: TFunction) => [
     category: t("skills.categories.tools"),
     categoryIcon: <FaTools />,
     skills: [
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "Docker", icon: <FaDocker /> },
-      { name: "Kubernetes", icon: <SiKubernetes /> },
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "GitLab", icon: <SiGitlab /> },
+      { name: "Docker", icon: <FaDocker /> },
+      { name: "Kubernetes", icon: <SiKubernetes /> },
+      { name: "GitHub Actions", icon: <SiGithubactions /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+    ],
+  },
+  {
+    id: "web_dev",
+    category: t("skills.categories.web_dev"),
+    categoryIcon: <FaGlobe />,
+    skills: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "MERN", icon: <FaLayerGroup /> },
+      { name: "PERN", icon: <FaLayerGroup /> },
+      { name: "Django", icon: <SiDjango /> },
+      { name: "Flask", icon: <SiFlask /> },
+    ],
+  },
+  {
+    id: "ai_ml",
+    category: t("skills.categories.ai_ml"),
+    categoryIcon: <FaBrain />,
+    skills: [
+      { name: "FastAI", icon: <FaRocket /> },
+      { name: "PyTorch", icon: <SiPytorch /> },
+      { name: "OpenCV", icon: <SiOpencv /> },
+      { name: "NumPy", icon: <SiNumpy /> },
+      { name: "Pandas", icon: <SiPandas /> },
     ],
   },
 ];
 
-// --- ANIMATION VARIANTS ---
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
@@ -188,7 +181,6 @@ const skillItemVariants: Variants = {
   },
 };
 
-// --- TYPES ---
 type InfoCardProps = {
   icon: ReactNode;
   title: string;
@@ -196,7 +188,6 @@ type InfoCardProps = {
   index: number;
 };
 
-// Reusable card for text-based content
 const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
   <motion.div
     custom={index}
@@ -212,7 +203,6 @@ const InfoCard = ({ icon, title, children, index }: InfoCardProps) => (
   </motion.div>
 );
 
-// --- MAIN COMPONENT ---
 export default function Skills() {
   const { t } = useTranslation();
 
