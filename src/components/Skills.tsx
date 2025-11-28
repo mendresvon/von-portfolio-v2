@@ -132,7 +132,6 @@ const skillsData = (t: TFunction) => [
       { name: "HTML", icon: <FaHtml5 /> },
       { name: "CSS", icon: <FaCss3Alt /> },
       { name: "MERN", icon: <FaLayerGroup /> },
-      { name: "PERN", icon: <FaLayerGroup /> },
       { name: "Flask", icon: <SiFlask /> },
     ],
   },
