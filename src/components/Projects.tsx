@@ -24,7 +24,7 @@ export default function Projects() {
       imageUrl: "/ai-classifier.png",
       techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Fine-Tuning"],
       liveUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman",
-      repoUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman/tree/main",
+      repoUrl: "https://github.com/mendresvon/sky-vision",
       videoUrl: "https://youtu.be/Gygq5JIcZ_o",
     },
     {
