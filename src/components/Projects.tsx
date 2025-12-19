@@ -9,11 +9,20 @@ export default function Projects() {
 
   const projectsData = [
     {
+      title: t("projects.pet_classifier.title"),
+      introduction: t("projects.pet_classifier.introduction"),
+      description: t("projects.pet_classifier.description"),
+      imageUrl: "/pet-classifier.jpg",
+      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Data Augmentation", "Fine-Tuning"],
+      liveUrl: "https://huggingface.co/spaces/breznev/pet-classifier",
+      repoUrl: "https://github.com/mendresvon/pet-classifier",
+    },
+    {
       title: t("projects.skyvision.title"),
       introduction: t("projects.skyvision.introduction"),
       description: t("projects.skyvision.description"),
       imageUrl: "/ai-classifier.png",
-      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Hugging Face", "ResNet"],
+      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Fine-Tuning"],
       liveUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman",
       repoUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman/tree/main",
       videoUrl: "https://youtu.be/Gygq5JIcZ_o",

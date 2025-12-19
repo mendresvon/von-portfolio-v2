@@ -79,6 +79,11 @@
   },
   "projects": {
     "title": "Project Portfolio",
+    "pet_classifier": {
+      "title": "AI Pet Species Classifier",
+      "introduction": "Boosted model accuracy from 77% to 98% by fine-tuning ResNet34 and optimizing hyperparameters.",
+      "description": "Engineered a high-performance image classifier using FastAI and PyTorch. Systematically improved model accuracy from a 77% baseline to 98% by implementing advanced data augmentation pipelines and utilizing a learning rate finder to optimize convergence. The final solution is deployed on Hugging Face Spaces with a responsive Gradio interface for real-time inference."
+    },
     "skyvision": {
       "title": "SkyVision AI",
       "introduction": "Trained and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
