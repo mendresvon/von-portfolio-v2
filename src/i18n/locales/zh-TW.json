@@ -76,8 +76,8 @@
     "title": "專案作品集",
     "pet_classifier": {
       "title": "AI 寵物物種辨識系統",
-      "introduction": "透過資料增強與超參數優化，將 ResNet34 模型準確率從 77% 大幅提升至 98%。",
-      "description": "使用 FastAI 與 PyTorch 微調 ResNet34 架構，開發高效能影像分類器。透過實作進階資料增強 (Data Augmentation) 策略並運用學習率尋找器 (Learning Rate Finder) 優化收斂過程，成功將模型準確率從 77% 基準提升至 98%。最終將解決方案部署至 Hugging Face Spaces，並提供 Gradio 互動式介面以進行即時推論。"
+      "introduction": "透過資料增強與超參數優化，將 ResNet34 模型準確率從 76% 大幅提升至 98%。",
+      "description": "使用 FastAI 與 PyTorch 微調 ResNet34 架構，開發高效能影像分類器。透過實作進階資料增強 (Data Augmentation) 策略並運用學習率尋找器 (Learning Rate Finder) 優化收斂過程，成功將模型準確率從 76% 基準提升至 98%。最終將解決方案部署至 Hugging Face Spaces，並提供 Gradio 互動式介面以進行即時推論。"
     },
     "skyvision": {
       "title": "SkyVision AI",
