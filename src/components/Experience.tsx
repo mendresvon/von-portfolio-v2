@@ -4,7 +4,6 @@ import { motion, Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaBuilding, FaCalendarAlt, FaBriefcase } from "react-icons/fa";
 
-// Define the type for a single job experience
 interface Job {
   role: string;
   company: string;
@@ -12,7 +11,6 @@ interface Job {
   description: string[];
 }
 
-// Define the type for the entire experience section data
 interface ExperienceData {
   title: string;
   jobs: Job[];
@@ -66,7 +64,6 @@ export default function Experience() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}>
-              {/* Timeline Dot */}
               <div className="absolute -left-2.5 mt-1.5 h-5 w-5 rounded-full bg-teal-500 ring-8 ring-slate-900"></div>
 
               <div className="bg-gray-800/50 backdrop-blur-md p-6 rounded-lg border border-teal-500/30 shadow-[0_0_10px_rgba(45,212,191,0.2)] transition-all duration-300 hover:border-teal-400/70 hover:shadow-[0_0_25px_rgba(45,212,191,0.6)]">

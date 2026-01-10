@@ -17,7 +17,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  // If a live URL exists, use it; otherwise, fall back to the video URL.
+  // fallback to video if no live link
   const imageLinkUrl = project.videoUrl ?? project.liveUrl;
 
   return (

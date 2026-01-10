@@ -1,4 +1,3 @@
-// src/app/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -14,7 +13,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import GlowingCursor from "@/components/GlowingCursor";
 
-// This component ensures the document's lang attribute is updated
+// update lang attr
 const LanguageUpdater = () => {
   const { i18n } = useTranslation();
   useEffect(() => {

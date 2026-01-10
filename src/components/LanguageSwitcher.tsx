@@ -7,7 +7,7 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
 
-  // Ensures component is mounted on the client to prevent hydration mismatches.
+  // prevent hydration mismatch
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
-  // Render a placeholder on the server to avoid a hydration mismatch.
+  // ssr placeholder
   if (!isMounted) {
     return (
       <div className="flex items-center space-x-2">

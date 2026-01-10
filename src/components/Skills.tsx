@@ -1,4 +1,3 @@
-// src/components/Skills.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion";
@@ -7,7 +6,6 @@ import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 
-// --- ICONS ---
 import {
   FaPython,
   FaJava,
@@ -220,16 +218,13 @@ export default function Skills() {
           {t("skills.qualificationsTitle")}
         </motion.h2>
 
-        {/* --- Education, Coursework & Certs Section --- */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-32">
-          {/* Education Card */}
           <InfoCard icon={educationData(t)[0].icon} title={educationData(t)[0].title} index={0}>
             <p suppressHydrationWarning={true}>
               <strong>B.S.</strong> {educationData(t)[0].degree}
             </p>
           </InfoCard>
 
-          {/* Coursework Card */}
           <InfoCard icon={courseworkData()[0].icon} title={t("skills.coursework.title")} index={1}>
             <ul className="space-y-2">
               {courseworkData()[0].items.map((item) => (
@@ -246,7 +241,6 @@ export default function Skills() {
             </ul>
           </InfoCard>
 
-          {/* Certifications Card */}
           <InfoCard
             icon={certificationsData()[0].icon}
             title={t("skills.certifications.title")}
@@ -269,7 +263,6 @@ export default function Skills() {
           </InfoCard>
         </div>
 
-        {/* --- Technical Skills Section --- */}
         <motion.h3
           className="text-5xl font-bold text-center mb-20 text-white drop-shadow-md"
           initial={{ opacity: 0 }}

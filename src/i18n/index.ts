@@ -20,17 +20,13 @@ i18n
   .init({
     resources,
     fallbackLng: "en",
-    // This property tells i18next which languages are supported.
-    // It helps the detector resolve regional codes (like 'en-US') to the base language ('en').
     supportedLngs: ["en", "zh-TW"],
-    // The detection object configures *how* the language is detected.
     detection: {
-      // Order of detection methods
       order: ["cookie", "localStorage", "navigator", "htmlTag", "path", "subdomain"],
       caches: ["cookie", "localStorage"],
     },
     interpolation: {
-      escapeValue: false, // React already safes from xss
+      escapeValue: false, // react handles xss
     },
   });
 

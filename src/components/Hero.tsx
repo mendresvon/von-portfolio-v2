@@ -13,7 +13,7 @@ interface HeroProps {
 export default function Hero({ setIsGlowActive }: HeroProps) {
   const { t, i18n } = useTranslation();
 
-  // Set a slower speed for Chinese to make it feel more natural
+  // slow down for zh-TW
   const typingSpeed = i18n.language === "zh-TW" ? 2 : 50;
 
   return (
@@ -68,7 +68,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
               1500,
             ]}
             wrapper="span"
-            speed={typingSpeed} // Use the dynamic speed here
+            speed={typingSpeed} // dynamic speed
             className="font-semibold text-gradient"
             repeat={Infinity}
           />{" "}
