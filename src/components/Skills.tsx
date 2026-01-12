@@ -37,6 +37,8 @@ import {
   SiC,
   SiMongodb,
   SiGithubactions,
+  SiRedis,
+  SiMqtt,
 } from "react-icons/si";
 import { TbBrandCpp, TbSql } from "react-icons/tb";
 
@@ -126,8 +128,8 @@ const skillsData = (t: TFunction) => [
     categoryIcon: <FaLayerGroup />,
     skills: [
       { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "Redis", icon: <FaRocket /> },
-      { name: "MQTT", icon: <FaRocket /> },
+      { name: "Redis", icon: <SiRedis /> },
+      { name: "MQTT", icon: <SiMqtt /> },
     ],
   },
   {
