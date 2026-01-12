@@ -106,8 +106,8 @@
     },
     "filmfolio": {
       "title": "FilmFolio",
-      "introduction": "Built a secure, full-stack movie watchlist application with user authentication and a polished, animated interface.",
-      "description": "FilmFolio uses the TMDB API for real-time movie search and lets users create custom watchlists. It features JWT authentication, a clean glassmorphism UI with CSS Modules, and Framer Motion animations for a polished experience. Data is stored in PostgreSQL and managed with Prisma and an Express API."
+      "introduction": "Built a cloud-native movie management system with automated CI/CD, Redis caching, and near-zero downtime deployment on GCP.",
+      "description": "A full-stack MERN application deployed on Google Cloud Platform's Cloud Run with Docker containers and automated CI/CD via GitHub Actions. Implements Redis Cache-aside pattern to accelerate queries across 1.3M TMDB movie records, reducing API latency and backend load. Features JWT authentication with GitHub Secrets and IAM for production security, frontend debouncing to reduce redundant requests by 50%+, and Cloud Logs monitoring for system health tracking. Achieves near-zero downtime with automatic scaling in the asia-east1 region."
     },
     "card": {
       "code": "Code",
