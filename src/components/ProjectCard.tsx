@@ -17,8 +17,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  // fallback to video if no live link
-  const imageLinkUrl = project.videoUrl ?? project.liveUrl;
+  // prioritize demo link, fallback to video if no demo
+  const imageLinkUrl = project.liveUrl ?? project.videoUrl;
 
   return (
     <motion.div
