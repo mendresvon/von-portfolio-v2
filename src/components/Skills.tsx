@@ -8,15 +8,10 @@ import { TFunction } from "i18next";
 
 import {
   FaPython,
-  FaJava,
   FaGitAlt,
-  FaGithub,
   FaDocker,
-  FaHtml5,
-  FaCss3Alt,
   FaBrain,
   FaCode,
-  FaGlobe,
   FaTools,
   FaGraduationCap,
   FaBookOpen,
@@ -26,15 +21,9 @@ import {
 } from "react-icons/fa";
 import {
   SiJavascript,
-  SiDjango,
-  SiFlask,
   SiPytorch,
   SiOpencv,
-  SiNumpy,
-  SiPandas,
-  SiGitlab,
   SiKubernetes,
-  SiC,
   SiMongodb,
   SiGithubactions,
   SiRedis,
