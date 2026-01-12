@@ -91,8 +91,8 @@
     },
     "traffic_light": {
       "title": "聲控智慧紅綠燈",
-      "introduction": "設計並製作了一個物聯網原型交通號誌系統，能夠即時響應語音命令。",
-      "description": "一個行動應用程式捕捉語音命令，並透過MQTT將其發送到ESP 32，由它控制LED來模擬交通信號。該專案展示了我結合語音識別、無線通訊和嵌入式系統以實現互動式硬體解決方案的能力。"
+      "introduction": "建立 IoT 邊緣控制系統，實現即時語音響應，克服嵌入式系統單執行緒限制。",
+      "description": "於號誌控制迴圈中整合 MQTT 訊息監聽，克服單執行緒限制，確保在執行 ESP32 燈號序列時仍能即時響應 Android 語音控制。自主開發 Android App 並整合 MQTT 非同步架構（選用 QoS 0）實現低延遲通訊。利用 MQTTx 監控指令流，確保語音指令由 Android 客戶端至 ESP32 控制端的精確傳輸。"
     },
     "aura_notes": {
       "title": "Aura Notes",
