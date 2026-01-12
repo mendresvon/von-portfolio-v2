@@ -101,8 +101,8 @@
     },
     "filmfolio": {
       "title": "FilmFolio",
-      "introduction": "開發了一款安全的全端電影待看清單應用程式，具有使用者驗證和精緻的動畫介面。",
-      "description": "FilmFolio使用TMDB API進行即時電影搜索，並讓使用者創建自定義的觀看清單。它採用JWT身份驗證、帶有CSS模組的簡潔玻璃擬態UI以及Framer Motion動畫，提供精緻的體驗。數據儲存在PostgreSQL中，並使用Prisma和Express API進行管理。"
+      "introduction": "建立雲端原生電影管理系統，整合自動化 CI/CD、Redis 快取，並於 GCP 實現近零停機部署。",
+      "description": "一款部署於 Google Cloud Platform Cloud Run 的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis Cache-aside Pattern 加速檢索 1.3M 筆 TMDB 電影資料，降低 API 延遲並減輕後端負載。整合 GitHub Secrets 與 IAM 進行 JWT 身份驗證以確保生產環境資安，前端實作 Debouncing 減少 50%+ 冗餘請求，並透過 Cloud Logs 監控系統健康度。於 asia-east1 區域實現近零停機時間與自動擴展。"
     },
     "card": {
       "code": "程式碼",
