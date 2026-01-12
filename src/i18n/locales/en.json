@@ -81,19 +81,11 @@
     "title": "Project Portfolio",
     "pet_classifier": {
       "title": "AI Pet Species Classifier",
-      "introduction": "Fine-tuned ResNet34 and optimized hyperparameters to boost model accuracy from 76% to 98%.",
-      "description": "Built an end-to-end image classifier using PyTorch and FastAI without relying on pre-built APIs. Improved model accuracy from a 76% baseline to 98% through data augmentation and learning rate optimization. Implemented model serialization and deployed the solution to Hugging Face Spaces with a Gradio web interface for real-time inference."
+      "introduction": "Built an image classifier to help pet shelters and veterinarians identify pet species with 98% accuracy using deep learning.",
+      "description": "Developed an end-to-end image classifier using PyTorch and FastAI without relying on pre-built APIs. Improved model accuracy from a 76% baseline to 98% through data augmentation and learning rate optimization. Implemented model serialization and deployed the solution to Hugging Face Spaces with a Gradio web interface for real-time inference."
     },
-    "skyvision": {
-      "title": "SkyVision AI",
-      "introduction": "Trained and deployed a deep learning model that classifies birds, airplanes, and Superman with 98% accuracy.",
-      "description": "This project trains a ResNet34 model using FastAI and PyTorch on a custom dataset scraped from Google Images, then deploys it to Hugging Face Spaces with an interactive Gradio web app. Users can upload images and test the model in real time, showcasing practical machine learning deployment skills."
-    },
-    "portfolio": {
-      "title": "Personal Portfolio",
-      "introduction": "Designed and developed a modern, fully responsive portfolio website to showcase my skills, experience, and projects.",
-      "description": "Built from scratch with Next.js and TypeScript, this site emphasizes performance and accessibility. It features smooth animations with Framer Motion, a clean Tailwind CSS layout, and is deployed on Vercel, serving as my professional hub online."
-    },
+
+
     "traffic_light": {
       "title": "Voice-Controlled Smart Traffic Light",
       "introduction": "Built an IoT edge control system with real-time voice response, overcoming single-thread limitations in embedded systems.",
@@ -101,12 +93,12 @@
     },
     "aura_notes": {
       "title": "Aura Notes",
-      "introduction": "Developed a secure, full-stack note-taking application with authentication and smooth animations.",
-      "description": "This MERN app features JWT-based authentication, a stylish glassmorphism UI built with Tailwind CSS and React, and animated transitions powered by Framer Motion. Notes are stored in MongoDB with a Node.js/Express API for reliable data management."
+      "introduction": "Developed a full-stack note-taking application inspired by Google Keep with dynamic note sizing and secure authentication.",
+      "description": "A MERN application featuring dynamic note sizing where note height adapts to content length, creating a responsive masonry layout inspired by Google Keep. Built with JWT authentication, MongoDB for data persistence, and a React frontend with Tailwind CSS and Framer Motion for smooth animations. The adaptive card layout demonstrates CSS Grid mastery and attention to UX detail."
     },
     "filmfolio": {
       "title": "FilmFolio",
-      "introduction": "Built a cloud-native movie management system with automated CI/CD, Redis caching, and near-zero downtime deployment on GCP.",
+      "introduction": "Built a cloud-native movie management system to help users discover and organize films with sub-second search performance and near-zero downtime.",
       "description": "A full-stack MERN application deployed on Google Cloud Platform's Cloud Run with Docker containers and automated CI/CD via GitHub Actions. Implements Redis Cache-aside pattern to accelerate queries across 1.3M TMDB movie records, reducing API latency and backend load. Features JWT authentication with GitHub Secrets and IAM for production security, frontend debouncing to reduce redundant requests by 50%+, and Cloud Logs monitoring for system health tracking. Achieves near-zero downtime with automatic scaling in the asia-east1 region."
     },
     "card": {

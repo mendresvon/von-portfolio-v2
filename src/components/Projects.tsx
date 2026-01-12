@@ -9,35 +9,6 @@ export default function Projects() {
 
   const projectsData = [
     {
-      title: t("projects.pet_classifier.title"),
-      introduction: t("projects.pet_classifier.introduction"),
-      description: t("projects.pet_classifier.description"),
-      imageUrl: "/pet-classifier.jpg",
-      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Data Augmentation", "Fine-Tuning"],
-      liveUrl: "https://huggingface.co/spaces/breznev/pet-classifier",
-      repoUrl: "https://github.com/mendresvon/pet-classifier",
-    },
-    {
-      title: t("projects.skyvision.title"),
-      introduction: t("projects.skyvision.introduction"),
-      description: t("projects.skyvision.description"),
-      imageUrl: "/ai-classifier.png",
-      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Fine-Tuning"],
-      liveUrl: "https://huggingface.co/spaces/breznev/bird-plane-superman",
-      repoUrl: "https://github.com/mendresvon/sky-vision",
-      videoUrl: "https://youtu.be/Gygq5JIcZ_o",
-    },
-    {
-      title: t("projects.traffic_light.title"),
-      introduction: t("projects.traffic_light.introduction"),
-      description: t("projects.traffic_light.description"),
-      imageUrl: "/traffic-light.jpeg",
-      techStack: ["C++", "ESP 32", "MQTT", "Embedded Systems", "Mobile App Development"],
-      repoUrl:
-        "https://github.com/mendresvon/Project-Portfolio/tree/main/Voice%20Controlled%20Traffic%20Control",
-      videoUrl: "https://youtu.be/nRs0o199rpQ",
-    },
-    {
       title: t("projects.filmfolio.title"),
       introduction: t("projects.filmfolio.introduction"),
       description: t("projects.filmfolio.description"),
@@ -59,6 +30,25 @@ export default function Projects() {
       videoUrl: "https://youtu.be/T5hhrOQvQP8",
     },
     {
+      title: t("projects.pet_classifier.title"),
+      introduction: t("projects.pet_classifier.introduction"),
+      description: t("projects.pet_classifier.description"),
+      imageUrl: "/pet-classifier.jpg",
+      techStack: ["Python", "PyTorch", "FastAI", "Gradio", "Data Augmentation", "Fine-Tuning"],
+      liveUrl: "https://huggingface.co/spaces/breznev/pet-classifier",
+      repoUrl: "https://github.com/mendresvon/pet-classifier",
+    },
+    {
+      title: t("projects.traffic_light.title"),
+      introduction: t("projects.traffic_light.introduction"),
+      description: t("projects.traffic_light.description"),
+      imageUrl: "/traffic-light.jpeg",
+      techStack: ["C++", "ESP 32", "MQTT", "Embedded Systems", "Mobile App Development"],
+      repoUrl:
+        "https://github.com/mendresvon/Project-Portfolio/tree/main/Voice%20Controlled%20Traffic%20Control",
+      videoUrl: "https://youtu.be/nRs0o199rpQ",
+    },
+    {
       title: t("projects.aura_notes.title"),
       introduction: t("projects.aura_notes.introduction"),
       description: t("projects.aura_notes.description"),
@@ -76,15 +66,6 @@ export default function Projects() {
       liveUrl: "https://aura-notes-xi.vercel.app/login",
       repoUrl: "https://github.com/mendresvon/Aura-Notes",
       videoUrl: "https://youtu.be/9jRglvw2vF4",
-    },
-    {
-      title: t("projects.portfolio.title"),
-      introduction: t("projects.portfolio.introduction"),
-      description: t("projects.portfolio.description"),
-      imageUrl: "/portfolio-screenshot.png",
-      techStack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "https://von-mendres-portfolio.vercel.app/",
-      repoUrl: "https://github.com/mendresvon/von-portfolio-v2",
     },
   ];
 

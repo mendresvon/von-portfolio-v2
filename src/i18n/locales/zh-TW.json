@@ -76,19 +76,11 @@
     "title": "專案作品集",
     "pet_classifier": {
       "title": "AI 寵物物種辨識系統",
-      "introduction": "不依賴現成 API，自主完成 ResNet34 模型微調與資料增強，透過超參數優化將準確度由 76% 提升至 98%。",
+      "introduction": "建立影像分類器協助寵物收容所與獸醫識別寵物物種，運用深度學習達到 98% 準確率。",
       "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率優化將模型準確率從 76% 基準提升至 98%。實作模型序列化 (Model Serialization)，並部署至 Hugging Face 雲端平台，整合 Gradio 建立具即時辨識功能之 Web 應用。"
     },
-    "skyvision": {
-      "title": "SkyVision AI",
-      "introduction": "訓練了一個深度學習模型並部署至線上，能以 98% 的準確率分類鳥、飛機和超人。",
-      "description": "該專案使用 FastAI 和 PyTorch，基於從 Google 圖片爬取的自定義資料集訓練了一個 ResNet34 模型，並將其部署到 Hugging Face Spaces，搭配一個互動式的 Gradio Web 應用程式。使用者可以上傳圖片並即時測試模型，展現了實用的機器學習部署能力。"
-    },
-    "portfolio": {
-      "title": "個人作品集網站",
-      "introduction": "設計並開發了一個現代化、完全響應式的作品集網站，以展示我的技能、經驗和專案。",
-      "description": "這個網站從零開始使用Next.js和TypeScript構建，強調性能和可訪問性。它採用Framer Motion實現流暢的動畫，擁有簡潔的Tailwind CSS佈局，並部署在Vercel上，作為我線上專業形象的中心。"
-    },
+
+
     "traffic_light": {
       "title": "聲控智慧紅綠燈",
       "introduction": "建立 IoT 邊緣控制系統，實現即時語音響應，克服嵌入式系統單執行緒限制。",
@@ -96,12 +88,12 @@
     },
     "aura_notes": {
       "title": "Aura Notes",
-      "introduction": "開發了一款安全的全端堆疊筆記應用程式，具有身份驗證和流暢的動畫效果。",
-      "description": "這款MERN應用程式採用基於JWT的身份驗證，使用Tailwind CSS和React構建了時尚的玻璃擬態UI，並由Framer Motion驅動動畫過渡效果。筆記儲存在MongoDB中，並透過Node.js/Express API進行可靠的數據管理。"
+      "introduction": "開發全端筆記應用程式，靈感源自 Google Keep，具備動態筆記尺寸調整與安全驗證功能。",
+      "description": "MERN 應用程式，具備動態筆記尺寸功能，筆記高度會根據內容長度自動調整，創造如 Google Keep 般的響應式瀑布流布局。採用 JWT 身份驗證、MongoDB 資料持久化，以及整合 Tailwind CSS 與 Framer Motion 的 React 前端實現流暢動畫。適應性卡片布局展現 CSS Grid 技術掌握度與對 UX 細節的重視。"
     },
     "filmfolio": {
       "title": "FilmFolio",
-      "introduction": "建立雲端原生電影管理系統，整合自動化 CI/CD、Redis 快取，並於 GCP 實現近零停機部署。",
+      "introduction": "建立雲端原生電影管理系統，協助用戶探索與整理電影，實現次秒級搜尋效能與近零停機時間。",
       "description": "一款部署於 Google Cloud Platform Cloud Run 的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis Cache-aside Pattern 加速檢索 1.3M 筆 TMDB 電影資料，降低 API 延遲並減輕後端負載。整合 GitHub Secrets 與 IAM 進行 JWT 身份驗證以確保生產環境資安，前端實作 Debouncing 減少 50%+ 冗餘請求，並透過 Cloud Logs 監控系統健康度。於 asia-east1 區域實現近零停機時間與自動擴展。"
     },
     "card": {
