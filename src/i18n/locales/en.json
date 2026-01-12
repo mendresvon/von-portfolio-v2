@@ -26,16 +26,6 @@
     "title": "Work Experience",
     "jobs": [
       {
-        "role": "AI Laboratory Student",
-        "company": "Southern Taiwan University of Technology",
-        "period": "May 2025 - Present",
-        "description": [
-          "Fine-tuned a Convolutional Neural Network (CNN) using PyTorch and FastAI for a multi-class image classification task, achieving 98% accuracy on the test set.",
-          "Developed and deployed the fine-tuned model as an end-to-end application on Hugging Face Spaces, creating an interactive demo for real-time inference.",
-          "Built practical computer vision utilities using OpenCV for object detection, implementing algorithms to identify and localize objects within static images."
-        ]
-      },
-      {
         "role": "Life and Business English Teacher",
         "company": "ASPECT Interactive English",
         "period": "Oct 2023 - Present",
@@ -72,9 +62,9 @@
     },
     "categories": {
       "languages": "Languages",
-      "ai_ml": "AI & Machine Learning",
-      "web_dev": "Web Development",
-      "tools": "Tools & Technologies"
+      "devops_cloud": "DevOps / Cloud",
+      "database_tools": "Database / Tools",
+      "ai_ml": "AI & Machine Learning"
     }
   },
   "projects": {

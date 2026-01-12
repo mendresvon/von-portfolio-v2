@@ -21,16 +21,6 @@
     "title": "工作經歷",
     "jobs": [
       {
-        "role": "AI實驗室學生",
-        "company": "南臺科技大學",
-        "period": "2025年5月 - 至今",
-        "description": [
-          "使用 PyTorch 和 FastAI 微調卷積神經網絡 (CNN)，用於多類別圖像分類任務，在測試集上達到98%的準確率。",
-          "將微調後的模型開發並部署為 Hugging Face Spaces 上的端到端應用程式，創建了用於即時推論的互動式展示。",
-          "使用 OpenCV 建立實用的電腦視覺工具以進行物件偵測，並實作演算法以識別和定位靜態圖像中的物件。"
-        ]
-      },
-      {
         "role": "生活美語教師",
         "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)",
         "period": "2023年10月 - 至今",
@@ -67,9 +57,9 @@
     },
     "categories": {
       "languages": "語言",
-      "ai_ml": "人工智慧與機器學習",
-      "web_dev": "網頁開發",
-      "tools": "工具與技術"
+      "devops_cloud": "DevOps / 雲端",
+      "database_tools": "資料庫 / 工具",
+      "ai_ml": "人工智慧與機器學習"
     }
   },
   "projects": {
