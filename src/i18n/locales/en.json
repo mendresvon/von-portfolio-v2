@@ -76,7 +76,7 @@
     "title": "Project Portfolio",
     "pet_classifier": {
       "title": "AI Pet Species Classifier",
-      "introduction": "Built an image classifier to help pet shelters and veterinarians identify pet species with 98% accuracy using deep learning.",
+      "introduction": "Fine-tuned a model and built an image classifier to help pet shelters and veterinarians identify pet species with 98% accuracy using deep learning.",
       "description": "Developed an end-to-end image classifier using PyTorch and FastAI without relying on pre-built APIs. Improved model accuracy from a 76% baseline to 98% through data augmentation and learning rate optimization. Implemented model serialization and deployed the solution to Hugging Face Spaces with a Gradio web interface for real-time inference."
     },
 
