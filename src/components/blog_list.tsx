@@ -46,6 +46,14 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags?.map((tag) => (
+                    <span key={tag} className="text-[10px] uppercase tracking-widest font-black px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
                 <time className="text-sm font-bold text-teal-500/70 mb-4 block tracking-wider uppercase">
                   {format(parseISO(post.date), 'MMMM dd, yyyy', { locale: dateLocale })}
                 </time>
@@ -54,13 +62,13 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
                   {post.title}
                 </h2>
                 
-                <p className="text-gray-400 leading-relaxed flex-1">
-                  {post.description}
+                <p className="text-gray-400 leading-relaxed flex-1 italic mb-6">
+                  {post.subtitle || post.description}
                 </p>
                 
-                <div className="mt-8 flex items-center text-white font-bold gap-2">
-                   <span>Read Article</span>
-                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mt-auto flex items-center text-white font-bold gap-2">
+                   <span className="text-sm">Read Article</span>
+                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                    </svg>
                 </div>

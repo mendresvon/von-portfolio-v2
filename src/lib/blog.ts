@@ -8,9 +8,11 @@ const postsDirectory = path.join(process.cwd(), 'src/content/posts');
 export interface PostMetadata {
   slug: string;
   title: string;
+  subtitle?: string;
   date: string;
   description: string;
   image?: string;
+  tags?: string[];
   lang: string;
 }
 
