@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "./language_switcher";
 
 interface NavbarProps {
   setIsGlowActive: (isActive: boolean) => void;
@@ -45,10 +45,10 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
           <Link href="#hero">Von Mendres「馬盛中」</Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#about" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="#about_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.about")}
           </Link>
-          <Link href="#skills" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="#education_skills" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.skills")}
           </Link>
           <Link href="#projects" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
@@ -60,7 +60,7 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
             suppressHydrationWarning={true}>
             {t("navbar.experience")}
           </Link>
-          <Link href="#contact" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="#contact_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.contact")}
           </Link>
           <LanguageSwitcher />
@@ -76,7 +76,7 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
             <Link
-              href="#about"
+              href="#about_me"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
@@ -90,7 +90,7 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
               {t("navbar.experience")}
             </Link>
             <Link
-              href="#skills"
+              href="#education_skills"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
@@ -104,7 +104,7 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
               {t("navbar.projects")}
             </Link>
             <Link
-              href="#contact"
+              href="#contact_me"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
