@@ -113,7 +113,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
           className="mt-10 flex flex-col items-center gap-3"
         >
           <p className="text-xs uppercase tracking-widest text-gray-500 font-mono mb-1">
-            Download Resume
+            {t("hero.resume.label")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             {/* English Resume */}
@@ -121,17 +121,18 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
               href="https://flowcv.com/resume/p9w1ulfwwo8r"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-300
-                         bg-gradient-to-r from-blue-600 to-teal-500
-                         hover:from-blue-500 hover:to-teal-400
-                         shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_32px_rgba(45,212,191,0.5)]
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
+                         text-blue-300 border border-blue-500/50
+                         bg-white/5 backdrop-blur-sm
+                         hover:bg-blue-500/10 hover:border-blue-400 hover:text-blue-200
+                         shadow-[0_0_16px_rgba(59,130,246,0.1)] hover:shadow-[0_0_28px_rgba(59,130,246,0.35)]
                          hover:-translate-y-0.5"
             >
               <FiDownload
                 size={16}
-                className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0"
+                className="transition-transform duration-300 group-hover:-translate-y-0.5"
               />
-              Download English Resume
+              {t("hero.resume.english")}
             </a>
 
             {/* Chinese Resume */}
@@ -139,10 +140,10 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
               href="https://flowcv.com/resume/ssm0jmh53m3h"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
                          text-teal-300 border border-teal-500/50
                          bg-white/5 backdrop-blur-sm
-                         hover:bg-teal-500/10 hover:border-teal-400
+                         hover:bg-teal-500/10 hover:border-teal-400 hover:text-teal-200
                          shadow-[0_0_16px_rgba(45,212,191,0.1)] hover:shadow-[0_0_28px_rgba(45,212,191,0.35)]
                          hover:-translate-y-0.5"
             >
@@ -150,7 +151,7 @@ export default function Hero({ setIsGlowActive }: HeroProps) {
                 size={16}
                 className="transition-transform duration-300 group-hover:-translate-y-0.5"
               />
-              下載中文履歷
+              {t("hero.resume.chinese")}
             </a>
           </div>
         </motion.div>
