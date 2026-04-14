@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./project_card";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 

@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import i18n from "../i18n";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Footer from "@/components/Footer";
-import Contact from "@/components/Contact";
-import GlowingCursor from "@/components/GlowingCursor";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import About from "@/components/about_me";
+import Experience from "@/components/experience";
+import Skills from "@/components/education_skills";
+import Projects from "@/components/projects";
+import Footer from "@/components/footer";
+import Contact from "@/components/contact_me";
+import GlowingCursor from "@/components/glowing_cursor";
 
 // update lang attr
 const LanguageUpdater = () => {
