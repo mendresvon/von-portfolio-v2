@@ -45,6 +45,9 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
           <Link href="/#hero">Von Mendres「馬盛中」</Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
+          <Link href="/" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+            {t("navbar.home")}
+          </Link>
           <Link href="/#about_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.about")}
           </Link>
@@ -60,11 +63,11 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
             suppressHydrationWarning={true}>
             {t("navbar.experience")}
           </Link>
-          <Link href="/blog" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
-            {t("navbar.blog")}
-          </Link>
           <Link href="/#contact_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.contact")}
+          </Link>
+          <Link href="/blog" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+            {t("navbar.blog")}
           </Link>
           <LanguageSwitcher />
         </div>
@@ -78,6 +81,13 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-teal-400 transition-colors"
+              suppressHydrationWarning={true}>
+              {t("navbar.home")}
+            </Link>
             <Link
               href="/#about_me"
               onClick={handleLinkClick}
@@ -107,18 +117,18 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
               {t("navbar.projects")}
             </Link>
             <Link
-              href="/blog"
-              onClick={handleLinkClick}
-              className="text-lg hover:text-teal-400 transition-colors"
-              suppressHydrationWarning={true}>
-              {t("navbar.blog")}
-            </Link>
-            <Link
               href="/#contact_me"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.contact")}
+            </Link>
+            <Link
+              href="/blog"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-teal-400 transition-colors"
+              suppressHydrationWarning={true}>
+              {t("navbar.blog")}
             </Link>
           </div>
         </div>
