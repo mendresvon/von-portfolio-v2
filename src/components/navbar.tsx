@@ -42,25 +42,28 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
       }`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="font-bold text-lg" suppressHydrationWarning={true}>
-          <Link href="#hero">Von Mendres「馬盛中」</Link>
+          <Link href="/#hero">Von Mendres「馬盛中」</Link>
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#about_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="/#about_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.about")}
           </Link>
-          <Link href="#education_skills" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="/#education_skills" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.skills")}
           </Link>
-          <Link href="#projects" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="/#projects" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.projects")}
           </Link>
           <Link
-            href="#experience"
+            href="/#experience"
             className="hover:text-teal-400 transition-colors"
             suppressHydrationWarning={true}>
             {t("navbar.experience")}
           </Link>
-          <Link href="#contact_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+          <Link href="/blog" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
+            {t("navbar.blog")}
+          </Link>
+          <Link href="/#contact_me" className="hover:text-teal-400 transition-colors" suppressHydrationWarning={true}>
             {t("navbar.contact")}
           </Link>
           <LanguageSwitcher />
@@ -76,35 +79,42 @@ export default function Navbar({ setIsGlowActive }: NavbarProps) {
         <div className="md:hidden bg-gray-900/90 backdrop-blur-sm w-full absolute left-0 top-full">
           <div className="flex flex-col items-center space-y-6 py-8">
             <Link
-              href="#about_me"
+              href="/#about_me"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.about")}
             </Link>
             <Link
-              href="#experience"
+              href="/#experience"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.experience")}
             </Link>
             <Link
-              href="#education_skills"
+              href="/#education_skills"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.skills")}
             </Link>
             <Link
-              href="#projects"
+              href="/#projects"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
               {t("navbar.projects")}
             </Link>
             <Link
-              href="#contact_me"
+              href="/blog"
+              onClick={handleLinkClick}
+              className="text-lg hover:text-teal-400 transition-colors"
+              suppressHydrationWarning={true}>
+              {t("navbar.blog")}
+            </Link>
+            <Link
+              href="/#contact_me"
               onClick={handleLinkClick}
               className="text-lg hover:text-teal-400 transition-colors"
               suppressHydrationWarning={true}>
