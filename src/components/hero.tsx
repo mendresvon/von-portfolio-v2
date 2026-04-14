@@ -7,11 +7,10 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 
-interface HeroProps {
-  setIsGlowActive: (isActive: boolean) => void;
-}
+import { useGlobalState } from "./client_providers";
 
-export default function Hero({ setIsGlowActive }: HeroProps) {
+export default function Hero() {
+  const { setIsGlowActive } = useGlobalState();
   const { t, i18n } = useTranslation();
 
   // slow down for zh-TW

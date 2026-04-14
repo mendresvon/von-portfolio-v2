@@ -6,11 +6,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./language_switcher";
 
-interface NavbarProps {
-  setIsGlowActive: (isActive: boolean) => void;
-}
+import { useGlobalState } from "./client_providers";
 
-export default function Navbar({ setIsGlowActive }: NavbarProps) {
+export default function Navbar() {
+  const { setIsGlowActive } = useGlobalState();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();

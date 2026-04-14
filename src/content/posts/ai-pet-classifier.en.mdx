@@ -1,0 +1,19 @@
+---
+title: "Building the AI Pet Species Classifier"
+date: "2026-04-14"
+description: "How I fine-tuned a deep learning model to help pet shelters identify unique mixed breeds."
+---
+
+# The Vision
+Working with pet shelters showed me a common problem: staff often have to guess breeds by eye, which can be inaccurate for mixed-breed animals. I wanted to build a tool that uses **Deep Learning** to provide more accurate classifications.
+
+## Technical Details
+I used **Transfer Learning** on a pre-trained ResNet model:
+- **Dataset**: Over 5,000 images of various dog and cat breeds.
+- **Framework**: PyTorch.
+- **Fine-tuning**: We unfroze the top layers and trained specifically on our target species.
+
+## Result
+The model achieved **94% accuracy** on the validation set, providing a reliable tool for shelter volunteers.
+
+Check out the project in the [projects section](/#projects)!
