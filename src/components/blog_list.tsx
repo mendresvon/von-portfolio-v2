@@ -28,7 +28,7 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-7xl font-black mb-6 text-white tracking-tight drop-shadow-md bg-gradient-to-r from-white via-gray-200 to-teal-400 bg-clip-text text-transparent">
+        <h1 className="text-7xl font-black mb-6 tracking-tight drop-shadow-md bg-gradient-to-r from-white via-gray-200 to-teal-400 bg-clip-text text-transparent">
           {t("blog.title")}
         </h1>
         
