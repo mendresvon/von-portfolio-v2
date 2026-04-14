@@ -6,11 +6,7 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
+  // Add markdown plugins here, as desired
 });
 
 export default withMDX(nextConfig);
