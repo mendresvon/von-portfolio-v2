@@ -25,6 +25,19 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
   const dateLocale = currentLang === 'zh-TW' ? zhTW : enUS;
   const formattedDate = format(parseISO(post.metadata.date), 'PPP', { locale: dateLocale });
 
+  const components = {
+    img: (props: { src?: string; alt?: string }) => (
+      <div className="my-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-gray-900/20">
+        <img
+          src={props.src || ""}
+          alt={props.alt || ""}
+          className="w-full h-auto block"
+          loading="lazy"
+        />
+      </div>
+    ),
+  };
+
   return (
     <article className="container mx-auto px-6 py-32 flex-1 max-w-4xl">
       {/* Header */}
@@ -70,8 +83,9 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
       <div className="prose prose-invert prose-teal max-w-none 
         prose-headings:text-white prose-p:text-gray-300 prose-p:text-lg
         prose-a:text-teal-400 prose-strong:text-white
+        prose-em:block prose-em:text-center prose-em:text-sm prose-em:text-gray-500 prose-em:not-italic prose-em:-mt-8 prose-em:mb-12
         border-t border-white/5 pt-16">
-        <MDXRemote {...post.content} />
+        <MDXRemote {...post.content} components={components} />
       </div>
     </article>
   );
