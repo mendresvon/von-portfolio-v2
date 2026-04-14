@@ -41,7 +41,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <section id="contact" className="py-20 text-center bg-grid">
+      <section id="contact_me" className="py-20 text-center bg-grid">
         <h2 className="text-3xl font-bold mb-4" suppressHydrationWarning={true}>
           {t("contact.submitted.title")}
         </h2>
@@ -54,7 +54,7 @@ export default function Contact() {
 
   return (
     <motion.section
-      id="contact"
+      id="contact_me"
       className="py-20 bg-grid"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -188,7 +188,7 @@ export default function Skills() {
 
   return (
     <motion.section
-      id="skills"
+      id="education_skills"
       className="py-28 relative overflow-hidden bg-grid-dark"
       initial="hidden"
       whileInView="visible"
