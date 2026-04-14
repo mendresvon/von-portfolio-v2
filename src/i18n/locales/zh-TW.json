@@ -71,7 +71,7 @@
     "title": "專案作品集",
     "pet_classifier": {
       "title": "AI 寵物物種辨識系統",
-      "introduction": "建立影像分類器協助寵物收容所與獸醫識別寵物物種，運用深度學習達到 98% 準確率。",
+      "introduction": "微調模型並建立影像分類器，協助寵物收容所與獸醫識別寵物物種，運用深度學習達到 98% 準確率。",
       "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率優化將模型準確率從 76% 基準提升至 98%。實作模型序列化 (Model Serialization)，並部署至 Hugging Face 雲端平台，整合 Gradio 建立具即時辨識功能之 Web 應用。"
     },
 
