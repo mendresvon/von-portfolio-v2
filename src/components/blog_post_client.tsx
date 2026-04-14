@@ -27,14 +27,12 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
 
   const components = {
     img: (props: { src?: string; alt?: string }) => (
-      <div className="my-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-gray-900/20">
-        <img
-          src={props.src || ""}
-          alt={props.alt || ""}
-          className="w-full h-auto block"
-          loading="lazy"
-        />
-      </div>
+      <img
+        src={props.src || ""}
+        alt={props.alt || ""}
+        className="w-full h-auto rounded-2xl border border-white/10 shadow-2xl my-10 block"
+        loading="lazy"
+      />
     ),
   };
 
@@ -83,7 +81,7 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
       <div className="prose prose-invert prose-teal max-w-none 
         prose-headings:text-white prose-p:text-gray-300 prose-p:text-lg
         prose-a:text-teal-400 prose-strong:text-white
-        prose-em:block prose-em:text-center prose-em:text-sm prose-em:text-gray-500 prose-em:not-italic prose-em:-mt-8 prose-em:mb-12
+        prose-em:block prose-em:text-center prose-em:text-sm prose-em:text-gray-500 prose-em:not-italic prose-em:-mt-6 prose-em:mb-12
         border-t border-white/5 pt-16">
         <MDXRemote {...post.content} components={components} />
       </div>
