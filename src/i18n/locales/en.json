@@ -14,7 +14,12 @@
       "Part-Time Teacher",
       "Future Engineer",
       "Aspiring Software Engineer"
-    ]
+    ],
+    "resume": {
+      "label": "Download Resume",
+      "english": "Download English Resume",
+      "chinese": "Download Chinese Resume"
+    }
   },
   "about": {
     "title": "About Me",
