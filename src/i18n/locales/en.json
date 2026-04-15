@@ -119,6 +119,16 @@
     "submitted": {
       "title": "Thank you!",
       "message": "Your message has been sent. I'll get back to you shortly."
+    },
+    "quick_contact": "Quick Contact",
+    "location": "Location",
+    "location_value": "Tainan, Taiwan",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
     }
   },
   "footer": {
