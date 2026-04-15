@@ -114,6 +114,16 @@
     "submitted": {
       "title": "謝謝您！",
       "message": "您的訊息已成功發送。我會盡快回覆您。"
+    },
+    "quick_contact": "快速聯絡",
+    "location": "地點",
+    "location_value": "台灣，台南",
+    "copy": "複製",
+    "copied": "已複製！",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "電子郵件"
     }
   },
   "footer": {
