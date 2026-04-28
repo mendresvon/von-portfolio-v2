@@ -12,9 +12,10 @@ import {
   FaBriefcase,
   FaGraduationCap,
   FaTrophy,
-  FaCalendarAlt,
+  FaHandsHelping,
   FaRegCopy,
   FaCheck,
+  FaGithub,
   FaArrowRight,
 } from "react-icons/fa";
 import { PostMetadata } from "@/lib/blog";
@@ -43,6 +44,7 @@ export default function About({ latestPosts }: AboutProps) {
   const dateLocale = i18n.language === "zh-TW" ? zhTW : enUS;
 
   const email = t("about.email");
+  const github = t("about.github");
 
   const copyToClipboard = async () => {
     try {
@@ -54,23 +56,20 @@ export default function About({ latestPosts }: AboutProps) {
     }
   };
 
-  // Filter posts by current language, sorted newest first, take 2
   const filteredPosts = latestPosts
     .filter((p) => p.lang === i18n.language)
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .slice(0, 2);
 
-  // Retrieve positions as array from i18n
   const positions = t("about.positions", { returnObjects: true }) as {
     role: string;
     company: string;
   }[];
 
-  const upcoming = t("about.upcoming", { returnObjects: true }) as {
+  const involvements = t("about.involvements", { returnObjects: true }) as {
     role: string;
     org: string;
-    period: string;
-  };
+  }[];
 
   return (
     <motion.section
@@ -94,6 +93,7 @@ export default function About({ latestPosts }: AboutProps) {
 
         {/* ── Bento Grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+
           {/* ──────────── Cell 1: Profile Card (tall left) ──────────── */}
           <motion.div
             custom={0}
@@ -102,13 +102,13 @@ export default function About({ latestPosts }: AboutProps) {
           >
             {/* Profile image with gradient ring */}
             <div className="relative mb-6">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 p-[3px] -m-[3px]" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 blur-sm opacity-60" />
               <Image
                 src="/profile.jpg"
                 alt="Von Mendres"
                 width={180}
                 height={180}
-                className="rounded-full object-cover relative z-10 border-2 border-slate-900"
+                className="rounded-full object-cover relative z-10 border-[3px] border-slate-900"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function About({ latestPosts }: AboutProps) {
             </p>
 
             {/* Department + Year */}
-            <div className="flex items-center gap-2 text-gray-300 mb-2">
+            <div className="flex items-center gap-2 text-gray-300 mb-1">
               <FaGraduationCap className="text-teal-400 shrink-0" />
               <span className="text-sm" suppressHydrationWarning>
                 {t("about.department")}
@@ -132,79 +132,75 @@ export default function About({ latestPosts }: AboutProps) {
             </p>
 
             {/* Rank Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-5">
               <FaTrophy className="text-amber-400" />
               <span className="text-sm font-bold text-amber-300" suppressHydrationWarning>
                 {t("about.rank_label")}: {t("about.rank")}
               </span>
             </div>
 
+            {/* Divider */}
+            <div className="w-full h-px bg-white/10 mb-4" />
+
             {/* Email */}
-            <div className="w-full border-t border-white/10 pt-4">
-              <div className="flex items-center justify-center gap-3 group">
-                <FaEnvelope className="text-gray-400 group-hover:text-red-400 transition-colors shrink-0" />
-                <a
-                  href={`mailto:${email}`}
-                  className="text-sm text-gray-300 hover:text-teal-400 transition-colors truncate"
-                >
-                  {email}
-                </a>
-                <button
-                  onClick={copyToClipboard}
-                  className="p-1.5 rounded-md hover:bg-white/10 text-gray-500 hover:text-white transition-all relative cursor-pointer"
-                  title={t("about.copy")}
-                >
-                  <AnimatePresence mode="wait">
-                    {copied ? (
-                      <motion.div
-                        key="check"
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        exit={{ scale: 0 }}
-                      >
-                        <FaCheck className="text-teal-400 text-xs" />
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key="copy"
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        exit={{ scale: 0 }}
-                      >
-                        <FaRegCopy className="text-xs" />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  {copied && (
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-teal-500 text-white text-[10px] rounded shadow-lg pointer-events-none whitespace-nowrap" suppressHydrationWarning>
-                      {t("about.copied")}
-                    </span>
+            <div className="w-full flex items-center justify-center gap-3 mb-3 group">
+              <FaEnvelope className="text-gray-400 group-hover:text-red-400 transition-colors shrink-0" />
+              <a
+                href={`mailto:${email}`}
+                className="text-sm text-gray-300 hover:text-teal-400 transition-colors truncate"
+              >
+                {email}
+              </a>
+              <button
+                onClick={copyToClipboard}
+                className="p-1.5 rounded-md hover:bg-white/10 text-gray-500 hover:text-white transition-all relative cursor-pointer"
+                title={t("about.copy")}
+              >
+                <AnimatePresence mode="wait">
+                  {copied ? (
+                    <motion.div key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
+                      <FaCheck className="text-teal-400 text-xs" />
+                    </motion.div>
+                  ) : (
+                    <motion.div key="copy" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
+                      <FaRegCopy className="text-xs" />
+                    </motion.div>
                   )}
-                </button>
-              </div>
+                </AnimatePresence>
+                {copied && (
+                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-teal-500 text-white text-[10px] rounded shadow-lg pointer-events-none whitespace-nowrap" suppressHydrationWarning>
+                    {t("about.copied")}
+                  </span>
+                )}
+              </button>
             </div>
+
+            {/* GitHub */}
+            <a
+              href={`https://github.com/${github}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-300 hover:text-teal-400 transition-colors group"
+            >
+              <FaGithub className="text-gray-400 group-hover:text-white transition-colors" />
+              <span>github.com/{github}</span>
+            </a>
           </motion.div>
 
-          {/* ──────────── Cell 2: Quick Facts ──────────── */}
+          {/* ──────────── Cell 2: Quick Facts (top right) ──────────── */}
           <motion.div
             custom={1}
             variants={cellVariants}
             className="backdrop-blur-md bg-gradient-to-br from-slate-900/60 to-black/80 rounded-2xl border border-teal-500/25 shadow-[0_0_12px_rgba(45,212,191,0.15)] p-6 transition-all duration-300 hover:border-teal-400/60 hover:shadow-[0_0_30px_rgba(45,212,191,0.35)]"
           >
-            <h3
-              className="text-lg font-bold text-white mb-4 flex items-center gap-2"
-              suppressHydrationWarning
-            >
+            {/* Current Positions */}
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2" suppressHydrationWarning>
               <FaBriefcase className="text-teal-400" />
               {t("about.current_positions_label")}
             </h3>
-
             <div className="space-y-3 mb-5">
               {positions.map((pos, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5"
-                >
+                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
                   <div className="w-2 h-2 rounded-full bg-teal-400 mt-2 shrink-0" />
                   <div>
                     <p className="text-sm font-semibold text-white">{pos.role}</p>
@@ -214,24 +210,27 @@ export default function About({ latestPosts }: AboutProps) {
               ))}
             </div>
 
-            {/* Upcoming */}
+            {/* Community & Service */}
             <div className="border-t border-white/10 pt-4">
-              <p className="text-xs uppercase tracking-widest text-gray-500 font-mono mb-2" suppressHydrationWarning>
-                <FaCalendarAlt className="inline mr-1.5 text-teal-400/70" />
-                {t("about.upcoming_label")}
+              <p className="text-xs uppercase tracking-widest text-gray-500 font-mono mb-3 flex items-center gap-1.5" suppressHydrationWarning>
+                <FaHandsHelping className="text-teal-400/70" />
+                {t("about.involvements_label")}
               </p>
-              <div className="p-3 rounded-xl bg-teal-500/5 border border-teal-500/20">
-                <p className="text-sm font-semibold text-teal-300" suppressHydrationWarning>
-                  {upcoming.role}
-                </p>
-                <p className="text-xs text-gray-400" suppressHydrationWarning>
-                  {upcoming.org} — {upcoming.period}
-                </p>
+              <div className="space-y-2">
+                {involvements.map((inv, i) => (
+                  <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-teal-500/[0.04] border border-teal-500/15">
+                    <div className="w-2 h-2 rounded-full bg-teal-400 mt-2 shrink-0" />
+                    <div>
+                      <p className="text-sm font-semibold text-teal-300">{inv.role}</p>
+                      <p className="text-xs text-gray-400">{inv.org}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
 
-          {/* ──────────── Cell 3: Bio ──────────── */}
+          {/* ──────────── Cell 3: Bio (bottom right) ──────────── */}
           <motion.div
             custom={2}
             variants={cellVariants}
@@ -281,18 +280,13 @@ export default function About({ latestPosts }: AboutProps) {
                   >
                     <div className="flex flex-wrap gap-1.5 mb-2">
                       {post.tags?.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[9px] uppercase tracking-widest font-bold px-1.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20"
-                        >
+                        <span key={tag} className="text-[9px] uppercase tracking-widest font-bold px-1.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
                           {tag}
                         </span>
                       ))}
                     </div>
                     <time className="text-[11px] text-gray-500 font-mono block mb-1.5">
-                      {format(parseISO(post.date), "MMM dd, yyyy", {
-                        locale: dateLocale,
-                      })}
+                      {format(parseISO(post.date), "MMM dd, yyyy", { locale: dateLocale })}
                     </time>
                     <h4 className="text-sm font-bold text-white group-hover:text-teal-400 transition-colors leading-snug mb-1">
                       {post.title}

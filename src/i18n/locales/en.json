@@ -35,6 +35,7 @@
     "rank": "#1 / 132",
     "year_level": "3rd Year",
     "email": "mendresvon@gmail.com",
+    "github": "mendresvon",
     "copy": "Copy",
     "copied": "Copied!",
     "current_positions_label": "Current Positions",
@@ -42,14 +43,13 @@
       { "role": "English Teacher", "company": "ASPECT Interactive English (雅斯貝互動英語認證中心)" },
       { "role": "English Teacher", "company": "Gram English (格蘭英語)" }
     ],
-    "upcoming_label": "Upcoming",
-    "upcoming": {
-      "role": "Deputy Secretary-General",
-      "org": "Tainan Youth Center",
-      "period": "2026 Academic Year"
-    },
-    "p1": "Hi everyone, I’m Von, a Filipino student in Taiwan. I'm currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
-    "p2": "Guided by my personal motto, “The day you stop learning is the day you stop living,” I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
+    "involvements_label": "Community & Service",
+    "involvements": [
+      { "role": "Deputy Secretary-General", "org": "Tainan Youth Center (台南青年中心)" },
+      { "role": "Acolyte, Lector & Psalmist", "org": "Sacred Heart Church Tainan (聖心堂)" }
+    ],
+    "p1": "Hi everyone, I'm Von, a Filipino student in Taiwan. I'm currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
+    "p2": "Guided by my personal motto, \u201cThe day you stop learning is the day you stop living,\u201d I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
     "p3": "I am currently seeking an internship opportunity in Taiwan. I am very eager to apply my knowledge, acquire new skills, and actively contribute to team goals, while achieving professional growth through practical experience.",
     "blog_preview_title": "Latest from the Blog",
     "blog_read_more": "Read Article →",
@@ -107,8 +107,6 @@
       "introduction": "Fine-tuned a model and built an image classifier to help pet shelters and veterinarians identify pet species with 98% accuracy using deep learning.",
       "description": "Developed an end-to-end image classifier using PyTorch and FastAI without relying on pre-built APIs. Improved model accuracy from a 76% baseline to 98% through data augmentation and learning rate optimization. Implemented model serialization and deployed the solution to Hugging Face Spaces with a Gradio web interface for real-time inference."
     },
-
-
     "traffic_light": {
       "title": "Voice-Controlled Smart Traffic Light",
       "introduction": "Built an IoT edge control system with real-time voice response, overcoming single-thread limitations in embedded systems.",

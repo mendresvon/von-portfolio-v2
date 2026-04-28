@@ -30,6 +30,7 @@
     "rank": "#1 / 132",
     "year_level": "大三",
     "email": "mendresvon@gmail.com",
+    "github": "mendresvon",
     "copy": "複製",
     "copied": "已複製！",
     "current_positions_label": "目前職位",
@@ -37,12 +38,11 @@
       { "role": "英語教師", "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)" },
       { "role": "英語外師", "company": "格蘭英語 (Gram English)" }
     ],
-    "upcoming_label": "即將擔任",
-    "upcoming": {
-      "role": "副總幹事",
-      "org": "台南青年中心",
-      "period": "2026學年度"
-    },
+    "involvements_label": "社區與服務",
+    "involvements": [
+      { "role": "副總幹事", "org": "台南青年中心 (Tainan Youth Center)" },
+      { "role": "輔祭、讀經員、領唱員", "org": "聖心堂 (Sacred Heart Church Tainan)" }
+    ],
     "p1": "大家好，我是馬盛中，一個在台灣讀書的菲律賓人，目前就讀於南臺科技大學（STUST）資工系三年級。",
     "p2": "秉持著我的座右銘「學習一旦停止，生活亦隨之止步」，我熱衷於提升技能、迎接挑戰，並不斷探索新的機會。",
     "p3": "我目前正在尋找在台灣的實習機會，期望透過實習應用所學、持續學習新知、積極協助團隊，並在實踐中持續成長。",
@@ -102,8 +102,6 @@
       "introduction": "微調模型並建立影像分類器，協助寵物收容所與獸醫識別寵物物種，運用深度學習達到 98% 準確率。",
       "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率優化將模型準確率從 76% 基準提升至 98%。實作模型序列化 (Model Serialization)，並部署至 Hugging Face 雲端平台，整合 Gradio 建立具即時辨識功能之 Web 應用。"
     },
-
-
     "traffic_light": {
       "title": "聲控智慧紅綠燈",
       "introduction": "建立 IoT 邊緣控制系統，實現即時語音響應，克服嵌入式系統單執行緒限制。",
