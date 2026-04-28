@@ -28,9 +28,32 @@
   },
   "about": {
     "title": "About Me",
+    "name_en": "Von Breznev A. Mendres",
+    "name_zh": "馬盛中",
+    "department": "Computer Science and Information Engineering",
+    "rank_label": "Department Rank",
+    "rank": "#1 / 132",
+    "year_level": "3rd Year",
+    "email": "mendresvon@gmail.com",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "current_positions_label": "Current Positions",
+    "positions": [
+      { "role": "English Teacher", "company": "ASPECT Interactive English (雅斯貝互動英語認證中心)" },
+      { "role": "English Teacher", "company": "Gram English (格蘭英語)" }
+    ],
+    "upcoming_label": "Upcoming",
+    "upcoming": {
+      "role": "Deputy Secretary-General",
+      "org": "Tainan Youth Center",
+      "period": "2026 Academic Year"
+    },
     "p1": "Hi everyone, I’m Von, a Filipino student in Taiwan. I'm currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
     "p2": "Guided by my personal motto, “The day you stop learning is the day you stop living,” I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
-    "p3": "I am currently seeking an internship opportunity in Taiwan. I am very eager to apply my knowledge, acquire new skills, and actively contribute to team goals, while achieving professional growth through practical experience."
+    "p3": "I am currently seeking an internship opportunity in Taiwan. I am very eager to apply my knowledge, acquire new skills, and actively contribute to team goals, while achieving professional growth through practical experience.",
+    "blog_preview_title": "Latest from the Blog",
+    "blog_read_more": "Read Article →",
+    "blog_empty": "Stay tuned for upcoming articles!"
   },
   "experience": {
     "title": "Work Experience",

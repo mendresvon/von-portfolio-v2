@@ -35,3 +35,44 @@ body {
   background-size: 3rem 3rem;
   background-position: top center;
 }
+
+/* ── Infinite Marquee ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee-row {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee-row-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 40s linear infinite;
+}
+.marquee-row:hover,
+.marquee-row-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* ── Timeline Pulse ── */
+@keyframes timeline-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.5); }
+  50% { box-shadow: 0 0 0 14px rgba(45, 212, 191, 0); }
+}
+.timeline-dot {
+  animation: timeline-pulse 2.5s ease-in-out infinite;
+}
+
+/* ── Premium Gradient Headings ── */
+.heading-gradient {
+  background-image: linear-gradient(135deg, #ffffff 0%, #2dd4bf 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

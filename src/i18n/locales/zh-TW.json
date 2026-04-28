@@ -23,9 +23,32 @@
   },
   "about": {
     "title": "關於我",
+    "name_en": "Von Breznev A. Mendres",
+    "name_zh": "馬盛中",
+    "department": "資訊工程學系",
+    "rank_label": "系排名",
+    "rank": "#1 / 132",
+    "year_level": "大三",
+    "email": "mendresvon@gmail.com",
+    "copy": "複製",
+    "copied": "已複製！",
+    "current_positions_label": "目前職位",
+    "positions": [
+      { "role": "英語教師", "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)" },
+      { "role": "英語外師", "company": "格蘭英語 (Gram English)" }
+    ],
+    "upcoming_label": "即將擔任",
+    "upcoming": {
+      "role": "副總幹事",
+      "org": "台南青年中心",
+      "period": "2026學年度"
+    },
     "p1": "大家好，我是馬盛中，一個在台灣讀書的菲律賓人，目前就讀於南臺科技大學（STUST）資工系三年級。",
     "p2": "秉持著我的座右銘「學習一旦停止，生活亦隨之止步」，我熱衷於提升技能、迎接挑戰，並不斷探索新的機會。",
-    "p3": "我目前正在尋找在台灣的實習機會，期望透過實習應用所學、持續學習新知、積極協助團隊，並在實踐中持續成長。"
+    "p3": "我目前正在尋找在台灣的實習機會，期望透過實習應用所學、持續學習新知、積極協助團隊，並在實踐中持續成長。",
+    "blog_preview_title": "最新文章",
+    "blog_read_more": "閱讀全文 →",
+    "blog_empty": "敬請期待即將發布的文章！"
   },
   "experience": {
     "title": "工作經歷",
