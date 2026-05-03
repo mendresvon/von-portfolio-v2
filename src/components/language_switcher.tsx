@@ -16,37 +16,26 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
-  // ssr placeholder
-  if (!isMounted) {
-    return (
-      <div className="flex items-center space-x-2">
-        <button className="px-3 py-1 text-sm rounded-md transition-colors bg-teal-600 text-white">
-          EN
-        </button>
-        <button className="px-3 py-1 text-sm rounded-md transition-colors hover:bg-gray-700">
-          繁
-        </button>
-      </div>
-    );
-  }
+  const isEn = !isMounted || i18n.language === "en" || i18n.language.startsWith("en-");
+  const isZh = isMounted && i18n.language === "zh-TW";
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-1">
       <button
         onClick={() => changeLanguage("en")}
-        className={`px-3 py-1 text-sm rounded-md transition-colors ${
-          i18n.language === "en" || i18n.language.startsWith("en-")
-            ? "bg-teal-600 text-white"
-            : "hover:bg-gray-700"
+        className={`px-3 py-1 text-xs font-medium rounded-md transition-all duration-300 ${
+          isEn
+            ? "bg-[var(--accent)] text-black font-bold"
+            : "text-[var(--text-muted)] hover:bg-white/[0.06] hover:text-white"
         }`}>
         EN
       </button>
       <button
         onClick={() => changeLanguage("zh-TW")}
-        className={`px-3 py-1 text-sm rounded-md transition-colors ${
-          i18n.language === "zh-TW"
-            ? "bg-teal-600 text-white"
-            : "hover:bg-gray-700"
+        className={`px-3 py-1 text-xs font-medium rounded-md transition-all duration-300 ${
+          isZh
+            ? "bg-[var(--accent)] text-black font-bold"
+            : "text-[var(--text-muted)] hover:bg-white/[0.06] hover:text-white"
         }`}>
         繁
       </button>

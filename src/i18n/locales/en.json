@@ -13,7 +13,7 @@
   },
   "hero": {
     "name": "Von Breznev A. Mendres",
-    "tagline": "Built through discipline, proven through results.",
+    "tagline": "Ranked #1 in an all-Mandarin CS department. I build fast, break down complex problems, and ship production-ready code.",
     "roles": [
       "Computer Science Student",
       "Part-Time Teacher",
@@ -48,9 +48,9 @@
       { "role": "Deputy Secretary-General", "org": "Tainan Youth Center (台南青年中心)" },
       { "role": "Acolyte, Lector & Psalmist", "org": "Sacred Heart Church Tainan (聖心堂)" }
     ],
-    "p1": "Hi everyone, I'm Von, a Filipino student in Taiwan. I'm currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
-    "p2": "Guided by my personal motto, \u201cThe day you stop learning is the day you stop living,\u201d I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
-    "p3": "I am currently seeking an internship opportunity in Taiwan. I am very eager to apply my knowledge, acquire new skills, and actively contribute to team goals, while achieving professional growth through practical experience.",
+    "p1": "I'm a Filipino who came to Taiwan with zero Mandarin and earned the #1 rank in an all-Mandarin Computer Science department. That journey taught me how to operate under pressure, learn fast in unfamiliar environments, and deliver results regardless of constraints.",
+    "p2": "I don't just write code that works — I want to understand the systems underneath it, make deliberate architectural decisions, and own the outcomes. From fine-tuning PyTorch models to deploying Dockerized MERN stacks on GCP with sub-second latency, I build systems that perform at scale.",
+    "p3": "I'm looking for an internship — but not an easy one. I want to be challenged, do work that has real impact, and grow fast. I never become a victim of my circumstances; I take control of my outcomes.",
     "blog_preview_title": "Latest from the Blog",
     "blog_read_more": "Read Article →",
     "blog_empty": "Stay tuned for upcoming articles!"

@@ -36,15 +36,18 @@ export default function Hero() {
         <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-lg md:text-xl font-mono mb-4 text-gradient">
+            transition={{ duration: 0.6 }}
+            className="text-lg md:text-xl mb-4 text-[var(--accent)]"
+            style={{ fontFamily: 'var(--font-mono)' }}>
             Hi, my name is
         </motion.p>
+
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-white"
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter"
+          style={{ fontFamily: 'var(--font-display)' }}
           suppressHydrationWarning={true}>
           {t("hero.name")}
         </motion.h1>
@@ -52,8 +55,8 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-4 text-lg md:text-xl text-gray-300"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-6 text-lg md:text-xl text-[var(--text-secondary)]"
           suppressHydrationWarning={true}>
           <TypeAnimation
             key={i18n.language}
@@ -68,39 +71,39 @@ export default function Hero() {
               1500,
             ]}
             wrapper="span"
-            speed={typingSpeed} // dynamic speed
-            className="font-semibold text-gradient"
+            speed={typingSpeed}
+            className="font-semibold text-white"
             repeat={Infinity}
           />{" "}
           <br />
-          {t("hero.tagline")}
+          <span className="text-[var(--text-muted)] text-base md:text-lg">{t("hero.tagline")}</span>
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center gap-6 mt-8">
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex justify-center gap-6 mt-10">
           <a
             href="https://www.linkedin.com/in/vonmendres/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-teal-400 transition-colors">
-            <FaLinkedin size={32} />
+            className="text-[var(--text-muted)] hover:text-[var(--accent)] transition-all duration-300 hover:scale-110">
+            <FaLinkedin size={28} />
           </a>
           <a
             href="https://github.com/mendresvon"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-teal-400 transition-colors">
-            <FaGithub size={32} />
+            className="text-[var(--text-muted)] hover:text-[var(--accent)] transition-all duration-300 hover:scale-110">
+            <FaGithub size={28} />
           </a>
           <a
             href="mailto:mendresvon@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-teal-400 transition-colors">
-            <SiGmail size={32} />
+            className="text-[var(--text-muted)] hover:text-[var(--accent)] transition-all duration-300 hover:scale-110">
+            <SiGmail size={28} />
           </a>
         </motion.div>
 
@@ -108,10 +111,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-10 flex flex-col items-center gap-3"
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mt-12 flex flex-col items-center gap-4"
         >
-          <p className="text-xs uppercase tracking-widest text-gray-500 font-mono mb-1">
+          <p
+            className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-1"
+            style={{ fontFamily: 'var(--font-mono)' }}>
             {t("hero.resume.label")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -120,12 +125,10 @@ export default function Hero() {
               href="https://flowcv.com/resume/p9w1ulfwwo8r"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
-                         text-blue-300 border border-blue-500/50
-                         bg-white/5 backdrop-blur-sm
-                         hover:bg-blue-500/10 hover:border-blue-400 hover:text-blue-200
-                         shadow-[0_0_16px_rgba(59,130,246,0.1)] hover:shadow-[0_0_28px_rgba(59,130,246,0.35)]
-                         hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300
+                         bg-[var(--accent)] text-black
+                         hover:shadow-[0_0_30px_rgba(var(--accent-rgb),0.4)]
+                         hover:scale-105 active:scale-[0.98]"
             >
               <FiDownload
                 size={16}
@@ -139,12 +142,11 @@ export default function Hero() {
               href="https://flowcv.com/resume/ssm0jmh53m3h"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300
-                         text-teal-300 border border-teal-500/50
-                         bg-white/5 backdrop-blur-sm
-                         hover:bg-teal-500/10 hover:border-teal-400 hover:text-teal-200
-                         shadow-[0_0_16px_rgba(45,212,191,0.1)] hover:shadow-[0_0_28px_rgba(45,212,191,0.35)]
-                         hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300
+                         border border-white/20 text-white bg-white/5
+                         hover:border-[var(--accent)]/50 hover:text-[var(--accent)]
+                         hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.15)]
+                         hover:scale-105 active:scale-[0.98]"
             >
               <FiDownload
                 size={16}

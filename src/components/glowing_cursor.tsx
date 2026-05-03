@@ -24,7 +24,7 @@ export default function GlowingCursor({ isActive }: GlowingCursorProps) {
     <motion.div
       className="pointer-events-none fixed inset-0 z-50"
       style={{
-        background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(220, 230, 255, 0.15), transparent 80%)`,
+        background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(212, 255, 0, 0.03), transparent 80%)`,
       }}
       animate={{ opacity: isActive ? 1 : 0 }}
       transition={{ duration: 0.20 }}

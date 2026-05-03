@@ -30,7 +30,7 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
       <img
         src={props.src || ""}
         alt={props.alt || ""}
-        className="w-full h-auto rounded-2xl border border-white/10 shadow-2xl my-10 block"
+        className="w-full h-auto rounded-2xl border border-white/[0.06] shadow-2xl my-10 block"
         loading="lazy"
       />
     ),
@@ -42,34 +42,37 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
       <header className="mb-16">
         <Link 
           href="/blog" 
-          className="group flex items-center text-teal-400 hover:text-teal-300 transition-all duration-300 gap-2 w-fit mb-8 px-4 py-2 rounded-full bg-teal-500/5 border border-teal-500/10 hover:border-teal-500/30 font-medium"
+          className="group flex items-center text-[var(--text-muted)] hover:text-[var(--accent)] transition-all duration-300 gap-2 w-fit mb-8 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.06] hover:border-[var(--accent)]/30 font-medium text-sm"
         >
            <span className="transform transition-transform group-hover:-translate-x-1">
             {t("blog.back")}
           </span>
         </Link>
         
-        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+        <h1
+          className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tighter"
+          style={{ fontFamily: 'var(--font-display)' }}
+        >
           {post.metadata.title}
         </h1>
 
         {post.metadata.subtitle && (
-          <p className="text-2xl md:text-3xl font-medium text-teal-400/90 mb-8 leading-tight italic">
+          <p className="text-2xl md:text-3xl font-medium text-[var(--accent)]/80 mb-8 leading-tight italic">
             {post.metadata.subtitle}
           </p>
         )}
         
         <div className="flex flex-wrap items-center gap-6 mt-10">
-          <div className="flex items-center gap-4 text-gray-400 font-bold tracking-wide">
+          <div className="flex items-center gap-4 text-[var(--text-muted)] font-bold tracking-wide">
             <time dateTime={post.metadata.date} className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-teal-500 shadow-[0_0_10px_rgba(20,184,166,0.5)]"></span>
+              <span className="w-2 h-2 rounded-full bg-[var(--accent)] shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)]" />
               {formattedDate}
             </time>
           </div>
 
           <div className="flex flex-wrap gap-2">
             {post.metadata.tags?.map((tag: string) => (
-              <span key={tag} className="text-xs uppercase tracking-widest font-black px-3 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">
+              <span key={tag} className="text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-white/[0.04] text-[var(--text-muted)] border border-white/[0.06]">
                 #{tag}
               </span>
             ))}
@@ -78,11 +81,11 @@ export default function BlogPostClient({ initialPosts }: { initialPosts: Record<
       </header>
 
       {/* Content */}
-      <div className="prose prose-invert prose-teal max-w-none 
-        prose-headings:text-white prose-p:text-gray-300 prose-p:text-lg
-        prose-a:text-teal-400 prose-strong:text-white
-        prose-em:block prose-em:text-center prose-em:text-sm prose-em:text-gray-500 prose-em:not-italic prose-em:-mt-6 prose-em:mb-12
-        border-t border-white/5 pt-16">
+      <div className="prose prose-invert max-w-none 
+        prose-headings:text-white prose-headings:tracking-tight prose-p:text-[var(--text-secondary)] prose-p:text-lg
+        prose-a:text-[var(--accent)] prose-strong:text-white
+        prose-em:block prose-em:text-center prose-em:text-sm prose-em:text-[var(--text-muted)] prose-em:not-italic prose-em:-mt-6 prose-em:mb-12
+        border-t border-white/[0.06] pt-16">
         <MDXRemote {...post.content} components={components} />
       </div>
     </article>
