@@ -13,12 +13,12 @@ A bilingual portfolio website built with Next.js 15 and TypeScript. It supports 
 
 ## Features
 
-- **Languages**: English and 繁體中文 using react-i18next
-- **Visual design**: Glassmorphism with teal accents
-- **Animations**: Scroll-triggered animations using Framer Motion
-- **Responsive layout**: Mobile, tablet, and desktop support
-- **Dark theme**: Dark color scheme throughout the site
-- **Rendering**: Static generation with the Next.js App Router
+- Languages: English and 繁體中文 using react-i18next
+- Visual design: Glassmorphism with teal accents
+- Animations: Scroll-triggered animations using Framer Motion
+- Responsive layout: Mobile, tablet, and desktop support
+- Dark theme: Dark color scheme throughout the site
+- Rendering: Static generation with the Next.js App Router
 
 ---
 
@@ -40,7 +40,7 @@ A bilingual portfolio website built with Next.js 15 and TypeScript. It supports 
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, pnpm, or bun
 
 ### Installation
@@ -95,7 +95,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-  
+
 Built by [Von Mendres](https://von-mendres-portfolio.vercel.app/)
 
 </div>

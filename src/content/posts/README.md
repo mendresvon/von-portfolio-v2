@@ -5,9 +5,9 @@ To add a new post to the blog, add a `.mdx` file to this folder using the rules 
 ## 1. File Naming Convention
 To support multilingual switching, every post must have a **shared slug** followed by the **language identifier**.
 
-- **File Syntax**: `unique-slug.language.mdx`
-- **English version**: `my-new-post.en.mdx`
-- **Traditional Chinese version**: `my-new-post.zh-TW.mdx`
+- File Syntax: `unique-slug.language.mdx`
+- English version: `my-new-post.en.mdx`
+- Traditional Chinese version: `my-new-post.zh-TW.mdx`
 
 > [!IMPORTANT]
 > Both versions **MUST** share the same base slug (`my-new-post`) so they function correctly as a single piece of content when switching languages.
