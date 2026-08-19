@@ -1,28 +1,28 @@
-# Von Mendres Portfolio 🌐
+# Von Mendres Portfolio
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://von-mendres-portfolio.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-A modern, bilingual portfolio website built with Next.js 15 and TypeScript. Features smooth animations, responsive design, and internationalization support for English and Chinese (Traditional).
+A bilingual portfolio website built with Next.js 15 and TypeScript. It supports English and Traditional Chinese and uses Framer Motion for page animations.
 
 🔗 **Live Demo:** [von-mendres-portfolio.vercel.app](https://von-mendres-portfolio.vercel.app/)
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌐 **Bilingual Support** - Full i18n with English and 繁體中文 using react-i18next
-- 🎨 **Modern UI** - Glassmorphism design with teal accent colors
-- ⚡ **Smooth Animations** - Scroll-triggered animations powered by Framer Motion
-- 📱 **Fully Responsive** - Optimized for mobile, tablet, and desktop
-- 🌙 **Dark Theme** - Professional dark aesthetic throughout
-- 🚀 **Fast Performance** - Static generation with Next.js App Router
+- **Languages**: English and 繁體中文 using react-i18next
+- **Visual design**: Glassmorphism with teal accents
+- **Animations**: Scroll-triggered animations using Framer Motion
+- **Responsive layout**: Mobile, tablet, and desktop support
+- **Dark theme**: Dark color scheme throughout the site
+- **Rendering**: Static generation with the Next.js App Router
 
 ---
 
-## 🛠️ Tech Stack
+## Tech stack
 
 | Category | Technologies |
 |----------|-------------|
@@ -36,7 +36,7 @@ A modern, bilingual portfolio website built with Next.js 15 and TypeScript. Feat
 
 ---
 
-## 🚀 Getting Started
+## Getting started
 
 ### Prerequisites
 
@@ -68,7 +68,7 @@ npm start
 
 ---
 
-## 📁 Project Structure
+## Project structure
 
 ```
 src/
@@ -88,7 +88,7 @@ src/
 
 ---
 
-## 📝 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
@@ -96,6 +96,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 <div align="center">
   
-**Built with ❤️ by [Von Mendres](https://von-mendres-portfolio.vercel.app/)**
+Built by [Von Mendres](https://von-mendres-portfolio.vercel.app/)
 
 </div>
