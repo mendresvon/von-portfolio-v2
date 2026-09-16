@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/posts');
 
@@ -14,6 +13,11 @@ export interface PostMetadata {
   image?: string;
   tags?: string[];
   lang: string;
+}
+
+export interface PostData {
+  metadata: PostMetadata;
+  source: string;
 }
 
 export async function getPostSlugs() {
@@ -36,13 +40,10 @@ export async function getPostData(slug: string, lang: string) {
   const fileContents = fs.readFileSync(targetPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const mdxSource = await serialize(content);
-
   return {
-    slug,
     metadata: { ...data, slug, lang: fs.existsSync(fullPath) ? lang : 'en' } as PostMetadata,
-    content: mdxSource,
-  };
+    source: content,
+  } satisfies PostData;
 }
 
 export async function getAllPosts(lang: string): Promise<PostMetadata[]> {

@@ -1,19 +1,12 @@
-"use client";
-
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 import ClientProviders from "@/components/client_providers";
+
+export const metadata: Metadata = {
+  title: "Von Breznev A. Mendres · Computer Science & Software",
+  description: "Portfolio of Von Breznev A. Mendres, a Computer Science student building software, cloud systems, and machine learning projects in Taiwan.",
+};
 
 export default function RootLayout({
   children,
@@ -22,10 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ClientProviders>
-          {children}
-        </ClientProviders>
+      <body>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
