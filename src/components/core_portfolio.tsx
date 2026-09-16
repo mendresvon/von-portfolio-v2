@@ -177,36 +177,54 @@ const staticJobs: Job[] = [];
 const awards = [
   {
     period: "2026",
+    periodZh: "2026",
     title: "1st Place · National English Social Solutions Contest",
+    titleZh: "第一名 · 全國英語社會方案競賽",
     detail: "Proposed SafetyLink with Amber and Jerome, an autonomous one-button RF alert concept for seniors living alone in Taiwan.",
+    detailZh: "與 Amber 和 Jerome 共同提出 SafetyLink，一套為臺灣獨居長者設計的單鍵 RF 求助警報概念。",
   },
   {
     period: "2023 — NOW",
+    periodZh: "2023 — 至今",
     title: "Academic Elite Award · STUST",
+    titleZh: "學業菁英獎 · 南臺科技大學",
     detail: "Recognized for academic performance while completing a Computer Science degree in Mandarin.",
+    detailZh: "在以中文修讀資訊工程學位期間，因學業表現優異而獲獎。",
   },
   {
     period: "USJ-R",
+    periodZh: "USJ-R",
     title: "Valedictorian",
+    titleZh: "畢業生代表",
     detail: "Graduated as valedictorian of my class at the University of San Jose–Recoletos.",
+    detailZh: "以班級第一名身分畢業於聖荷西－雷科萊多大學（University of San Jose–Recoletos）。",
   },
 ];
 
 const leadership = [
   {
     period: "2026 — NOW",
+    periodZh: "2026 — 至今",
     title: "Deputy Secretary-General · Tainan Youth Center",
+    titleZh: "臺南青年中心副總幹事",
     detail: "Helping organize youth programs and community initiatives in Tainan.",
+    detailZh: "協助籌辦臺南的青年活動與社區計畫。",
   },
   {
     period: "2016 — 2020",
+    periodZh: "2016 — 2020",
     title: "S2 General Scribe · USJ-R Senior Scouts",
+    titleZh: "USJ-R Senior Scouts S2 總記錄員",
     detail: "Served as General Scribe in the USJ-R Senior Scouts, focused on service, discipline, and community.",
+    detailZh: "在 USJ-R Senior Scouts 擔任總記錄員，專注於服務、紀律與社群參與。",
   },
   {
     period: "2023 — NOW",
+    periodZh: "2023 — 至今",
     title: "Acolyte, Lector & Psalmist · Sacred Heart Church",
+    titleZh: "聖心堂輔祭、讀經員與領唱員",
     detail: "Contributing to the life of the Filipino community in Tainan.",
+    detailZh: "參與並服務臺南菲律賓社群的教會生活。",
   },
 ];
 
@@ -214,30 +232,35 @@ const featuredPictures = [
   {
     src: "/images/featured/von-and-zoe.jpg",
     alt: "Von with his baby sister Zoe",
+    altZh: "Von 與妹妹 Zoe 的合照",
     width: 2134,
     height: 2134,
   },
   {
     src: "/images/featured/fr-jean.jpg",
     alt: "A large community group photo in a church",
+    altZh: "教堂內的大型團體合照",
     width: 1477,
     height: 1108,
   },
   {
     src: "/images/featured/more-safetylink.jpg",
     alt: "Three people holding SafetyLink certificates",
+    altZh: "三人手持 SafetyLink 證書",
     width: 1200,
     height: 2134,
   },
   {
     src: "/images/featured/despidida.jpg",
     alt: "A group gathered outside a restaurant in Tainan",
+    altZh: "一群人在臺南餐廳外的合照",
     width: 1477,
     height: 1108,
   },
   {
     src: "/images/featured/family.jpg",
     alt: "A family selfie",
+    altZh: "家庭自拍照",
     width: 1422,
     height: 2134,
   },
@@ -246,7 +269,7 @@ const featuredPictures = [
 const stackGroups = [
   {
     label: "AI STACK / AGENTIC ENGINEERING",
-    labelZh: "AI 堆疊 / Agentic Engineering",
+    labelZh: "AI 技術堆疊 / Agentic Engineering",
     tools: [
       { name: "Hermes", Icon: HermesMark, tone: "hermes" },
       { name: "Codex", Icon: SiOpenai, tone: "codex" },
@@ -257,7 +280,7 @@ const stackGroups = [
   },
   {
     label: "PRODUCT & FULL-STACK",
-    labelZh: "產品與全端",
+    labelZh: "產品與全端開發",
     tools: [
       { name: "MongoDB", Icon: SiMongodb, tone: "mongodb" },
       { name: "Express", Icon: SiExpress, tone: "express" },
@@ -268,7 +291,7 @@ const stackGroups = [
   },
   {
     label: "CLOUD & DELIVERY",
-    labelZh: "雲端與交付",
+    labelZh: "雲端與軟體交付",
     tools: [
       { name: "Docker", Icon: SiDocker, tone: "docker" },
       { name: "Kubernetes", Icon: SiKubernetes, tone: "kubernetes" },
@@ -280,8 +303,8 @@ const stackGroups = [
     ],
   },
   {
-    label: "DATABase, MESSAGING, & Others",
-    labelZh: "資料庫、訊息傳遞與其他",
+    label: "DATABASE, MESSAGING, & OTHER TOOLS",
+    labelZh: "資料庫、訊息傳遞與其他工具",
     tools: [
       { name: "MongoDB", Icon: SiMongodb, tone: "mongodb" },
       { name: "PostgreSQL", Icon: SiPostgresql, tone: "postgresql" },
@@ -373,41 +396,103 @@ export default function CorePortfolio() {
   const isZh = isMounted && i18n.language.startsWith("zh");
   const copy = isZh
     ? {
-        basedIn: "現居台灣台南",
+        language: "語言",
+        primaryNavigation: "主要導覽",
+        available: "目前開放工作機會",
+        socialLinks: "社群連結",
+        resume: "履歷",
+        projectImageAlt: "專案畫面",
+        linkLive: "線上版",
+        linkCode: "程式碼",
+        linkDemo: "示範影片",
+        linkBlog: "文章",
+        neuronSignalFlow: "神經元訊號流",
+        neuronDiagramAlt: "動態神經元示意圖",
+        signalIn: "訊號輸入",
+        signalOut: "訊號輸出",
+        education: "學歷",
+        degree: "資訊工程學系學士 · 2027",
+        departmentRank: "系排名 #1 / 132",
+        externalCoursework: "校外課程",
+        courseProvider: "哈佛大學（線上課程）",
+        certifications: "專業認證",
+        courseComputerScience: "電腦科學",
+        courseUnderstandingTechnology: "科技理解",
+        courseProgrammingPython: "Python 程式設計",
+        contactName: "姓名",
+        contactEmail: "電子郵件",
+        contactMessage: "訊息",
+        sending: "傳送中…",
+        error: "發生錯誤",
+        enterHint: "或按下 ↵ Enter 傳送",
+        backToTop: "回到頂端 ↑",
+        copied: "已複製",
+        basedIn: "現居臺南，臺灣",
         introRole: "資訊工程 · 軟體 · AI 研究",
-        introLead: "嗨，我是 Von，一名來自菲律賓 🇵🇭、目前在台灣 🇹🇼 就讀的資訊工程學生。",
-        intro: "我來到台灣時完全不會中文。現在，我所有課程都以中文授課，並在全中文授課的資工系中排名第一。",
+        introLead: "嗨，我是 Von，一名來自菲律賓、目前在臺灣求學的資訊工程學生。",
+        intro: "我來到臺灣時完全不會說中文。現在，我所有課程都以中文授課，並在全中文授課的資訊工程系中排名第一。",
         emailHint: "按下 C 複製我的電子郵件",
         personalBlog: "個人部落格",
         work: "作品",
         workTitle: "精選作品",
         picturesTitle: "精選照片",
-        picturesCaption: "記憶快照",
+        picturesCaption: "回憶剪影",
         favoriteProjects: "喜愛的專案",
-        favoriteProjectsIntro: "從雲端系統到嵌入式系統，這些是我最投入的幾個作品。",
-        moreWorkPrefix: "我也持續打造軟體、雲端系統與 AI 應用。歡迎造訪我的",
-        moreWorkSuffix: "查看更多作品。",
+        favoriteProjectsIntro: "從雲端系統到嵌入式硬體，這些是我投入最多心力的幾個專案。",
+        moreWorkPrefix: "我打造軟體專案、雲端系統與 AI 應用。歡迎造訪我的",
+        moreWorkSuffix: "，查看更多作品。",
         aiResearch: "AI 研究",
-        researchIntro: "機制可解釋性研究的核心問題是：神經網路如何表徵資訊，又是哪些內部組件造成它們的輸出？",
-        researchContext: "我與一位 NCKU 教授及一位同校研究生共同撰寫研究論文，並負責以下實驗。",
+        researchIntro: "機制可解釋性研究探討現代 AI 的核心問題：神經網路如何將輸入轉化為輸出？透過追蹤模型內部的特徵、迴路與因果路徑，研究者不僅試圖理解模型做了什麼，也希望解釋它為什麼這麼做。",
+        researchContext: "我與來自國立成功大學（NCKU）的一位教授及一位研究生合作撰寫一篇投稿至 NeurIPS 的研究論文；NCKU 是全球排名前 200 名的大學，目前論文正在審查中。我負責以下實驗。",
         experience: "經歷",
         experienceTitle: "工作經歷",
-        experienceIntro: "除了投入 AI 研究、維持優異的學業表現並承擔社群責任外，我也透過兼職工作全額負擔學業與生活開支。",
-        qualifications: "學歷與認證",
+        experienceIntro: "除了進行 AI 研究、維持優異的學業成績並承擔社群責任外，我也透過兼職工作全額負擔學業與生活開支。",
+        qualifications: "學歷與專業認證",
         qualificationsIntro: "除了課堂學習，我也主動透過自學、認證與實作，持續尋找校外的學習機會。",
         stack: "技術堆疊",
         stackIntro: "我在研究、軟體開發與日常工作中使用的工具與技術。",
         awards: "獎項",
         leadership: "領導與服務",
         outside: "螢幕之外",
-        outsideIntro: "在台南生活、學習、教學，也和一群很棒的人一起完成 SafetyLink。",
+        outsideIntro: "在臺南生活，意味著學習、教學、服務，也和一群用心的夥伴一起打造 SafetyLink。",
         writing: "文章",
         contact: "聯絡",
         contactIntro: "你可以使用表單，或透過下方連結聯絡我。",
-        send: "發送訊息",
+        send: "傳送訊息",
         sent: "訊息已送出，謝謝你。",
       }
     : {
+        language: "LANGUAGE",
+        primaryNavigation: "Primary navigation",
+        available: "Available for opportunities",
+        socialLinks: "Social links",
+        resume: "Resume",
+        projectImageAlt: "project screenshot",
+        linkLive: "Live",
+        linkCode: "Code",
+        linkDemo: "Demo",
+        linkBlog: "Blog",
+        neuronSignalFlow: "NEURON SIGNAL FLOW",
+        neuronDiagramAlt: "Animated generic neuron diagram",
+        signalIn: "signal in",
+        signalOut: "signal out",
+        education: "EDUCATION",
+        degree: "B.S. Computer Science and Information Engineering · 2027",
+        departmentRank: "Department rank #1 / 132",
+        externalCoursework: "EXTERNAL COURSEWORK",
+        courseProvider: "Harvard University (online coursework)",
+        certifications: "CERTIFICATIONS",
+        courseComputerScience: "Computer Science",
+        courseUnderstandingTechnology: "Understanding Technology",
+        courseProgrammingPython: "Programming with Python",
+        contactName: "Name",
+        contactEmail: "Email",
+        contactMessage: "Message",
+        sending: "Sending…",
+        error: "Something went wrong",
+        enterHint: "or ↵ Enter to send",
+        backToTop: "Back to top ↑",
+        copied: "Copied",
         basedIn: "BASED IN TAINAN, TAIWAN",
         introRole: "Computer Science · Software · AI Research",
         introLead: "Hey, I'm Von. A computer science student from the Philippines 🇵🇭, currently studying in Taiwan 🇹🇼.",
@@ -454,6 +539,32 @@ export default function CorePortfolio() {
     { href: "#qualifications", label: copy.qualifications, Icon: FiBookOpen },
     { href: "#contact", label: copy.contact, Icon: FiMail },
   ];
+
+  const researchItems = isZh
+    ? [
+        {
+          year: "2026",
+          title: "因果神經元消融 · 多模態模型",
+          description: "測量針對性移除神經元如何改變多模態模型的預測，並揭示其內部的因果結構。",
+        },
+        {
+          year: "2026",
+          title: "神經元－特徵映射",
+          description: "將模型學得的特徵對應至個別神經元與神經元群組，讓內部表徵更容易檢視。",
+        },
+      ]
+    : [
+        {
+          year: "2026",
+          title: "Causal neuron ablation · Multimodal model",
+          description: "Measuring how targeted neuron removal changes predictions in a multimodal model and reveals its internal causal structure.",
+        },
+        {
+          year: "2026",
+          title: "Neuron-to-feature mapping",
+          description: "Mapping learned features to individual neurons and neuron groups to make internal representations easier to inspect.",
+        },
+      ];
 
   const projects = useMemo(() => getProjectData(t), [t]);
   const translatedJobs = (t("experience.jobs", { returnObjects: true }) as Job[]) || [];
@@ -507,8 +618,8 @@ export default function CorePortfolio() {
                 <span className="time-dot" aria-hidden="true" />
                 {time}
               </span>
-              <div className="language-control" aria-label="Language">
-                <span className="language-label">LANGUAGE</span>
+              <div className="language-control" aria-label={copy.language}>
+                <span className="language-label">{copy.language}</span>
                 <button type="button" className={!isZh ? "active" : ""} onClick={() => i18n.changeLanguage("en")}>EN</button>
                 <span>/</span>
                 <button type="button" className={isZh ? "active" : ""} onClick={() => i18n.changeLanguage("zh-TW")}>繁中</button>
@@ -518,8 +629,8 @@ export default function CorePortfolio() {
 
           <div className="intro-block">
             <div className="profile-frame">
-              <Image src="/profile.jpg" alt="Von Breznev A. Mendres" fill priority sizes="72px" />
-              <span className="online-dot" aria-label="Available for opportunities" />
+              <Image src="/profile.jpg" alt={isZh ? "馬盛中" : "Von Breznev A. Mendres"} fill priority sizes="72px" />
+              <span className="online-dot" aria-label={copy.available} />
             </div>
             <div className="intro-name-row">
               <h1>Von Breznev A. Mendres</h1>
@@ -530,15 +641,15 @@ export default function CorePortfolio() {
             <p className="intro-copy">{copy.intro}</p>
 
             <div className="intro-actions">
-              <div className="social-links" aria-label="Social links">
+              <div className="social-links" aria-label={copy.socialLinks}>
                 <a href="https://github.com/mendresvon" target="_blank" rel="noreferrer">GitHub <FiArrowUpRight /></a>
                 <a href="https://www.linkedin.com/in/vonmendres/" target="_blank" rel="noreferrer">LinkedIn <FiArrowUpRight /></a>
                 <Link href="/blog">{copy.personalBlog} <FiBookOpen /></Link>
-                <a href="https://flowcv.com/resume/p9w1ulfwwo8r" target="_blank" rel="noreferrer">Resume <FiDownload /></a>
+                <a href="https://flowcv.com/resume/p9w1ulfwwo8r" target="_blank" rel="noreferrer">{copy.resume} <FiDownload /></a>
               </div>
               <button type="button" className="copy-link" onClick={() => void copyEmail()}>
                 {copied ? <FaCheck aria-hidden="true" /> : <FiCopy aria-hidden="true" />}
-                {copied ? (isZh ? "已複製" : "Copied") : copy.emailHint}
+                {copied ? copy.copied : copy.emailHint}
               </button>
             </div>
           </div>
@@ -554,7 +665,7 @@ export default function CorePortfolio() {
                 variants={pictureReveal}
                 transition={{ delay: index * 0.06 }}
               >
-                <Image src={picture.src} alt={picture.alt} fill sizes="(max-width: 740px) 36vw, (max-width: 1100px) 18vw, 220px" />
+                <Image src={picture.src} alt={isZh ? picture.altZh : picture.alt} fill sizes="(max-width: 740px) 36vw, (max-width: 1100px) 18vw, 220px" />
               </motion.figure>
             ))}
           </div>
@@ -564,7 +675,7 @@ export default function CorePortfolio() {
 
         </header>
 
-        <nav className="inspiration-nav" aria-label="Primary navigation">
+        <nav className="inspiration-nav" aria-label={copy.primaryNavigation}>
           {navItems.map(({ href, label, Icon }) => (
             <a href={href} key={href} aria-label={label}>
               <Icon aria-hidden="true" />
@@ -592,31 +703,26 @@ export default function CorePortfolio() {
 
             <div className="research-layout">
             <div className="research-list">
-              <motion.div className="research-row" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}>
-                <span className="research-year">2026</span>
-                <div>
-                  <h3>Causal neuron ablation · Multimodal model</h3>
-                  <p>Measuring how targeted neuron removal changes predictions in a multimodal model and reveals its internal causal structure.</p>
-                </div>
-              </motion.div>
-              <motion.div className="research-row" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}>
-                <span className="research-year">2026</span>
-                <div>
-                  <h3>Neuron-to-feature mapping</h3>
-                  <p>Mapping learned features to individual neurons and neuron groups to make internal representations easier to inspect.</p>
-                </div>
-              </motion.div>
+              {researchItems.map((item) => (
+                <motion.div className="research-row" key={item.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}>
+                  <span className="research-year">{item.year}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
-            <div className="research-figure" aria-label="Animated generic neuron diagram" role="img">
-              <div className="figure-label">NEURON SIGNAL FLOW</div>
+            <div className="research-figure" aria-label={copy.neuronDiagramAlt} role="img">
+              <div className="figure-label">{copy.neuronSignalFlow}</div>
               <motion.svg viewBox="0 0 360 230" fill="none" aria-hidden="true" animate={prefersReducedMotion ? undefined : { opacity: [0.72, 1, 0.72] }} transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}>
                 <motion.path d="M56 46C122 46 132 115 196 115M56 115C120 115 135 46 196 46M56 184C122 184 132 115 196 115M196 46C247 46 255 84 304 84M196 115C245 115 258 115 304 115M196 184C247 184 255 146 304 146" stroke="currentColor" strokeWidth="1" animate={prefersReducedMotion ? undefined : { pathLength: [0.82, 1, 0.82] }} transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }} />
                 {[ [56, 46, 7, 0], [56, 115, 7, 0.3], [56, 184, 7, 0.6], [196, 46, 9, 0.4], [196, 115, 9, 0.8], [196, 184, 9, 1.1], [304, 84, 7, 0.7], [304, 115, 7, 1], [304, 146, 7, 1.3] ].map(([cx, cy, radius, delay]) => (
                   <motion.circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={radius} fill="currentColor" animate={prefersReducedMotion ? undefined : { scale: [0.88, 1.14, 0.88], opacity: [0.55, 1, 0.55] }} transition={{ duration: 2.6, repeat: Infinity, delay, ease: "easeInOut" }} />
                 ))}
               </motion.svg>
-              <div className="figure-caption"><span>signal in</span><span>signal out</span></div>
+              <div className="figure-caption"><span>{copy.signalIn}</span><span>{copy.signalOut}</span></div>
             </div>
             </div>
           </div>
@@ -644,7 +750,7 @@ export default function CorePortfolio() {
                   whileHover={prefersReducedMotion ? undefined : { y: -7 }}
                 >
                   <div className="project-media">
-                    <Image src={project.imageUrl} alt={`${project.title} project screenshot`} fill sizes="(max-width: 700px) 100vw, 50vw" />
+                    <Image src={project.imageUrl} alt={project.title + " " + copy.projectImageAlt} fill sizes="(max-width: 700px) 100vw, 50vw" />
                   </div>
                   <div className="project-copy">
                     <div className="project-index">{project.number}</div>
@@ -657,10 +763,10 @@ export default function CorePortfolio() {
                     <div className="project-footer">
                       <div className="project-tags">{project.techStack.join(" · ")}</div>
                       <div className="project-links">
-                        {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer">Live <FiArrowUpRight /></a>}
-                        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">Code <FiArrowUpRight /></a>}
-                        {project.videoUrl && <a href={project.videoUrl} target="_blank" rel="noreferrer">Demo <FiArrowUpRight /></a>}
-                        {project.blogUrl && <Link href={project.blogUrl}>Blog <FiArrowUpRight /></Link>}
+                        {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer">{copy.linkLive} <FiArrowUpRight /></a>}
+                        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">{copy.linkCode} <FiArrowUpRight /></a>}
+                        {project.videoUrl && <a href={project.videoUrl} target="_blank" rel="noreferrer">{copy.linkDemo} <FiArrowUpRight /></a>}
+                        {project.blogUrl && <Link href={project.blogUrl}>{copy.linkBlog} <FiArrowUpRight /></Link>}
                       </div>
                     </div>
                   </div>
@@ -668,7 +774,11 @@ export default function CorePortfolio() {
               ))}
             </div>
             <p className="more-work-note">
-              {copy.moreWorkPrefix} <a href="https://github.com/mendresvon" target="_blank" rel="noopener noreferrer">GitHub</a> {copy.moreWorkSuffix}
+              {isZh ? (
+                <>{copy.moreWorkPrefix} <a href="https://github.com/mendresvon" target="_blank" rel="noopener noreferrer">GitHub</a>{copy.moreWorkSuffix}</>
+              ) : (
+                <>{copy.moreWorkPrefix} <a href="https://github.com/mendresvon" target="_blank" rel="noopener noreferrer">GitHub</a> {copy.moreWorkSuffix}</>
+              )}
             </p>
           </div>
         </section>
@@ -702,7 +812,7 @@ export default function CorePortfolio() {
               <h2>{copy.awards}</h2>
             </motion.div>
             <div className="plain-list">
-              {awards.map((item) => <div className="plain-list-row" key={item.title}><span>{item.period}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div></div>)}
+              {awards.map((item) => <div className="plain-list-row" key={item.title}><span>{isZh ? item.periodZh : item.period}</span><div><h3>{isZh ? item.titleZh : item.title}</h3><p>{isZh ? item.detailZh : item.detail}</p></div></div>)}
             </div>
           </div>
           <div className="split-column">
@@ -710,7 +820,7 @@ export default function CorePortfolio() {
               <h2>{copy.leadership}</h2>
             </motion.div>
             <div className="plain-list">
-              {leadership.map((item) => <div className="plain-list-row" key={item.title}><span>{item.period}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div></div>)}
+              {leadership.map((item) => <div className="plain-list-row" key={item.title}><span>{isZh ? item.periodZh : item.period}</span><div><h3>{isZh ? item.titleZh : item.title}</h3><p>{isZh ? item.detailZh : item.detail}</p></div></div>)}
             </div>
           </div>
         </section>
@@ -725,7 +835,7 @@ export default function CorePortfolio() {
             {jobs.map((job, index) => (
               <motion.details className="experience-node" key={`${job.company}-${job.role}`} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal} transition={{ delay: index * 0.05 }}>
                 <summary className="experience-summary">
-                  <span className="experience-period">{isZh && index > 0 ? job.period.replace("Oct", "10月").replace("Jan", "1月").replace("Present", "至今") : job.period}</span>
+                  <span className="experience-period">{isZh ? job.period.replace("Oct", "10月").replace("Jan", "1月").replace("Present", "至今") : job.period}</span>
                   <span className="experience-marker" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></span>
                   <span className="experience-summary-copy">
                     <span className="experience-role">{job.role}</span>
@@ -750,22 +860,22 @@ export default function CorePortfolio() {
 
           <div className="qualification-grid">
             <div>
-              <p className="row-label">EDUCATION</p>
+              <p className="row-label">{copy.education}</p>
               <h3>{isZh ? "南臺科技大學" : "Southern Taiwan University of Science and Technology"}</h3>
-              <p>{isZh ? "資訊工程學系學士 · 2027" : "B.S. Computer Science and Information Engineering · 2027"}</p>
-              <p className="qualification-note">{isZh ? "系排名 #1 / 132" : "Department rank #1 / 132"}</p>
+              <p>{copy.degree}</p>
+              <p className="qualification-note">{copy.departmentRank}</p>
             </div>
             <div>
-              <p className="row-label">{isZh ? "校外課程" : "EXTERNAL COURSEWORK"}</p>
-              <p className="qualification-provider">{isZh ? "哈佛大學（線上課程）" : "Harvard University (online coursework)"}</p>
+              <p className="row-label">{copy.externalCoursework}</p>
+              <p className="qualification-provider">{copy.courseProvider}</p>
               <div className="link-stack">
-                <a href="https://certificates.cs50.io/ca725574-9d0f-48d9-bd78-19fa78241779.pdf?size=letter" target="_blank" rel="noreferrer">CS50x · Computer Science <FiArrowUpRight /></a>
-                <a href="https://certificates.cs50.io/af766a85-6434-42d1-b271-e04b39ccb6a1.pdf?size=letter" target="_blank" rel="noreferrer">CS50T · Understanding Technology <FiArrowUpRight /></a>
-                <a href="https://certificates.cs50.io/e58bc053-4269-4012-8be6-41dd1d92af68.pdf?size=letter" target="_blank" rel="noreferrer">CS50P · Programming with Python <FiArrowUpRight /></a>
+                <a href="https://certificates.cs50.io/ca725574-9d0f-48d9-bd78-19fa78241779.pdf?size=letter" target="_blank" rel="noreferrer">CS50x · {copy.courseComputerScience} <FiArrowUpRight /></a>
+                <a href="https://certificates.cs50.io/af766a85-6434-42d1-b271-e04b39ccb6a1.pdf?size=letter" target="_blank" rel="noreferrer">CS50T · {copy.courseUnderstandingTechnology} <FiArrowUpRight /></a>
+                <a href="https://certificates.cs50.io/e58bc053-4269-4012-8be6-41dd1d92af68.pdf?size=letter" target="_blank" rel="noreferrer">CS50P · {copy.courseProgrammingPython} <FiArrowUpRight /></a>
               </div>
             </div>
             <div>
-              <p className="row-label">CERTIFICATIONS</p>
+              <p className="row-label">{copy.certifications}</p>
               <div className="link-stack">
                 <a href="https://www.coursera.org/account/accomplishments/professional-cert/ZFBSVP8GUL2D" target="_blank" rel="noreferrer">Google IT Support <FiArrowUpRight /></a>
                 <a href="https://www.coursera.org/account/accomplishments/specialization/MZ3HK8DAZD3F" target="_blank" rel="noreferrer">IBM Software Engineering <FiArrowUpRight /></a>
@@ -786,28 +896,28 @@ export default function CorePortfolio() {
             <div className="contact-fields">
               <label className="contact-field">
                 <input name="name" type="text" autoComplete="name" placeholder=" " required />
-                <span>Name</span>
+                <span>{copy.contactName}</span>
               </label>
               <label className="contact-field">
                 <input name="email" type="email" autoComplete="email" placeholder=" " required />
-                <span>Email</span>
+                <span>{copy.contactEmail}</span>
               </label>
               <label className="contact-field contact-message-field">
                 <textarea name="message" placeholder=" " rows={4} required />
-                <span>Message</span>
+                <span>{copy.contactMessage}</span>
               </label>
             </div>
             <div className="contact-submit-row">
               <button className="send-button" type="submit" disabled={formState === "sending"}>
-                {formState === "sending" ? "Sending…" : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "error" ? "Something went wrong" : copy.send}
+                {formState === "sending" ? copy.sending : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "error" ? copy.error : copy.send}
               </button>
-              <span className="enter-hint">or ↵ Enter to send</span>
+              <span className="enter-hint">{copy.enterHint}</span>
             </div>
           </form>
 
           <div className="contact-links-list">
             <button type="button" className="contact-link-row" onClick={() => void copyEmail()}>
-              <span className="contact-link-name"><FiMail aria-hidden="true" /> Email</span>
+              <span className="contact-link-name"><FiMail aria-hidden="true" /> {copy.contactEmail}</span>
               <span className="contact-link-value">{email}</span>
               <FiCopy aria-hidden="true" />
             </button>
@@ -827,7 +937,7 @@ export default function CorePortfolio() {
               <FiArrowUpRight aria-hidden="true" />
             </a>
             <a className="contact-link-row" href="https://flowcv.com/resume/p9w1ulfwwo8r" target="_blank" rel="noreferrer">
-              <span className="contact-link-name"><FiDownload aria-hidden="true" /> Resume</span>
+              <span className="contact-link-name"><FiDownload aria-hidden="true" /> {copy.resume}</span>
               <span className="contact-link-value">FlowCV</span>
               <FiArrowUpRight aria-hidden="true" />
             </a>
@@ -837,7 +947,7 @@ export default function CorePortfolio() {
         <footer className="portfolio-footer">
           <span>© {new Date().getFullYear()} Von Breznev A. Mendres</span>
           <span>{copy.basedIn}</span>
-          <a href="#top">Back to top ↑</a>
+          <a href="#top">{copy.backToTop}</a>
         </footer>
       </div>
     </main>

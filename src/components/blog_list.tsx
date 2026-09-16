@@ -19,7 +19,7 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
       <div className="blog-container">
         <header className="blog-index-header">
           <Link href="/" className="blog-back-link">{t("blog.back")}</Link>
-          <p className="eyebrow">WRITING</p>
+          <p className="eyebrow">{t("blog.eyebrow")}</p>
           <h1>{t("blog.title")}</h1>
           <p className="blog-index-intro">{t("blog.intro")}</p>
         </header>
@@ -45,7 +45,7 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
           </div>
         ) : (
           <div className="blog-empty">
-            <p className="eyebrow">WRITING</p>
+            <p className="eyebrow">{t("blog.eyebrow")}</p>
             <h2>{t("blog.emptyTitle")}</h2>
             <p>{t("blog.empty")}</p>
           </div>

@@ -13,16 +13,22 @@
     "intro": "記錄軟體工程、創意 AI，以及如何用心打造實用作品。",
     "read": "閱讀文章",
     "emptyTitle": "目前還沒有文章",
-    "empty": "敬請期待即將發布的文章。"
+    "empty": "敬請期待即將發表的文章。",
+    "eyebrow": "文章"
   },
   "hero": {
     "name": "馬盛中",
     "tagline": "以自律奠基，以成果驗證",
-    "roles": ["資訊工程系學生", "兼職教師", "工程師志向者", "立志成為軟體工程師"],
+    "roles": [
+      "資訊工程系學生",
+      "兼職教師",
+      "未來的工程師",
+      "立志成為軟體工程師"
+    ],
     "resume": {
       "label": "下載履歷",
       "english": "下載英文履歷",
-      "chinese": "下載中文履歷"
+      "chinese": "下載中文版履歷"
     }
   },
   "about": {
@@ -37,95 +43,107 @@
     "github": "mendresvon",
     "copy": "複製",
     "copied": "已複製！",
-    "current_positions_label": "目前職位",
+    "current_positions_label": "目前職務",
     "positions": [
-      { "role": "英語教師", "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)" },
-      { "role": "英語外師", "company": "格蘭英語 (Gram English)" }
+      {
+        "role": "生活與商務英語教師",
+        "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)"
+      },
+      {
+        "role": "英語教師",
+        "company": "格蘭英語 (Gram English)"
+      }
     ],
     "involvements_label": "社區與服務",
     "involvements": [
-      { "role": "副總幹事", "org": "台南青年中心 (Tainan Youth Center)" },
-      { "role": "輔祭、讀經員、領唱員", "org": "聖心堂 (Sacred Heart Church Tainan)" }
+      {
+        "role": "副總幹事",
+        "org": "台南青年中心 (Tainan Youth Center)"
+      },
+      {
+        "role": "輔祭、讀經員、領唱員",
+        "org": "聖心堂 (Sacred Heart Church Tainan)"
+      }
     ],
-    "p1": "大家好，我是馬盛中，一個在台灣讀書的菲律賓人，目前就讀於南臺科技大學（STUST）資工系三年級。",
-    "p2": "秉持著我的座右銘「學習一旦停止，生活亦隨之止步」，我熱衷於提升技能、迎接挑戰，並不斷探索新的機會。",
-    "p3": "我目前正在尋找在台灣的實習機會，期望透過實習應用所學、持續學習新知、積極協助團隊，並在實踐中持續成長。",
+    "p1": "大家好，我是馬盛中，一名來自菲律賓、目前在臺灣求學的學生。我目前就讀於南臺科技大學（STUST）資訊工程學系三年級。",
+    "p2": "秉持我的座右銘：「停止學習的那一天，就是停止生活的那一天。」我熱衷於提升技能、迎接新的挑戰，並尋找新的機會。",
+    "p3": "我目前正在尋找在臺灣的實習機會，非常期待應用所學、學習新技能並積極協助團隊達成目標，並透過實務經驗持續成長。",
     "blog_preview_title": "最新文章",
-    "blog_read_more": "閱讀全文 →",
-    "blog_empty": "敬請期待即將發布的文章！"
+    "blog_read_more": "閱讀文章 →",
+    "blog_empty": "敬請期待即將發表的文章！"
   },
   "experience": {
     "title": "工作經歷",
     "jobs": [
       {
-        "role": "生活美語教師",
+        "role": "生活與商務英語教師",
         "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)",
-        "period": "2023年10月 - 至今",
+        "period": "2023 年 10 月－至今",
         "description": [
-          "指導包括上班族、研究生、大專院校生和高中生在內的多元學員，教授商務與日常英語主題。",
-          "設計並執行客製化課程計畫，以滿足特定行業需求和成年學習者的專業發展目標。",
-          "將複雜的主題內容提煉成清晰、易懂且引人入勝的課程，展現出色的溝通與表達能力。"
+          "指導上班族、研究生、大學生與高中生等多元學員，教授商務與日常英語。",
+          "針對特定產業需求與成年學習者的專業發展目標，設計並執行客製化課程。",
+          "將複雜的主題內容轉化為清晰、易懂且引人入勝的課程，展現出色的溝通與表達能力。"
         ]
       },
       {
-        "role": "英語外師",
+        "role": "英語教師",
         "company": "格蘭英語 (Gram English)",
-        "period": "2023年1月 - 至今",
+        "period": "2023 年 1 月－至今",
         "description": [
-          "從零開始開發並實施一套專門的口說課程，專注於提升學生的流利度、發音和自信心。",
-          "調整教材和教學方法，以有效地吸引從國小到國中不同年齡和程度的學生。",
-          "管理課堂動態，營造一個紀律嚴明、互相支持且積極活躍的學習環境。"
+          "從零開始設計並實施英語口說課程，專注於提升學生的流暢度、發音與自信。",
+          "調整教材與教學方法，讓從國小到國中的不同年齡與程度學生都能投入學習。",
+          "管理課堂動態，營造紀律嚴明、互相支持且積極活躍的學習環境。"
         ]
       }
     ]
   },
   "skills": {
-    "qualificationsTitle": "專業資格",
+    "qualificationsTitle": "學歷與認證",
     "technicalSkillsTitle": "技術能力",
     "education": {
       "title": "南臺科技大學",
-      "degree": "資訊工程學系學士 (2027)"
+      "degree": "資訊工程學系學士（2027）"
     },
     "coursework": {
-      "title": "哈佛大學 - 線上"
+      "title": "哈佛大學（線上課程）"
     },
     "certifications": {
-      "title": "行業認證"
+      "title": "專業認證"
     },
     "categories": {
-      "languages": "語言",
-      "devops_cloud": "DevOps / 雲端",
-      "database_tools": "資料庫 / 工具",
+      "languages": "程式語言",
+      "devops_cloud": "DevOps／雲端",
+      "database_tools": "資料庫／工具",
       "ai_ml": "人工智慧與機器學習"
     }
   },
   "projects": {
     "title": "專案作品集",
     "pet_classifier": {
-      "title": "AI 寵物物種辨識系統",
-      "introduction": "微調模型並建立影像分類器，協助寵物收容所與獸醫識別寵物物種，運用深度學習達到 98% 準確率。",
-      "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率優化將模型準確率從 76% 基準提升至 98%。實作模型序列化 (Model Serialization)，並部署至 Hugging Face 雲端平台，整合 Gradio 建立具即時辨識功能之 Web 應用。"
+      "title": "AI 寵物物種分類器",
+      "introduction": "微調模型並建立影像分類器，運用深度學習以 98% 的準確率協助寵物收容所與獸醫辨識寵物種類。",
+      "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率最佳化，將模型準確率從 76% 的基準提升至 98%。實作模型序列化，並部署至 Hugging Face Spaces，整合 Gradio 建立具備即時推論功能的網頁介面。"
     },
     "traffic_light": {
       "title": "聲控智慧紅綠燈",
-      "introduction": "建立 IoT 邊緣控制系統，實現即時語音響應，克服嵌入式系統單執行緒限制。",
-      "description": "於號誌控制迴圈中整合 MQTT 訊息監聽，克服單執行緒限制，確保在執行 ESP32 燈號序列時仍能即時響應 Android 語音控制。自主開發 Android App 並整合 MQTT 非同步架構（選用 QoS 0）實現低延遲通訊。利用 MQTTx 監控指令流，確保語音指令由 Android 客戶端至 ESP32 控制端的精確傳輸。"
+      "introduction": "建立 IoT 邊緣控制系統，實現即時語音回應，克服嵌入式系統的單執行緒限制。",
+      "description": "在紅綠燈控制迴圈中整合 MQTT 訊息監聽，讓系統在執行 ESP32 的 LED 燈號序列時，仍能即時回應 Android 語音指令。從零開發 Android 應用程式，並實作採用 QoS 0 的 MQTT 非同步架構，以實現低延遲通訊。利用 MQTTx 監控訊息流，確保語音指令能從 Android 用戶端精確傳送至 ESP32 控制器。"
     },
     "aura_notes": {
       "title": "Aura Notes",
-      "introduction": "開發全端筆記應用程式，靈感源自 Google Keep，具備動態筆記尺寸調整與安全驗證功能。",
-      "description": "MERN 應用程式，具備動態筆記尺寸功能，筆記高度會根據內容長度自動調整，創造如 Google Keep 般的響應式瀑布流布局。採用 JWT 身份驗證、MongoDB 資料持久化，以及整合 Tailwind CSS 與 Framer Motion 的 React 前端實現流暢動畫。適應性卡片布局展現 CSS Grid 技術掌握度與對 UX 細節的重視。"
+      "introduction": "開發全端筆記應用程式，靈感源自 Google Keep，具備動態筆記尺寸調整與安全的身分驗證功能。",
+      "description": "MERN 應用程式具備動態筆記尺寸功能，筆記高度會依內容長度自動調整，形成靈感來自 Google Keep 的響應式瀑布流版面。採用 JWT 身分驗證、MongoDB 資料儲存，以及整合 Tailwind CSS 與 Framer Motion 的 React 前端，實現流暢動畫。適應性卡片版面展現對 CSS Grid 的熟悉度，以及對 UX 細節的重視。"
     },
     "filmfolio": {
       "title": "FilmFolio",
-      "introduction": "建立雲端原生電影管理系統，協助用戶探索與整理電影，實現次秒級搜尋效能與近零停機時間。",
-      "description": "一款部署於 Google Cloud Platform Cloud Run 的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis Cache-aside Pattern 加速檢索 1.3M 筆 TMDB 電影資料，降低 API 延遲並減輕後端負載。整合 GitHub Secrets 與 IAM 進行 JWT 身份驗證以確保生產環境資安，前端實作 Debouncing 減少 50%+ 冗餘請求，並透過 Cloud Logs 監控系統健康度。於 asia-east1 區域實現近零停機時間與自動擴展。",
-      "note": "我為妹妹打造了 FilmFolio。當我離開菲律賓前往台灣時，她只有三歲；今年她即將滿八歲。我們最喜歡一起看電影，所以我做了這個應用程式，記錄我們想看的電影。"
+      "introduction": "建立雲端原生電影管理系統，協助使用者探索與整理電影，實現次秒級搜尋效能與近零停機時間。",
+      "description": "一款使用 Google Cloud Platform 的 Cloud Run 服務部署的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis 的 Cache-aside 模式，加快對 130 萬筆 TMDB 電影資料的查詢，降低 API 延遲並減輕後端負載。以 JWT 實作身分驗證，並透過 GitHub Secrets 與 IAM 強化正式環境的安全性；前端採用 debounce 機制，減少 50% 以上的重複請求，並透過 Cloud Logs 監測系統健康狀態。於 asia-east1 區域實現近零停機時間與自動擴展。",
+      "note": "我為妹妹打造了 FilmFolio。當我離開菲律賓前往臺灣時，她只有三歲；今年她即將滿八歲。我們最喜歡一起看電影，所以我打造了這個應用程式，整理我們想看的電影。"
     },
     "safetylink": {
       "title": "SafetyLink",
-      "introduction": "以單鍵 RF 警報概念參加全國社會方案競賽，為台灣獨居長者提出求助方案並獲得第一名。",
-      "description": "競賽要求參賽者為台灣同樣真實的社會問題提出可行解決方案。SafetyLink 是我們為獨居長者設計的簡單求助提案，讓他們只需按下一個按鈕即可發出求救訊號。我與兩位國際商務系學生合作，擔任團隊工程師，也學會在工程師與商務專業人士需要共同協作的環境中溝通與合作。這段經歷讓我練習打造實用的 IoT 與嵌入式系統概念、與隊友協商取捨、在會議室情境中清楚溝通，並向評審提出可信的解決方案。"
+      "introduction": "以單鍵 RF 警報系統概念參加全國英語社會方案競賽，為臺灣獨居長者提出求助方案並獲得第一名。",
+      "description": "這項競賽要求各隊針對臺灣真實存在的社會問題，提出切實可行的解決方案。SafetyLink 是我們為獨居長者設計的簡單求助提案，讓他們只需按下一個按鈕即可發出求救訊號。我與兩位國際商務系學生合作，擔任團隊工程師，也學會在工程師與商務專業人士共同打造解決方案時進行溝通與協作。這段經歷讓我練習設計實用的 IoT 與嵌入式系統方案、與隊友協商取捨、在正式簡報場合清楚溝通，並向評審提出可信的解決方案。"
     },
     "card": {
       "code": "程式碼",
@@ -135,12 +153,12 @@
   },
   "contact": {
     "title": "聯絡我",
-    "intro": "我對新的機會和合作持開放態度。歡迎透過下列表單聯絡我，或直接發送電子郵件至<1>mendresvon@gmail.com</1>。",
+    "intro": "我對新的機會和合作持開放態度。歡迎使用下列表單傳送訊息，或直接寄送電子郵件至<1>mendresvon@gmail.com</1>。",
     "form": {
       "name": "您的姓名",
       "email": "您的電子郵件",
       "message": "您的訊息",
-      "submit": "發送訊息"
+      "submit": "傳送訊息"
     },
     "submitted": {
       "title": "謝謝您！",
@@ -148,7 +166,7 @@
     },
     "quick_contact": "快速聯絡",
     "location": "地點",
-    "location_value": "台灣，台南",
+    "location_value": "臺南，臺灣",
     "copy": "複製",
     "copied": "已複製！",
     "socials": {
@@ -158,6 +176,6 @@
     }
   },
   "footer": {
-    "rights": "版權所有。"
+    "rights": "保留所有權利。"
   }
 }
