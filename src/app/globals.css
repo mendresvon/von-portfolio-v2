@@ -962,17 +962,24 @@ textarea {
   transform: translateY(-2px);
 }
 
-.project-note {
-  grid-column: 2;
-  grid-row: 2;
-  width: 100%;
-  margin: -20px 0 0;
-  padding: 17px 19px;
-  border: 1px solid var(--line-strong);
-  border-left: 4px solid var(--ink);
+.filmfolio-note {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  padding: 18px 24px;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  text-align: center;
+}
+
+.filmfolio-note .eyebrow {
+  margin: 0 0 10px;
+}
+
+.filmfolio-note > p:last-child {
+  max-width: 640px;
+  margin: 0 auto;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.76);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   line-height: 1.65;
 }
 
@@ -1988,9 +1995,9 @@ textarea {
     padding: 0 2px;
   }
 
-  .project-note {
-    width: auto;
-    margin: -8px 2px 0;
+  .filmfolio-note {
+    margin: 0 auto 28px;
+    padding: 16px 14px;
   }
 
   .research-layout {

@@ -534,6 +534,13 @@ export default function CorePortfolio() {
               <p>{copy.favoriteProjectsIntro}</p>
             </div>
 
+            {projects[0]?.note && (
+              <aside className="filmfolio-note">
+                <p className="eyebrow">{isZh ? "個人緣起" : "WHY I BUILT IT"}</p>
+                <p>{projects[0].note}</p>
+              </aside>
+            )}
+
             <div className="project-stage">
               <div className="dot-grid" aria-hidden="true" />
               {projects.map((project, index) => (
@@ -550,7 +557,6 @@ export default function CorePortfolio() {
                   <div className="project-media">
                     <Image src={project.imageUrl} alt={`${project.title} project screenshot`} fill sizes="(max-width: 700px) 100vw, 50vw" />
                   </div>
-                  {project.note && <p className="project-note">{project.note}</p>}
                   <div className="project-copy">
                     <div className="project-index">{project.number}</div>
                     <h3>{project.title}</h3>
