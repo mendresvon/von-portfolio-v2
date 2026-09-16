@@ -33,7 +33,7 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
                     {post.tags?.map((tag) => <span key={tag}>{tag}</span>)}
                   </div>
                   <time dateTime={post.date}>
-                    {format(parseISO(post.date), "MMMM dd, yyyy", { locale: dateLocale })}
+                    {currentLanguage === "zh-TW" ? format(parseISO(post.date), "yyyy年M月d日", { locale: dateLocale }) : format(parseISO(post.date), "MMMM dd, yyyy", { locale: dateLocale })}
                   </time>
                 </div>
 
