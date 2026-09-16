@@ -732,8 +732,10 @@ export default function CorePortfolio() {
                     <span className="experience-company">{job.company}</span>
                   </span>
                 </summary>
-                <div className="experience-popover">
-                  <ul>{job.description.map((item) => <li key={item}>{item}</li>)}</ul>
+                <div className="experience-detail-row">
+                  <div className="experience-popover">
+                    <ul>{job.description.map((item) => <li key={item}>{item}</li>)}</ul>
+                  </div>
                 </div>
               </motion.details>
             ))}
@@ -782,13 +784,22 @@ export default function CorePortfolio() {
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="contact-fields">
-              <label><span>Name</span><input name="name" type="text" placeholder="Your name" required /></label>
-              <label><span>Email</span><input name="email" type="email" placeholder="you@example.com" required /></label>
-              <label><span>Message</span><textarea name="message" placeholder="What would you like to talk about?" rows={4} required /></label>
+              <label className="contact-field">
+                <input name="name" type="text" autoComplete="name" placeholder=" " required />
+                <span>Name</span>
+              </label>
+              <label className="contact-field">
+                <input name="email" type="email" autoComplete="email" placeholder=" " required />
+                <span>Email</span>
+              </label>
+              <label className="contact-field contact-message-field">
+                <textarea name="message" placeholder=" " rows={4} required />
+                <span>Message</span>
+              </label>
             </div>
             <div className="contact-submit-row">
               <button className="send-button" type="submit" disabled={formState === "sending"}>
-                {formState === "sending" ? "Sending…" : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "error" ? "Something went wrong" : <>{copy.send} <FiArrowUpRight /></>}
+                {formState === "sending" ? "Sending…" : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "error" ? "Something went wrong" : copy.send}
               </button>
               <span className="enter-hint">or ↵ Enter to send</span>
             </div>

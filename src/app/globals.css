@@ -970,7 +970,7 @@ textarea {
   border-left: 2px solid var(--line-strong);
   background: var(--wash);
   text-align: left;
-  transition: background 180ms ease, box-shadow 180ms ease;
+  transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .filmfolio-note .eyebrow {
@@ -1017,7 +1017,12 @@ textarea {
   font-size: 0.82rem;
   line-height: 1.65;
   opacity: 0;
-  transition: max-height 260ms ease, margin 180ms ease, opacity 180ms ease;
+  transform: translateY(-4px);
+  transition:
+    max-height 420ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    margin 300ms ease,
+    opacity 280ms ease,
+    transform 300ms ease;
 }
 
 .filmfolio-note.is-expanded {
@@ -1029,6 +1034,7 @@ textarea {
   max-height: 20rem;
   margin-top: 12px;
   opacity: 1;
+  transform: translateY(0);
 }
 
 .research-layout {
@@ -1197,26 +1203,40 @@ textarea {
   font-size: 0.87rem;
 }
 
-.experience-popover {
-  position: absolute;
-  z-index: 4;
-  top: calc(100% - 2px);
-  right: 0;
-  width: min(360px, calc(50% - 34px));
-  padding: 19px 21px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--paper);
-  box-shadow: 0 18px 45px rgba(20, 20, 18, 0.14);
+.experience-detail-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 46px minmax(0, 1fr);
+  column-gap: 22px;
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-5px);
-  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+  transform: translateY(-3px);
+  transition:
+    max-height 360ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    margin 240ms ease,
+    opacity 240ms ease,
+    transform 240ms ease,
+    visibility 240ms ease;
 }
 
-.experience-node:hover .experience-popover,
-.experience-node[open] .experience-popover {
+.experience-popover {
+  position: relative;
+  grid-column: 3;
+  justify-self: start;
+  width: min(360px, 100%);
+  margin: 0;
+  padding: 0 0 0 16px;
+  border-left: 1px solid var(--line-strong);
+  color: var(--muted);
+}
+
+.experience-node:hover .experience-detail-row,
+.experience-node[open] .experience-detail-row {
+  max-height: 18rem;
+  margin-top: 12px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -1235,8 +1255,8 @@ textarea {
 }
 
 .experience-node:nth-child(even) .experience-popover {
-  right: auto;
-  left: 0;
+  grid-column: 1;
+  justify-self: end;
 }
 
 .experience-row {
@@ -1799,7 +1819,7 @@ textarea {
 .contact-fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px 14px;
+  gap: 12px 14px;
 }
 
 .contact-section {
@@ -1834,14 +1854,59 @@ textarea {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 17px 16px;
+  height: 62px;
+  padding: 25px 16px 9px;
   border: 0;
   border-radius: 14px;
   background: var(--wash);
+  font-size: 0.94rem;
+}
+
+.contact-form .contact-field {
+  position: relative;
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.contact-field > span {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: top 200ms ease, font-size 200ms ease, transform 200ms ease;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: transparent;
+}
+
+.contact-field:focus-within {
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px var(--line-strong);
+}
+
+.contact-field:focus-within > span,
+.contact-field input:not(:placeholder-shown) + span,
+.contact-field textarea:not(:placeholder-shown) + span {
+  top: 11px;
+  font-size: 0.62rem;
+  transform: none;
 }
 
 .contact-form textarea {
-  min-height: 180px;
+  min-height: 142px;
+}
+
+.contact-message-field > span {
+  top: 18px;
+  transform: none;
 }
 
 .contact-submit-row {
@@ -1853,10 +1918,11 @@ textarea {
 
 .send-button {
   margin-top: 0;
-  padding: 11px 17px;
+  padding: 8px 13px;
   border: 0;
   border-radius: 999px;
   background: var(--wash);
+  font-size: 0.9rem;
 }
 
 .enter-hint {
@@ -2163,13 +2229,22 @@ textarea {
     font-size: 1.02rem;
   }
 
+  .experience-detail-row {
+    display: block;
+    margin: 0 0 0 42px;
+  }
+
   .experience-popover,
   .experience-node:nth-child(even) .experience-popover {
-    position: static;
     width: auto;
-    margin: 14px 0 0 42px;
-    padding: 16px 18px;
-    transform: none;
+    grid-column: auto;
+    justify-self: start;
+    padding-left: 14px;
+  }
+
+  .experience-node:hover .experience-detail-row,
+  .experience-node[open] .experience-detail-row {
+    margin-top: 12px;
   }
 
   .stack-row {
