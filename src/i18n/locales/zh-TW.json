@@ -9,7 +9,11 @@
   },
   "blog": {
     "title": "部落格",
-    "back": "← 回到首頁"
+    "back": "← 回到首頁",
+    "intro": "記錄軟體工程、創意 AI，以及如何用心打造實用作品。",
+    "read": "閱讀文章",
+    "emptyTitle": "目前還沒有文章",
+    "empty": "敬請期待即將發布的文章。"
   },
   "hero": {
     "name": "馬盛中",
@@ -115,7 +119,13 @@
     "filmfolio": {
       "title": "FilmFolio",
       "introduction": "建立雲端原生電影管理系統，協助用戶探索與整理電影，實現次秒級搜尋效能與近零停機時間。",
-      "description": "一款部署於 Google Cloud Platform Cloud Run 的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis Cache-aside Pattern 加速檢索 1.3M 筆 TMDB 電影資料，降低 API 延遲並減輕後端負載。整合 GitHub Secrets 與 IAM 進行 JWT 身份驗證以確保生產環境資安，前端實作 Debouncing 減少 50%+ 冗餘請求，並透過 Cloud Logs 監控系統健康度。於 asia-east1 區域實現近零停機時間與自動擴展。"
+      "description": "一款部署於 Google Cloud Platform Cloud Run 的全端 MERN 應用程式，採用 Docker 容器化與 GitHub Actions 實現自動化 CI/CD。運用 Redis Cache-aside Pattern 加速檢索 1.3M 筆 TMDB 電影資料，降低 API 延遲並減輕後端負載。整合 GitHub Secrets 與 IAM 進行 JWT 身份驗證以確保生產環境資安，前端實作 Debouncing 減少 50%+ 冗餘請求，並透過 Cloud Logs 監控系統健康度。於 asia-east1 區域實現近零停機時間與自動擴展。",
+      "note": "我為妹妹打造了 FilmFolio。當我離開菲律賓前往台灣時，她只有三歲；今年她即將滿八歲。我們最喜歡一起看電影，所以我做了這個應用程式，記錄我們想看的電影。"
+    },
+    "safetylink": {
+      "title": "SafetyLink",
+      "introduction": "以單鍵 RF 警報概念參加全國社會方案競賽，為台灣獨居長者提出求助方案並獲得第一名。",
+      "description": "競賽要求參賽者為台灣同樣真實的社會問題提出可行解決方案。SafetyLink 是我們為獨居長者設計的簡單求助提案，讓他們只需按下一個按鈕即可發出求救訊號。我與兩位國際商務系學生合作，擔任團隊工程師，也學會在工程師與商務專業人士需要共同協作的環境中溝通與合作。這段經歷讓我練習打造實用的 IoT 與嵌入式系統概念、與隊友協商取捨、在會議室情境中清楚溝通，並向評審提出可信的解決方案。"
     },
     "card": {
       "code": "程式碼",

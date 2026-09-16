@@ -9,7 +9,11 @@
   },
   "blog": {
     "title": "Blog",
-    "back": "← Back to Home"
+    "back": "← Back to Home",
+    "intro": "Notes on software engineering, creative AI, and building useful things with care.",
+    "read": "Read article",
+    "emptyTitle": "No posts yet",
+    "empty": "Stay tuned for upcoming articles."
   },
   "hero": {
     "name": "Von Breznev A. Mendres",
@@ -120,7 +124,13 @@
     "filmfolio": {
       "title": "FilmFolio",
       "introduction": "Built a cloud-native movie management system to help users discover and organize films with sub-second search performance and near-zero downtime.",
-      "description": "A full-stack MERN application deployed on Google Cloud Platform's Cloud Run with Docker containers and automated CI/CD via GitHub Actions. Implements Redis Cache-aside pattern to accelerate queries across 1.3M TMDB movie records, reducing API latency and backend load. Features JWT authentication with GitHub Secrets and IAM for production security, frontend debouncing to reduce redundant requests by 50%+, and Cloud Logs monitoring for system health tracking. Achieves near-zero downtime with automatic scaling in the asia-east1 region."
+      "description": "A full-stack MERN application deployed on Google Cloud Platform's Cloud Run with Docker containers and automated CI/CD via GitHub Actions. Implements Redis Cache-aside pattern to accelerate queries across 1.3M TMDB movie records, reducing API latency and backend load. Features JWT authentication with GitHub Secrets and IAM for production security, frontend debouncing to reduce redundant requests by 50%+, and Cloud Logs monitoring for system health tracking. Achieves near-zero downtime with automatic scaling in the asia-east1 region.",
+      "note": "I built FilmFolio for my baby sister. When I left for Taiwan, she was only three. This year, she's turning eight. Our favorite thing to do together is watch movies, so I built this app to keep track of the movies we want to watch."
+    },
+    "safetylink": {
+      "title": "SafetyLink",
+      "introduction": "Won first place in a national social solutions competition with a one-button RF alert concept for seniors living alone in Taiwan.",
+      "description": "The competition challenged teams to present real solutions to equally real social problems in Taiwan. SafetyLink was our proposal for a simple, accessible way for seniors living alone to call for help with one button. I worked with two students from the International Business Department as the team's engineer, learning how to collaborate and communicate where engineers and business professionals need to build a shared solution. It tested my ability to shape a practical IoT and embedded-systems concept, negotiate trade-offs with teammates, communicate clearly in a boardroom, and present a credible solution to judges."
     },
     "card": {
       "code": "Code",
