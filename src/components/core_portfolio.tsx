@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaCheck, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import {
   FiActivity,
+  FiAward,
   FiArrowUpRight,
   FiBookOpen,
   FiBriefcase,
@@ -18,6 +19,7 @@ import {
   FiGrid,
   FiHome,
   FiLayers,
+  FiFolder,
   FiMail,
 } from "react-icons/fi";
 import {
@@ -75,6 +77,89 @@ function GoogleAntigravityMark() {
 
 function HerdrMark() {
   return <span className="herdr-mark" aria-hidden="true" />;
+}
+
+function FilmfolioNote({ note, isZh }: { note: string; isZh: boolean }) {
+  const noteRef = useRef<HTMLElement | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isPinned, setIsPinned] = useState(false);
+  const [isHoverDismissed, setIsHoverDismissed] = useState(false);
+  const [isFocusDismissed, setIsFocusDismissed] = useState(false);
+  const isExpanded =
+    isPinned ||
+    (isHovered && !isHoverDismissed) ||
+    (isFocused && !isFocusDismissed);
+
+  useEffect(() => {
+    if (!isPinned) return;
+
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (noteRef.current && !noteRef.current.contains(event.target as Node)) {
+        setIsPinned(false);
+        setIsHoverDismissed(true);
+        setIsFocusDismissed(true);
+      }
+    };
+
+    document.addEventListener("click", closeOnOutsideClick);
+    return () => document.removeEventListener("click", closeOnOutsideClick);
+  }, [isPinned]);
+
+  const togglePinned = () => {
+    if (isPinned) {
+      setIsPinned(false);
+      setIsHoverDismissed(true);
+      setIsFocusDismissed(true);
+      return;
+    }
+
+    setIsPinned(true);
+    setIsHoverDismissed(false);
+    setIsFocusDismissed(false);
+  };
+
+  return (
+    <aside
+      className={`filmfolio-note${isExpanded ? " is-expanded" : ""}`}
+      ref={noteRef}
+      onPointerEnter={() => {
+        setIsHovered(true);
+        setIsHoverDismissed(false);
+      }}
+      onPointerLeave={() => {
+        setIsHovered(false);
+        setIsHoverDismissed(false);
+      }}
+    >
+      <button
+        type="button"
+        className="filmfolio-note-toggle"
+        aria-expanded={isExpanded}
+        aria-controls="filmfolio-note-details"
+        onClick={togglePinned}
+        onFocus={() => {
+          setIsFocused(true);
+          setIsFocusDismissed(false);
+        }}
+        onBlur={() => {
+          setIsFocused(false);
+          setIsFocusDismissed(false);
+        }}
+      >
+        <span className="eyebrow">{isZh ? "個人緣起" : "WHY I BUILT IT"}</span>
+        <span className="filmfolio-note-summary">
+          {isZh ? "我為妹妹打造了 FilmFolio…" : "I built it for my baby sister…"}
+          <span className="filmfolio-note-action">
+            {isPinned ? (isZh ? "收起" : "See less") : (isZh ? "查看更多" : "See more")}
+          </span>
+        </span>
+      </button>
+      <p id="filmfolio-note-details" className="filmfolio-note-full" aria-hidden={!isExpanded}>
+        {note}
+      </p>
+    </aside>
+  );
 }
 
 const reveal: Variants = {
@@ -358,6 +443,18 @@ export default function CorePortfolio() {
         sent: "Message sent. Thanks for reaching out.",
       };
 
+  const navItems = [
+    { href: "#top", label: isZh ? "首頁" : "Home", Icon: FiHome },
+    { href: "#work", label: copy.workTitle, Icon: FiGrid },
+    { href: "#research", label: copy.aiResearch, Icon: FiLayers },
+    { href: "#favorite-projects", label: copy.favoriteProjects, Icon: FiFolder },
+    { href: "#stack", label: copy.stack, Icon: FiCpu },
+    { href: "#awards", label: copy.awards, Icon: FiAward },
+    { href: "#experience", label: copy.experienceTitle, Icon: FiBriefcase },
+    { href: "#qualifications", label: copy.qualifications, Icon: FiBookOpen },
+    { href: "#contact", label: copy.contact, Icon: FiMail },
+  ];
+
   const projects = useMemo(() => getProjectData(t), [t]);
   const translatedJobs = (t("experience.jobs", { returnObjects: true }) as Job[]) || [];
   const jobs = [...staticJobs, ...translatedJobs];
@@ -468,13 +565,12 @@ export default function CorePortfolio() {
         </header>
 
         <nav className="inspiration-nav" aria-label="Primary navigation">
-          <a href="#top" aria-label="Home" title="Home"><FiHome /></a>
-          <a href="#work" aria-label="Work" title="Work"><FiGrid /></a>
-          <a href="#research" aria-label="Research" title="Research"><FiLayers /></a>
-          <a href="#experience" aria-label="Experience" title="Experience"><FiBriefcase /></a>
-          <a href="#qualifications" aria-label="Education" title="Education"><FiBookOpen /></a>
-          <a href="#stack" aria-label="Stack" title="Stack"><FiCpu /></a>
-          <a href="#contact" aria-label="Contact" title="Contact"><FiMail /></a>
+          {navItems.map(({ href, label, Icon }) => (
+            <a href={href} key={href} aria-label={label}>
+              <Icon aria-hidden="true" />
+              <span className="inspiration-nav-tooltip" aria-hidden="true">{label}</span>
+            </a>
+          ))}
         </nav>
 
         <section className="portfolio-section work-section" id="work">
@@ -534,13 +630,6 @@ export default function CorePortfolio() {
               <p>{copy.favoriteProjectsIntro}</p>
             </div>
 
-            {projects[0]?.note && (
-              <aside className="filmfolio-note">
-                <p className="eyebrow">{isZh ? "個人緣起" : "WHY I BUILT IT"}</p>
-                <p>{projects[0].note}</p>
-              </aside>
-            )}
-
             <div className="project-stage">
               <div className="dot-grid" aria-hidden="true" />
               {projects.map((project, index) => (
@@ -561,6 +650,9 @@ export default function CorePortfolio() {
                     <div className="project-index">{project.number}</div>
                     <h3>{project.title}</h3>
                     <p className="project-introduction">{project.introduction}</p>
+                    {project.note && (
+                      <FilmfolioNote note={project.note} isZh={isZh} />
+                    )}
                     <p className="project-description">{project.description}</p>
                     <div className="project-footer">
                       <div className="project-tags">{project.techStack.join(" · ")}</div>

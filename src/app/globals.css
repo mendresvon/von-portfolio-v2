@@ -899,7 +899,7 @@ textarea {
 
 .project-description {
   margin: 12px 0 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .project-footer {
@@ -934,7 +934,8 @@ textarea {
   gap: 7px;
   margin: 30px auto 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
+  font-style: italic;
   line-height: 1.65;
   text-align: center;
 }
@@ -950,6 +951,7 @@ textarea {
   background: var(--ink);
   font-size: 0.84rem;
   font-weight: 600;
+  font-style: normal;
   line-height: 1.2;
   text-decoration: none;
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
@@ -963,24 +965,70 @@ textarea {
 }
 
 .filmfolio-note {
-  max-width: 720px;
-  margin: 0 auto 38px;
-  padding: 18px 24px;
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-  text-align: center;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-left: 2px solid var(--line-strong);
+  background: var(--wash);
+  text-align: left;
+  transition: background 180ms ease, box-shadow 180ms ease;
 }
 
 .filmfolio-note .eyebrow {
-  margin: 0 0 10px;
+  display: block;
+  margin: 0 0 6px;
 }
 
-.filmfolio-note > p:last-child {
-  max-width: 640px;
-  margin: 0 auto;
+.filmfolio-note-toggle {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.filmfolio-note-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.filmfolio-note-summary {
+  display: block;
   color: var(--ink);
-  font-size: 0.88rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.filmfolio-note-action {
+  margin-left: 6px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.filmfolio-note-full {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.82rem;
   line-height: 1.65;
+  opacity: 0;
+  transition: max-height 260ms ease, margin 180ms ease, opacity 180ms ease;
+}
+
+.filmfolio-note.is-expanded {
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(20, 20, 18, 0.08);
+}
+
+.filmfolio-note.is-expanded .filmfolio-note-full {
+  max-height: 20rem;
+  margin-top: 12px;
+  opacity: 1;
 }
 
 .research-layout {
@@ -1554,6 +1602,8 @@ textarea {
 }
 
 .inspiration-nav a {
+  position: relative;
+  flex: 0 0 auto;
   display: grid;
   width: 34px;
   height: 34px;
@@ -1567,6 +1617,60 @@ textarea {
   color: var(--ink);
   background: var(--wash);
   transform: translateY(-2px);
+}
+
+.inspiration-nav-tooltip {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: var(--paper);
+  background: var(--ink);
+  box-shadow: 0 5px 18px rgba(20, 20, 18, 0.16);
+  font-size: 0.68rem;
+  font-weight: 550;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 4px);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+  pointer-events: none;
+}
+
+.inspiration-nav a:hover .inspiration-nav-tooltip,
+.inspiration-nav a:focus-visible .inspiration-nav-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.inspiration-nav a:first-child .inspiration-nav-tooltip {
+  left: 0;
+  transform: translateY(4px);
+}
+
+.inspiration-nav a:first-child:hover .inspiration-nav-tooltip,
+.inspiration-nav a:first-child:focus-visible .inspiration-nav-tooltip {
+  transform: translateY(0);
+}
+
+.inspiration-nav a:last-child .inspiration-nav-tooltip {
+  right: 0;
+  left: auto;
+  transform: translateY(4px);
+}
+
+.inspiration-nav a:last-child:hover .inspiration-nav-tooltip,
+.inspiration-nav a:last-child:focus-visible .inspiration-nav-tooltip {
+  transform: translateY(0);
+}
+
+.inspiration-nav a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 .inspiration-nav svg {
@@ -1996,8 +2100,8 @@ textarea {
   }
 
   .filmfolio-note {
-    margin: 0 auto 28px;
-    padding: 16px 14px;
+    margin-top: 16px;
+    padding: 14px;
   }
 
   .research-layout {
@@ -2136,6 +2240,31 @@ textarea {
 
   .inspiration-nav {
     bottom: 14px;
+    gap: 1px;
+    max-width: calc(100vw - 24px);
+    padding: 5px;
+  }
+
+  .inspiration-nav a {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .inspiration-nav {
+    gap: 0;
+    padding: 4px;
+  }
+
+  .inspiration-nav a {
+    width: 26px;
+    height: 26px;
+  }
+
+  .inspiration-nav svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
