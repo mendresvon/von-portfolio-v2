@@ -76,6 +76,16 @@
     "title": "Work Experience",
     "jobs": [
       {
+        "role": "Teaching Assistant · Computer Programming",
+        "company": "Southern Taiwan University of Science and Technology (STUST)",
+        "period": "Sep 2026 - Jan 2027",
+        "description": [
+          "Support students in the Computer Programming (計算機程式) course with programming concepts, implementation, logic, and debugging.",
+          "Help students work through technical questions and strengthen their programming foundations.",
+          "Use clear communication to explain technical ideas and provide peer support in a Mandarin-taught university course."
+        ]
+      },
+      {
         "role": "Life and Business English Teacher",
         "company": "ASPECT Interactive English",
         "period": "Oct 2023 - Present",
