@@ -403,7 +403,8 @@ export default function CorePortfolio() {
         resumeUrl: "https://flowcv.com/resume/ssm0jmh53m3h",
         name: "馬盛中",
         established: "始於 2004",
-        verified: "Meta 驗證",
+        altName: "Von Breznev A. Mendres",
+        altNameLang: "en",
         mailSubject: "作品集留言，來自",
         mailVisitor: "訪客",
         mailReplyTo: "回覆信箱：",
@@ -476,7 +477,8 @@ export default function CorePortfolio() {
         resumeUrl: "https://flowcv.com/resume/p9w1ulfwwo8r",
         name: "Von Breznev A. Mendres",
         established: "EST. 2004",
-        verified: "Meta Verified",
+        altName: "馬盛中",
+        altNameLang: "zh-TW",
         mailSubject: "Portfolio message from",
         mailVisitor: "a visitor",
         mailReplyTo: "Reply to:",
@@ -645,8 +647,11 @@ export default function CorePortfolio() {
               <span className="online-dot" aria-label={copy.available} />
             </div>
             <div className="intro-name-row">
-              <h1>{copy.name}</h1>
-              <span className="verified-mark" role="img" aria-label={copy.verified} title={copy.verified}><FaCheck aria-hidden="true" /></span>
+              <h1>
+                <span className="intro-name-main">{copy.name}</span>{" "}
+                <span className="verified-mark" role="img" aria-label="Meta Verified" title="Meta Verified"><FaCheck aria-hidden="true" /></span>{" "}
+                <span className="intro-name-alt" lang={copy.altNameLang}>{copy.altName}</span>
+              </h1>
             </div>
             <p className="intro-role">{copy.introRole}</p>
             <p className="intro-copy intro-lead">{copy.introLead}</p>
