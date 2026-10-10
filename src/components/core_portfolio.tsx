@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaCheck, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -352,17 +352,18 @@ function getProjectData(t: (key: string) => string): Project[] {
   ];
 }
 
+const subscribeNoop = () => () => {};
+
 export default function CorePortfolio() {
   const { t, i18n } = useTranslation();
   const prefersReducedMotion = useReducedMotion();
-  const [isMounted, setIsMounted] = useState(false);
+  // false during SSR and hydration, true once running on the client
+  const isMounted = useSyncExternalStore(subscribeNoop, () => true, () => false);
   const [time, setTime] = useState("--:--:-- GMT+8");
   const [copied, setCopied] = useState(false);
   const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   useEffect(() => {
-    setIsMounted(true);
-
     const updateTime = () => {
       setTime(
         new Intl.DateTimeFormat("en-US", {
