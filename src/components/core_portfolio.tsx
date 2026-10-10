@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { FaCheck, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import {
@@ -179,7 +180,7 @@ const awards = [
     title: "1st Place · National English Social Solutions Contest",
     titleZh: "第一名 · 全國英語社會方案競賽",
     detail: "Proposed SafetyLink with Amber and Jerome, an autonomous one-button RF alert concept for seniors living alone in Taiwan.",
-    detailZh: "與 Amber 和 Jerome 共同提出 SafetyLink，一套為臺灣獨居長者設計的單鍵 RF 求助警報概念。",
+    detailZh: "與 Amber 和 Jerome 共同提出 SafetyLink，一套為臺灣獨居長者設計的自主式單鍵 RF 求助警報概念。",
   },
   {
     period: "2023 — NOW",
@@ -249,7 +250,7 @@ const featuredPictures = [
     height: 2134,
   },
   {
-    src: "/images/featured/despidida.jpg",
+    src: "/images/featured/despedida.jpg",
     alt: "A group gathered outside a restaurant in Tainan",
     altZh: "一群人在臺南餐廳外的合照",
     width: 1477,
@@ -316,7 +317,7 @@ const stackGroups = [
   },
 ];
 
-function getProjectData(t: (key: string) => string): Project[] {
+function getProjectData(t: TFunction): Project[] {
   return [
     {
       number: "01",
@@ -336,7 +337,7 @@ function getProjectData(t: (key: string) => string): Project[] {
       introduction: t("projects.safetylink.introduction"),
       description: t("projects.safetylink.description"),
       imageUrl: "/images/blog/safetylink-essc-win/award-ceremony.jpg",
-      techStack: ["IoT", "Embedded Systems", "Project Proposal", "Project Design", "Negotiation", "Presentation"],
+      techStack: t("projects.safetylink.tags", { returnObjects: true }) as string[],
       blogUrl: "/blog/safetylink-essc-win",
     },
     {
@@ -399,6 +400,13 @@ export default function CorePortfolio() {
         available: "目前開放工作機會",
         socialLinks: "社群連結",
         resume: "履歷",
+        resumeUrl: "https://flowcv.com/resume/ssm0jmh53m3h",
+        name: "馬盛中",
+        established: "始於 2004",
+        verified: "Meta 驗證",
+        mailSubject: "作品集留言，來自",
+        mailVisitor: "訪客",
+        mailReplyTo: "回覆信箱：",
         projectImageAlt: "專案畫面",
         linkLive: "線上版",
         linkCode: "程式碼",
@@ -465,6 +473,13 @@ export default function CorePortfolio() {
         available: "Available for opportunities",
         socialLinks: "Social links",
         resume: "Resume",
+        resumeUrl: "https://flowcv.com/resume/p9w1ulfwwo8r",
+        name: "Von Breznev A. Mendres",
+        established: "EST. 2004",
+        verified: "Meta Verified",
+        mailSubject: "Portfolio message from",
+        mailVisitor: "a visitor",
+        mailReplyTo: "Reply to:",
         projectImageAlt: "project screenshot",
         linkLive: "Live",
         linkCode: "Code",
@@ -584,8 +599,8 @@ export default function CorePortfolio() {
     const formspreeUrl = process.env.NEXT_PUBLIC_FORMSPREE_URL;
 
     if (!formspreeUrl) {
-      const subject = encodeURIComponent(`Portfolio message from ${data.get("name") || "a visitor"}`);
-      const body = encodeURIComponent(`${data.get("message") || ""}\n\nReply to: ${data.get("email") || ""}`);
+      const subject = encodeURIComponent(`${copy.mailSubject} ${data.get("name") || copy.mailVisitor}`);
+      const body = encodeURIComponent(`${data.get("message") || ""}\n\n${copy.mailReplyTo} ${data.get("email") || ""}`);
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
       setFormState("sent");
       return;
@@ -609,7 +624,7 @@ export default function CorePortfolio() {
       <div className="portfolio-container">
         <header className="portfolio-header" id="top">
           <div className="meta-row">
-            <span>EST. 2004</span>
+            <span>{copy.established}</span>
             <div className="meta-right">
               <span className="meta-time">
                 <span className="time-dot" aria-hidden="true" />
@@ -626,12 +641,12 @@ export default function CorePortfolio() {
 
           <div className="intro-block">
             <div className="profile-frame">
-              <Image src="/profile.jpg" alt={isZh ? "馬盛中" : "Von Breznev A. Mendres"} fill priority sizes="72px" />
+              <Image src="/profile.jpg" alt={copy.name} fill priority sizes="72px" />
               <span className="online-dot" aria-label={copy.available} />
             </div>
             <div className="intro-name-row">
-              <h1>Von Breznev A. Mendres</h1>
-              <span className="verified-mark" role="img" aria-label="Meta Verified" title="Meta Verified"><FaCheck aria-hidden="true" /></span>
+              <h1>{copy.name}</h1>
+              <span className="verified-mark" role="img" aria-label={copy.verified} title={copy.verified}><FaCheck aria-hidden="true" /></span>
             </div>
             <p className="intro-role">{copy.introRole}</p>
             <p className="intro-copy intro-lead">{copy.introLead}</p>
@@ -642,7 +657,7 @@ export default function CorePortfolio() {
                 <a href="https://github.com/mendresvon" target="_blank" rel="noreferrer">GitHub <FiArrowUpRight /></a>
                 <a href="https://www.linkedin.com/in/vonmendres/" target="_blank" rel="noreferrer">LinkedIn <FiArrowUpRight /></a>
                 <Link href="/blog">{copy.personalBlog} <FiBookOpen /></Link>
-                <a href="https://flowcv.com/resume/p9w1ulfwwo8r" target="_blank" rel="noreferrer">{copy.resume} <FiDownload /></a>
+                <a href={copy.resumeUrl} target="_blank" rel="noreferrer">{copy.resume} <FiDownload /></a>
               </div>
               <button type="button" className="copy-link" onClick={() => void copyEmail()}>
                 {copied ? <FaCheck aria-hidden="true" /> : <FiCopy aria-hidden="true" />}
@@ -933,7 +948,7 @@ export default function CorePortfolio() {
               <span className="contact-link-value">/in/vonmendres</span>
               <FiArrowUpRight aria-hidden="true" />
             </a>
-            <a className="contact-link-row" href="https://flowcv.com/resume/p9w1ulfwwo8r" target="_blank" rel="noreferrer">
+            <a className="contact-link-row" href={copy.resumeUrl} target="_blank" rel="noreferrer">
               <span className="contact-link-name"><FiDownload aria-hidden="true" /> {copy.resume}</span>
               <span className="contact-link-value">FlowCV</span>
               <FiArrowUpRight aria-hidden="true" />

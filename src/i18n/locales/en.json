@@ -50,7 +50,15 @@
     "safetylink": {
       "title": "SafetyLink",
       "introduction": "Won first place in a national social solutions competition with a one-button RF alert concept for seniors living alone in Taiwan.",
-      "description": "The competition challenged teams to present real solutions to equally real social problems in Taiwan. SafetyLink was our proposal for a simple, accessible way for seniors living alone to call for help with one button. I worked with two students from the International Business Department as the team's engineer, learning how to collaborate and communicate where engineers and business professionals need to build a shared solution. It tested my ability to shape a practical IoT and embedded-systems concept, negotiate trade-offs with teammates, communicate clearly in a boardroom, and present a credible solution to judges."
+      "description": "The competition challenged teams to present real solutions to equally real social problems in Taiwan. SafetyLink was our proposal for a simple, accessible way for seniors living alone to call for help with one button. I worked with two students from the International Business Department as the team's engineer, learning how to collaborate and communicate where engineers and business professionals need to build a shared solution. It tested my ability to shape a practical IoT and embedded-systems concept, negotiate trade-offs with teammates, communicate clearly in a boardroom, and present a credible solution to judges.",
+      "tags": [
+        "IoT",
+        "Embedded Systems",
+        "Project Proposal",
+        "Project Design",
+        "Negotiation",
+        "Presentation"
+      ]
     },
     "traffic_light": {
       "title": "Voice-Controlled Smart Traffic Light",
