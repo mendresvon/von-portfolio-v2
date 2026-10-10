@@ -12,7 +12,12 @@ export default function BlogList({ initialPosts }: { initialPosts: PostMetadata[
   const currentLanguage = i18n.language === "zh-TW" ? "zh-TW" : "en";
   const dateLocale = currentLanguage === "zh-TW" ? zhTW : enUS;
   const localizedPosts = initialPosts.filter((post) => post.lang === currentLanguage);
-  const posts = localizedPosts.length > 0 ? localizedPosts : initialPosts.filter((post) => post.lang === "en");
+  const localizedSlugs = new Set(localizedPosts.map((post) => post.slug));
+  // Posts without a translation still show up, in English
+  const posts = [
+    ...localizedPosts,
+    ...initialPosts.filter((post) => post.lang === "en" && !localizedSlugs.has(post.slug)),
+  ].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <div className="blog-index">
