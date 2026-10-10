@@ -4,6 +4,13 @@ import BlogList from "@/components/blog_list";
 export const metadata = {
   title: "Blog | Von Mendres",
   description: "Read my latest thoughts, guides, and updates.",
+  openGraph: {
+    type: "website",
+    title: "Blog | Von Mendres",
+    description: "Read my latest thoughts, guides, and updates.",
+    url: "/blog",
+    images: ["/profile.jpg"],
+  },
 };
 
 export default async function BlogPage() {

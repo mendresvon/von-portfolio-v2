@@ -359,7 +359,7 @@ export default function CorePortfolio() {
   const [isMounted, setIsMounted] = useState(false);
   const [time, setTime] = useState("--:--:-- GMT+8");
   const [copied, setCopied] = useState(false);
-  const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "mailto" | "error">("idle");
 
   useEffect(() => {
     setIsMounted(true);
@@ -467,6 +467,7 @@ export default function CorePortfolio() {
         contactIntro: "你可以使用表單，或透過下方連結聯絡我。",
         send: "傳送訊息",
         sent: "訊息已送出，謝謝你。",
+        mailOpened: "已開啟你的郵件程式，請從那裡寄出。",
       }
     : {
         language: "LANGUAGE",
@@ -541,6 +542,7 @@ export default function CorePortfolio() {
         contactIntro: "You can contact me using the form or via the links below.",
         send: "Send message",
         sent: "Message sent. Thanks for reaching out.",
+        mailOpened: "Opened your email app. Send it from there.",
       };
 
   const navItems = [
@@ -604,7 +606,7 @@ export default function CorePortfolio() {
       const subject = encodeURIComponent(`${copy.mailSubject} ${data.get("name") || copy.mailVisitor}`);
       const body = encodeURIComponent(`${data.get("message") || ""}\n\n${copy.mailReplyTo} ${data.get("email") || ""}`);
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-      setFormState("sent");
+      setFormState("mailto");
       return;
     }
 
@@ -926,7 +928,7 @@ export default function CorePortfolio() {
             </div>
             <div className="contact-submit-row">
               <button className="send-button" type="submit" disabled={formState === "sending"}>
-                {formState === "sending" ? copy.sending : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "error" ? copy.error : copy.send}
+                {formState === "sending" ? copy.sending : formState === "sent" ? <><FaCheck /> {copy.sent}</> : formState === "mailto" ? copy.mailOpened : formState === "error" ? copy.error : copy.send}
               </button>
               <span className="enter-hint">{copy.enterHint}</span>
             </div>
