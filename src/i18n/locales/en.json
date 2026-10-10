@@ -1,12 +1,4 @@
 {
-  "navbar": {
-    "about": "About Me",
-    "experience": "Experience",
-    "skills": "Education & Skills",
-    "projects": "Projects",
-    "contact": "Contact Me",
-    "blog": "Blog"
-  },
   "blog": {
     "title": "Blog",
     "back": "← Back to Home",
@@ -16,64 +8,7 @@
     "empty": "Stay tuned for upcoming articles.",
     "eyebrow": "WRITING"
   },
-  "hero": {
-    "name": "Von Breznev A. Mendres",
-    "tagline": "Built through discipline, proven through results.",
-    "roles": [
-      "Computer Science Student",
-      "Part-Time Teacher",
-      "Future Engineer",
-      "Aspiring Software Engineer"
-    ],
-    "resume": {
-      "label": "Download Resume",
-      "english": "Download English Resume",
-      "chinese": "Download Chinese Resume"
-    }
-  },
-  "about": {
-    "title": "About Me",
-    "name_en": "Von Breznev A. Mendres",
-    "name_zh": "馬盛中",
-    "department": "Computer Science and Information Engineering",
-    "rank_label": "Department Rank",
-    "rank": "#1 / 132",
-    "year_level": "3rd Year",
-    "email": "mendresvon@gmail.com",
-    "github": "mendresvon",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "current_positions_label": "Current Positions",
-    "positions": [
-      {
-        "role": "English Teacher",
-        "company": "ASPECT Interactive English (雅斯貝互動英語認證中心)"
-      },
-      {
-        "role": "English Teacher",
-        "company": "Gram English (格蘭英語)"
-      }
-    ],
-    "involvements_label": "Community & Service",
-    "involvements": [
-      {
-        "role": "Deputy Secretary-General",
-        "org": "Tainan Youth Center (台南青年中心)"
-      },
-      {
-        "role": "Acolyte, Lector & Psalmist",
-        "org": "Sacred Heart Church Tainan (聖心堂)"
-      }
-    ],
-    "p1": "Hi everyone, I'm Von, a Filipino student in Taiwan. I'm currently in my third year of Computer Science at Southern Taiwan University of Science and Technology (STUST).",
-    "p2": "Guided by my personal motto, “The day you stop learning is the day you stop living,” I am passionate about growing my skills, tackling new challenges, and seeking new opportunities.",
-    "p3": "I am currently seeking an internship opportunity in Taiwan. I am very eager to apply my knowledge, acquire new skills, and actively contribute to team goals, while achieving professional growth through practical experience.",
-    "blog_preview_title": "Latest from the Blog",
-    "blog_read_more": "Read Article →",
-    "blog_empty": "Stay tuned for upcoming articles!"
-  },
   "experience": {
-    "title": "Work Experience",
     "jobs": [
       {
         "role": "Teaching Assistant · Computer Programming (計算機程式)",
@@ -105,43 +40,7 @@
       }
     ]
   },
-  "skills": {
-    "qualificationsTitle": "Qualifications",
-    "technicalSkillsTitle": "Technical Skills",
-    "education": {
-      "title": "Southern Taiwan University of Science and Technology",
-      "degree": "Computer Science and Information Engineering (2027)"
-    },
-    "coursework": {
-      "title": "Harvard University (MOOC)"
-    },
-    "certifications": {
-      "title": "Industry Certifications"
-    },
-    "categories": {
-      "languages": "Languages",
-      "devops_cloud": "DevOps / Cloud",
-      "database_tools": "Database / Tools",
-      "ai_ml": "AI & Machine Learning"
-    }
-  },
   "projects": {
-    "title": "Project Portfolio",
-    "pet_classifier": {
-      "title": "AI Pet Species Classifier",
-      "introduction": "Fine-tuned a model and built an image classifier to help pet shelters and veterinarians identify pet species with 98% accuracy using deep learning.",
-      "description": "Developed an end-to-end image classifier using PyTorch and FastAI without relying on pre-built APIs. Improved model accuracy from a 76% baseline to 98% through data augmentation and learning rate optimization. Implemented model serialization and deployed the solution to Hugging Face Spaces with a Gradio web interface for real-time inference."
-    },
-    "traffic_light": {
-      "title": "Voice-Controlled Smart Traffic Light",
-      "introduction": "Built an IoT edge control system with real-time voice response, overcoming single-thread limitations in embedded systems.",
-      "description": "Integrated MQTT message listening within the traffic light control loop to enable real-time voice command response while executing LED sequences on ESP32. Developed an Android app from scratch and implemented MQTT async architecture with QoS 0 for low-latency communication. Used MQTTx to monitor message flow, ensuring precise command transmission from the Android client to the ESP32 controller."
-    },
-    "aura_notes": {
-      "title": "Aura Notes",
-      "introduction": "Developed a full-stack note-taking application inspired by Google Keep with dynamic note sizing and secure authentication.",
-      "description": "A MERN application featuring dynamic note sizing where note height adapts to content length, creating a responsive masonry layout inspired by Google Keep. Built with JWT authentication, MongoDB for data persistence, and a React frontend with Tailwind CSS and Framer Motion for smooth animations. The adaptive card layout demonstrates CSS Grid mastery and attention to UX detail."
-    },
     "filmfolio": {
       "title": "FilmFolio",
       "introduction": "Built a cloud-native movie management system to help users discover and organize films with sub-second search performance and near-zero downtime.",
@@ -153,37 +52,10 @@
       "introduction": "Won first place in a national social solutions competition with a one-button RF alert concept for seniors living alone in Taiwan.",
       "description": "The competition challenged teams to present real solutions to equally real social problems in Taiwan. SafetyLink was our proposal for a simple, accessible way for seniors living alone to call for help with one button. I worked with two students from the International Business Department as the team's engineer, learning how to collaborate and communicate where engineers and business professionals need to build a shared solution. It tested my ability to shape a practical IoT and embedded-systems concept, negotiate trade-offs with teammates, communicate clearly in a boardroom, and present a credible solution to judges."
     },
-    "card": {
-      "code": "Code",
-      "link": "Link",
-      "video": "Video"
+    "traffic_light": {
+      "title": "Voice-Controlled Smart Traffic Light",
+      "introduction": "Built an IoT edge control system with real-time voice response, overcoming single-thread limitations in embedded systems.",
+      "description": "Integrated MQTT message listening within the traffic light control loop to enable real-time voice command response while executing LED sequences on ESP32. Developed an Android app from scratch and implemented MQTT async architecture with QoS 0 for low-latency communication. Used MQTTx to monitor message flow, ensuring precise command transmission from the Android client to the ESP32 controller."
     }
-  },
-  "contact": {
-    "title": "Let's Connect",
-    "intro": "I'm open to new opportunities and collaborations. Feel free to send me a message using the form below or email me directly at <1>mendresvon@gmail.com</1>.",
-    "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your Message",
-      "submit": "Send Message"
-    },
-    "submitted": {
-      "title": "Thank you!",
-      "message": "Your message has been sent. I'll get back to you shortly."
-    },
-    "quick_contact": "Quick Contact",
-    "location": "Location",
-    "location_value": "Tainan, Taiwan",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "socials": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "email": "Email"
-    }
-  },
-  "footer": {
-    "rights": "All Rights Reserved."
   }
 }

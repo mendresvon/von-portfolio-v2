@@ -1,12 +1,4 @@
 {
-  "navbar": {
-    "about": "關於我",
-    "experience": "工作經歷",
-    "skills": "學歷與技能",
-    "projects": "專案",
-    "contact": "聯絡我",
-    "blog": "部落格"
-  },
   "blog": {
     "title": "部落格",
     "back": "← 回到首頁",
@@ -16,64 +8,7 @@
     "empty": "敬請期待即將發表的文章。",
     "eyebrow": "文章"
   },
-  "hero": {
-    "name": "馬盛中",
-    "tagline": "以自律奠基，以成果驗證",
-    "roles": [
-      "資訊工程系學生",
-      "兼職教師",
-      "未來的工程師",
-      "立志成為軟體工程師"
-    ],
-    "resume": {
-      "label": "下載履歷",
-      "english": "下載英文履歷",
-      "chinese": "下載中文版履歷"
-    }
-  },
-  "about": {
-    "title": "關於我",
-    "name_en": "Von Breznev A. Mendres",
-    "name_zh": "馬盛中",
-    "department": "資訊工程學系",
-    "rank_label": "系排名",
-    "rank": "#1 / 132",
-    "year_level": "大三",
-    "email": "mendresvon@gmail.com",
-    "github": "mendresvon",
-    "copy": "複製",
-    "copied": "已複製！",
-    "current_positions_label": "目前職務",
-    "positions": [
-      {
-        "role": "生活與商務英語教師",
-        "company": "雅斯貝互動英語認證中心 (ASPECT Interactive English)"
-      },
-      {
-        "role": "英語教師",
-        "company": "格蘭英語 (Gram English)"
-      }
-    ],
-    "involvements_label": "社區與服務",
-    "involvements": [
-      {
-        "role": "副總幹事",
-        "org": "臺南青年中心 (Tainan Youth Center)"
-      },
-      {
-        "role": "輔祭、讀經員、領唱員",
-        "org": "聖心堂 (Sacred Heart Church Tainan)"
-      }
-    ],
-    "p1": "大家好，我是馬盛中，一名來自菲律賓、目前在臺灣求學的學生。我目前就讀於南臺科技大學（STUST）資訊工程學系三年級。",
-    "p2": "秉持我的座右銘：「停止學習的那一天，就是停止生活的那一天。」我熱衷於提升技能、迎接新的挑戰，並尋找新的機會。",
-    "p3": "我目前正在尋找在臺灣的實習機會，非常期待應用所學、學習新技能並積極協助團隊達成目標，並透過實務經驗持續成長。",
-    "blog_preview_title": "最新文章",
-    "blog_read_more": "閱讀文章 →",
-    "blog_empty": "敬請期待即將發表的文章！"
-  },
   "experience": {
-    "title": "工作經歷",
     "jobs": [
       {
         "role": "計算機程式課程助教",
@@ -105,43 +40,7 @@
       }
     ]
   },
-  "skills": {
-    "qualificationsTitle": "學歷與認證",
-    "technicalSkillsTitle": "技術能力",
-    "education": {
-      "title": "南臺科技大學",
-      "degree": "資訊工程學系學士（2027）"
-    },
-    "coursework": {
-      "title": "哈佛大學（線上課程）"
-    },
-    "certifications": {
-      "title": "專業認證"
-    },
-    "categories": {
-      "languages": "程式語言",
-      "devops_cloud": "DevOps／雲端",
-      "database_tools": "資料庫／工具",
-      "ai_ml": "人工智慧與機器學習"
-    }
-  },
   "projects": {
-    "title": "專案作品集",
-    "pet_classifier": {
-      "title": "AI 寵物物種分類器",
-      "introduction": "微調模型並建立影像分類器，運用深度學習以 98% 的準確率協助寵物收容所與獸醫辨識寵物種類。",
-      "description": "使用 PyTorch 與 FastAI 建立端到端影像分類器，不依賴現成 API 進行模型開發。透過資料增強與學習率最佳化，將模型準確率從 76% 的基準提升至 98%。實作模型序列化，並部署至 Hugging Face Spaces，整合 Gradio 建立具備即時推論功能的網頁介面。"
-    },
-    "traffic_light": {
-      "title": "聲控智慧紅綠燈",
-      "introduction": "建立 IoT 邊緣控制系統，實現即時語音回應，克服嵌入式系統的單執行緒限制。",
-      "description": "在紅綠燈控制迴圈中整合 MQTT 訊息監聽，讓系統在執行 ESP32 的 LED 燈號序列時，仍能即時回應 Android 語音指令。從零開發 Android 應用程式，並實作採用 QoS 0 的 MQTT 非同步架構，以實現低延遲通訊。利用 MQTTx 監控訊息流，確保語音指令能從 Android 用戶端精確傳送至 ESP32 控制器。"
-    },
-    "aura_notes": {
-      "title": "Aura Notes",
-      "introduction": "開發全端筆記應用程式，靈感源自 Google Keep，具備動態筆記尺寸調整與安全的身分驗證功能。",
-      "description": "MERN 應用程式具備動態筆記尺寸功能，筆記高度會依內容長度自動調整，形成靈感來自 Google Keep 的響應式瀑布流版面。採用 JWT 身分驗證、MongoDB 資料儲存，以及整合 Tailwind CSS 與 Framer Motion 的 React 前端，實現流暢動畫。適應性卡片版面展現對 CSS Grid 的熟悉度，以及對 UX 細節的重視。"
-    },
     "filmfolio": {
       "title": "FilmFolio",
       "introduction": "建立雲端原生電影管理系統，協助使用者探索與整理電影，實現次秒級搜尋效能與近零停機時間。",
@@ -153,37 +52,10 @@
       "introduction": "以單鍵 RF 警報系統概念參加全國英語社會方案競賽，為臺灣獨居長者提出求助方案並獲得第一名。",
       "description": "這項競賽要求各隊針對臺灣真實存在的社會問題，提出切實可行的解決方案。SafetyLink 是我們為獨居長者設計的簡單求助提案，讓他們只需按下一個按鈕即可發出求救訊號。我與兩位國際商務系學生合作，擔任團隊工程師，也學會在工程師與商務專業人士共同打造解決方案時進行溝通與協作。這段經歷讓我練習設計實用的 IoT 與嵌入式系統方案、與隊友協商取捨、在正式簡報場合清楚溝通，並向評審提出可信的解決方案。"
     },
-    "card": {
-      "code": "程式碼",
-      "link": "連結",
-      "video": "影片"
+    "traffic_light": {
+      "title": "聲控智慧紅綠燈",
+      "introduction": "建立 IoT 邊緣控制系統，實現即時語音回應，克服嵌入式系統的單執行緒限制。",
+      "description": "在紅綠燈控制迴圈中整合 MQTT 訊息監聽，讓系統在執行 ESP32 的 LED 燈號序列時，仍能即時回應 Android 語音指令。從零開發 Android 應用程式，並實作採用 QoS 0 的 MQTT 非同步架構，以實現低延遲通訊。利用 MQTTx 監控訊息流，確保語音指令能從 Android 用戶端精確傳送至 ESP32 控制器。"
     }
-  },
-  "contact": {
-    "title": "聯絡我",
-    "intro": "我對新的機會和合作持開放態度。歡迎使用下列表單傳送訊息，或直接寄送電子郵件至<1>mendresvon@gmail.com</1>。",
-    "form": {
-      "name": "您的姓名",
-      "email": "您的電子郵件",
-      "message": "您的訊息",
-      "submit": "傳送訊息"
-    },
-    "submitted": {
-      "title": "謝謝您！",
-      "message": "您的訊息已成功傳送。我會盡快回覆您。"
-    },
-    "quick_contact": "快速聯絡",
-    "location": "地點",
-    "location_value": "臺南，臺灣",
-    "copy": "複製",
-    "copied": "已複製！",
-    "socials": {
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "email": "電子郵件"
-    }
-  },
-  "footer": {
-    "rights": "保留所有權利。"
   }
 }

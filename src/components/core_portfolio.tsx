@@ -172,8 +172,6 @@ const pictureReveal: Variants = {
   visible: { opacity: 1, transition: { duration: 0.65, ease: "easeOut" } },
 };
 
-const staticJobs: Job[] = [];
-
 const awards = [
   {
     period: "2026",
@@ -567,8 +565,7 @@ export default function CorePortfolio() {
       ];
 
   const projects = useMemo(() => getProjectData(t), [t]);
-  const translatedJobs = (t("experience.jobs", { returnObjects: true }) as Job[]) || [];
-  const jobs = [...staticJobs, ...translatedJobs];
+  const jobs = (t("experience.jobs", { returnObjects: true }) as Job[]) || [];
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(email);

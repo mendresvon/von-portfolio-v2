@@ -20,15 +20,6 @@ export interface PostData {
   source: string;
 }
 
-export async function getPostSlugs() {
-  if (!fs.existsSync(postsDirectory)) return [];
-  const files = fs.readdirSync(postsDirectory);
-  return files
-    .filter((file) => file.endsWith('.mdx') && file !== 'README.md')
-    .map((file) => file.replace(/\.(en|zh-TW)\.mdx$/, ''))
-    .filter((v, i, a) => a.indexOf(v) === i); // Unique slugs
-}
-
 export async function getPostData(slug: string, lang: string) {
   const fileName = `${slug}.${lang}.mdx`;
   const fullPath = path.join(postsDirectory, fileName);
