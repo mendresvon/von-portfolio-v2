@@ -439,10 +439,23 @@ textarea {
 }
 
 .intro-name-row h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 9px;
+  row-gap: 2px;
   margin: 0;
   font-size: clamp(1.55rem, 4vw, 2rem);
   font-weight: 520;
   letter-spacing: -0.04em;
+}
+
+.intro-name-alt {
+  margin-left: 3px;
+  color: var(--muted);
+  font-size: 0.55em;
+  font-weight: 450;
+  letter-spacing: 0;
 }
 
 .verified-mark {
