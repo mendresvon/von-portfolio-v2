@@ -222,8 +222,8 @@ const leadership = [
     periodZh: "2023 — 至今",
     title: "Acolyte, Lector & Psalmist · Sacred Heart Church",
     titleZh: "聖心堂輔祭、讀經員與領唱員",
-    detail: "Contributing to the life of the Filipino community in Tainan.",
-    detailZh: "參與並服務臺南菲律賓社群的教會生活。",
+    detail: "Contributing to the life of the local Catholic community in Tainan.",
+    detailZh: "參與並服務臺南在地天主教社群的教會生活。",
   },
 ];
 
